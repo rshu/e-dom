@@ -1170,7 +1170,7 @@ def latexPrint(ranks, all, higherBetter):
     lo, hi = all[0], all[-1]
     for _, __, x in sorted(ranks):
         q1, q2, q3 = x.quartiles()
-        #q1, q2, q3 = q1 , q2 , q3
+        # q1, q2, q3 = q1 , q2 , q3
         print("    %d &      %s &    %d &  %d & \quart{%d}{%d}{%d}{%d} \\\\" % (
             x.rank + 1, x.name.replace('_', '\_'), q2, q3 - q1, q1, q3 - q1, q2, 100))
         last = x.rank
@@ -1248,7 +1248,6 @@ def main():
             else:
                 now += [word]
     rdivDemo([[k] + v for k, v in all.items()], latex, higherBetter)
-
 
 # if args.demo:
 #     _rdivs()
