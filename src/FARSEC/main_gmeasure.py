@@ -120,9 +120,9 @@ def main():
             pass
 
     dic1 = OrderedDict(sorted(dic_auc.items(), key=itemgetter(0))).values()
-    area_under_curve = round(auc(list(range(len(dic1))), dic1), 3)
+    # area_under_curve = round(auc(list(range(len(dic1))), dic1), 3)
     final[epsilon_value] = dic_auc
-    final_auc[epsilon_value].append(area_under_curve)
+    # final_auc[epsilon_value].append(area_under_curve)
 
     print(final)
     print(dic)
