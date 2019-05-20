@@ -5,10 +5,6 @@ __author__ = 'rshu'
 import os
 
 cwd = os.getcwd()
-import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, classification_report, \
-    confusion_matrix
 
 from itertools import product
 from helper.transformation import *
@@ -93,7 +89,7 @@ def main():
 
     counter = 0
 
-    while counter != 100:
+    while counter != 10:
         if counter not in dic_func.keys():
             dic_func[counter] = []
 
@@ -101,9 +97,9 @@ def main():
             keys = [k for k, v in func_str_counter_dic.items() if v == 0]
             key = _randchoice(keys)
             scaler, model = func_str_dic[key]
-            farsec_transform = transform(farsec, scaler)
+            farsec_transform = transform_farsec(farsec, scaler)
 
-            train_data, test_data = farsec_transform.iloc[:train_size, :], farsec_transform[train_size:, :]
+            train_data, test_data = farsec_transform.iloc[:train_size, :], farsec_transform.iloc[train_size:, :]
             measurement = run_model_farsec(train_data, test_data, model, metric, training=-2)
 
             if all(abs(t - measurement) > epsilon_value for t in list_value):

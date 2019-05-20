@@ -101,3 +101,18 @@ def transform(df, scaler):
     elif "array" in str(type(df)):
         df1 = pd.DataFrame(scaler.fit_transform(df))
         return df1
+
+
+def transform_farsec(farsec, scaler):
+    if scaler == no_transformation.__name__:
+        if "DataFrame" in str(type(farsec)):
+            return farsec
+        else:
+            return pd.DataFrame(farsec)
+    elif "DataFrame" in str(type(farsec)):
+        farsec1 = pd.DataFrame(scaler.fit_transform(farsec[farsec.columns[:-1]].values))
+        farsec1['label'] = farsec['label']
+        return farsec1
+    elif "array" in str(type(farsec)):
+        farsec1 = pd.DataFrame(scaler.fit_transform(farsec))
+        return farsec1
