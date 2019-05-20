@@ -10,7 +10,6 @@ import sys
 
 sys.path.append(import_path)
 
-import numpy as np
 from helper.transformation import *
 from random import seed
 from helper.utilities import _randchoice, unpack
@@ -68,8 +67,7 @@ def _test(res=''):
             np.random.seed(mn)
             seed(mn)
             preprocess = [standard_scaler, minmax_scaler, maxabs_scaler, [robust_scaler] * 20, kernel_centerer,
-                          [quantile_transform] * 200
-                , normalizer, [binarize] * 100]  # ,[polynomial]*5
+                          [quantile_transform] * 200, normalizer, [binarize] * 100]  # ,[polynomial]*5
             MLs = [NB, [KNN] * 20, [RF] * 50, [DT] * 30, [LR] * 50]  # [SVM]*100,
             preprocess_list = unpack(preprocess)
             MLs_list = unpack(MLs)
