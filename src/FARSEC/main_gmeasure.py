@@ -15,6 +15,7 @@ from helper.transformation import *
 from helper.utilities import _randchoice
 from helper.ML import *
 from collections import OrderedDict
+from operator import itemgetter
 
 metrics = ["gmeasure"]
 data_path = os.path.join(cwd, "..", "..", "data", "FARSEC")
@@ -31,47 +32,6 @@ camel = []
 chromium = []
 derby = []
 wicket = []
-
-
-def read_data(path):
-    data = pd.read_csv(path)
-    data = data.drop(['id'], axis=1)
-    data = data.sample(frac=1)
-    return data
-
-
-def random_forest(features, target):
-    # rf = RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
-    #                             max_depth=9, max_features=0.8, max_leaf_nodes=23,
-    #                             min_impurity_decrease=0.0, min_impurity_split=None,
-    #                             min_samples_leaf=3, min_samples_split=4,
-    #                             min_weight_fraction_leaf=0.0, n_estimators=108, n_jobs=None,
-    #                             oob_score=False, random_state=0, verbose=0, warm_start=False)
-    rf = RandomForestClassifier()
-    rf.fit(features, target)
-    return rf
-
-
-def result_statistics(predictions):
-    # print("Test Accuracy  :: ", accuracy_score(test_y, predictions))
-    # print("Confusion matrix", confusion_matrix(test_y, predictions))
-    tn, fp, fn, tp = confusion_matrix(test_y, predictions).ravel()
-    print("TN, FP, FN, TP: ", (tn, fp, fn, tp))
-    # cm_lr = metrics.confusion_matrix(test_y, predictions)
-    # print("Confusion matrix")
-    # print(pd.DataFrame(cm_lr))
-
-    PD = tp / (tp + fn)
-    PF = fp / (fp + tn)
-    PREC = tp / (tp + fp)
-    F_MEASURE = 2 * PD * PREC / (PD + PREC)
-    G_MEASURE = 2 * PD * (1 - PF) / (PD + 1 - PF)
-
-    print("pd: ", PD)
-    print("pf: ", PF)
-    print("prec: ", PREC)
-    print("f-measure: ", F_MEASURE)
-    print("g-measure: ", G_MEASURE)
 
 
 def main():
@@ -100,26 +60,6 @@ def main():
     train_size = train_dataset["label"].count()
     farsec = pd.concat([train_dataset, test_dataset], ignore_index=True)
     farsec['label'] = farsec['label'].apply(lambda x: 0 if x == 0 else 1)
-
-    # print(farsec)
-    # print(train_dataset)
-    # print(test_dataset)
-    # print(train_size)
-
-    # global train_x
-    # global test_x
-    # global train_y
-    # global test_y
-
-    # train_x = train_dataset.iloc[:, :-1]
-    # train_y = train_dataset['label']
-
-    # test_x = test_dataset.iloc[:, :-1]
-    # test_y = test_dataset['label']
-
-    # rf = random_forest(train_x, train_y)
-    # rf_prediction = rf.predict(test_x)
-    # result_statistics(rf_prediction)
 
     metric = "d2h"
     final = {}
@@ -183,7 +123,6 @@ def main():
         except:
             pass
 
-
     dic1 = OrderedDict(sorted(dic_auc.items(), key=itemgetter(0))).values()
     area_under_curve = round(auc(list(range(len(dic1))), dic1), 3)
     final[epsilon_value] = dic_auc
@@ -192,6 +131,7 @@ def main():
     print(final)
     print(dic)
     print(dic_func)
+
 
 if __name__ == '__main__':
     main()
