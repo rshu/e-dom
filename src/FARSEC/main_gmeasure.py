@@ -93,7 +93,7 @@ def main():
 
     counter = 0
 
-    while counter != 1000:
+    while counter != 100:
         if counter not in dic_func.keys():
             dic_func[counter] = []
 
