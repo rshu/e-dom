@@ -3,7 +3,8 @@ from __future__ import print_function, division
 __author__ = 'amrit'
 from pandas.api.types import is_numeric_dtype, is_bool_dtype
 import pandas as pd
-from sklearn.preprocessing import *
+from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler, MaxAbsScaler, KernelCenterer
+from sklearn.preprocessing import QuantileTransformer, Normalizer, Binarizer, PolynomialFeatures
 from utilities import _randint, _randchoice, _randuniform
 from sklearn.neighbors import NearestNeighbors
 import numpy as np
@@ -57,7 +58,8 @@ def kernel_centerer():
 def quantile_transform():
     a, b = _randint(100, 1000), _randint(1000, 1e5)
     c = _randchoice(['normal', 'uniform'])
-    scaler = QuantileTransformer(n_quantiles=a, output_distribution=c, subsample=b)
+    scaler = QuantileTransformer(
+        n_quantiles=a, output_distribution=c, subsample=b)
     tmp = str(a) + "_" + str(b) + "_" + c + "_" + QuantileTransformer.__name__
     return scaler, tmp
 
@@ -82,7 +84,8 @@ def polynomial():
     b = _randchoice([True, False])
     c = _randchoice([True, False])
     scaler = PolynomialFeatures(degree=a, interaction_only=b, include_bias=c)
-    tmp = str(a) + "_" + str(b) + "_" + str(c) + "_" + PolynomialFeatures.__name__
+    tmp = str(a) + "_" + str(b) + "_" + str(
+        c) + "_" + PolynomialFeatures.__name__
     return scaler, tmp
 
 
@@ -113,7 +116,8 @@ def transform_farsec(farsec, scaler):
         else:
             return pd.DataFrame(farsec)
     elif "DataFrame" in str(type(farsec)):
-        farsec1 = pd.DataFrame(scaler.fit_transform(farsec[farsec.columns[:-1]].values))
+        farsec1 = pd.DataFrame(
+            scaler.fit_transform(farsec[farsec.columns[:-1]].values))
         farsec1['label'] = farsec['label']
         return farsec1
     elif "array" in str(type(farsec)):
@@ -125,7 +129,8 @@ def define_smote(data, num, k=5, r=1):
     corpus = []
     if len(data) < k:
         k = len(data) - 1
-    nbrs = NearestNeighbors(n_neighbors=k, algorithm='ball_tree', p=r).fit(data)
+    nbrs = NearestNeighbors(
+        n_neighbors=k, algorithm='ball_tree', p=r).fit(data)
     distances, indices = nbrs.kneighbors(data)
     for i in range(0, num):
         mid = randint(0, len(data) - 1)
@@ -155,7 +160,8 @@ def smote_balance(data_train, train_label, m=0, r=0, neighbors=0):
         pos_train = define_smote(pos_train, m, k=neighbors, r=r)
         if len(neg_train) < m:
             m = len(neg_train)
-        neg_train = neg_train[np.random.choice(len(neg_train), m, replace=False)]
+        neg_train = neg_train[np.random.choice(
+            len(neg_train), m, replace=False)]
     # print(pos_train,neg_train)
     data_train1 = np.vstack((pos_train, neg_train))
     label_train = [1] * len(pos_train) + [0] * len(neg_train)

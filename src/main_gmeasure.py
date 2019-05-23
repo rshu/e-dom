@@ -7,9 +7,11 @@ import os
 cwd = os.getcwd()
 
 from itertools import product
-from helper.transformation import *
-from helper.utilities import _randchoice
-from helper.ML import *
+from transformation import standard_scaler, minmax_scaler, maxabs_scaler, robust_scaler, normalizer, \
+    binarize, transform_farsec, quantile_transform, kernel_centerer
+from utilities import _randchoice
+import pandas as pd
+from ML import NB, KNN, DT, LR, unpack, RF, run_model_farsec
 from collections import OrderedDict
 from operator import itemgetter
 
@@ -52,7 +54,9 @@ def main():
     train_dataset = pd.read_csv(derby[0])
     test_dataset = pd.read_csv(derby[1])
 
-    train_dataset, test_dataset = train_dataset.iloc[:, 1:], test_dataset.iloc[:, 1:]
+    train_dataset, test_dataset = train_dataset.iloc[:,
+                                                     1:], test_dataset.iloc[:,
+                                                                            1:]
     train_size = train_dataset["label"].count()
     farsec = pd.concat([train_dataset, test_dataset], ignore_index=True)
     farsec['label'] = farsec['label'].apply(lambda x: 0 if x == 0 else 1)
@@ -64,8 +68,11 @@ def main():
     dic = {}
     dic_func = {}
 
-    preprocess = [standard_scaler, minmax_scaler, maxabs_scaler, [robust_scaler] * 20, kernel_centerer,
-                  [quantile_transform] * 200, normalizer, [binarize] * 100]
+    preprocess = [
+        standard_scaler, minmax_scaler,
+        maxabs_scaler, [robust_scaler] * 20, kernel_centerer,
+        [quantile_transform] * 200, normalizer, [binarize] * 100
+    ]
     MLs = [NB, [KNN] * 20, [RF] * 50, [DT] * 30, [LR] * 50]
     preprocess_list = unpack(preprocess)
     MLs_list = unpack(MLs)
@@ -99,8 +106,11 @@ def main():
             scaler, model = func_str_dic[key]
             farsec_transform = transform_farsec(farsec, scaler)
 
-            train_data, test_data = farsec_transform.iloc[:train_size, :], farsec_transform.iloc[train_size:, :]
-            measurement = run_model_farsec(train_data, test_data, model, metric, training=-2)
+            train_data, test_data = farsec_transform.iloc[:
+                                                          train_size, :], farsec_transform.iloc[
+                                                              train_size:, :]
+            measurement = run_model_farsec(
+                train_data, test_data, model, metric, training=-2)
 
             if all(abs(t - measurement) > epsilon_value for t in list_value):
                 list_value.append(measurement)
