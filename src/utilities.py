@@ -1,6 +1,25 @@
-from __future__ import print_function, division
-
-__author__ = 'amrit'
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Copyright (C) 2019, Jianfeng Chen <jchen37@ncsu.edu>
+# vim: set ts=4 sts=4 sw=4 expandtab smartindent:
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+#  of this software and associated documentation files (the "Software"), to deal
+#  in the Software without restriction, including without limitation the rights
+#  to use, copy, modify, merge, publish, _distribute, sublicense, and/or sell
+#  copies of the Software, and to permit persons to whom the Software is
+#  furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+#  all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+#  THE SOFTWARE.
 
 from random import randint, uniform, choice, sample
 from sklearn.metrics import roc_curve, auc
@@ -30,7 +49,7 @@ def _randsample(a=[], b=1):
 def unpack(l):
     tmp = []
     for i in l:
-        if list != type(i):
+        if type(i) is not list:
             tmp.append(i)
         else:
             for x in i:
@@ -39,25 +58,29 @@ def unpack(l):
 
 
 def get_performance(prediction, test_labels):
-    tn, fp, fn, tp = confusion_matrix(test_labels, prediction, labels=[0, 1]).ravel()
+    tn, fp, fn, tp = confusion_matrix(
+        test_labels, prediction, labels=[0, 1]).ravel()
     pre = 1.0 * tp / (tp + fp) if (tp + fp) != 0 else 0
     rec = 1.0 * tp / (tp + fn) if (tp + fn) != 0 else 0
     spec = 1.0 * tn / (tn + fp) if (tn + fp) != 0 else 0
     fpr = 1 - spec
     npv = 1.0 * tn / (tn + fn) if (tn + fn) != 0 else 0
-    acc = 1.0 * (tp + tn) / (tp + tn + fp + fn) if (tp + tn + fp + fn) != 0 else 0
+    acc = 1.0 * (tp + tn) / (tp + tn + fp + fn) if (
+        tp + tn + fp + fn) != 0 else 0
     f1 = 2.0 * tp / (2.0 * tp + fp + fn) if (2.0 * tp + fp + fn) != 0 else 0
     return [round(x, 3) for x in [pre, rec, spec, fpr, npv, acc, f1]]
 
 
 def get_score(criteria, prediction, test_labels, data):
-    tn, fp, fn, tp = confusion_matrix(test_labels, prediction, labels=[0, 1]).ravel()
-    pre, rec, spec, fpr, npv, acc, f1 = get_performance(test_labels, prediction)
+    tn, fp, fn, tp = confusion_matrix(
+        test_labels, prediction, labels=[0, 1]).ravel()
+    pre, rec, spec, fpr, npv, acc, f1 = get_performance(
+        test_labels, prediction)
     all_metrics = [tp, fp, tn, fn, pre, rec, spec, fpr, npv, acc, f1]
     if criteria == "Accuracy":
         score = -all_metrics[-ACC]
     elif criteria == "d2h":
-        score = all_metrics[-FPR] ** 2 + (1 - all_metrics[-REC]) ** 2
+        score = all_metrics[-FPR]**2 + (1 - all_metrics[-REC])**2
         score = math.sqrt(score) / math.sqrt(2)
     elif criteria == "Pf_Auc":
         score = auc_measure(prediction, test_labels)
@@ -68,7 +91,11 @@ def get_score(criteria, prediction, test_labels, data):
     elif criteria == "Gini":
         p1 = all_metrics[-PRE]  # target == 1 for the positive split
         p0 = 1 - all_metrics[-NPV]  # target == 1 for the negative split
-        score = 1 - p0 ** 2 - p1 ** 2
+        score = 1 - p0**2 - p1**2
+    elif criteria == 'recall':
+        score = rec
+    elif criteria == 'false_alarm':
+        score = fpr
     else:  # Information Gain
         P, N = all_metrics[0] + all_metrics[3], all_metrics[1] + all_metrics[2]
         p = 1.0 * P / (P + N) if P + N > 0 else 0  # before the split
