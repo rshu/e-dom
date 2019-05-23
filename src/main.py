@@ -10,23 +10,20 @@ from utilities import get_score
 
 import pdb
 
-metrics = ['recall', 'false_alarm']
 
-HP = {
-    'SMOTE': {
-        'm': 100,
-        'k': 5,
-        'r': 3
-    },
-    'DT': {
-        'min_samples_split': 0.2,
-        'criterion': 'entropy',
-        'splitter': 'best'
+def demo(dataset):
+    HP = {
+        'SMOTE': {
+            'm': 100,
+            'k': 5,
+            'r': 3
+        },
+        'DT': {
+            'min_samples_split': 0.2,
+            'criterion': 'entropy',
+            'splitter': 'best'
+        }
     }
-}
-
-
-def main(dataset):
     # read csv file
     train_df = pd.read_csv(f'{root}/data/FARSEC/{dataset}-train.csv').drop(
         ['id'], axis=1)
@@ -39,7 +36,10 @@ def main(dataset):
 
     rec = get_score('recall', prediction, test_labels, "NA")
     fp = get_score('false_alarm', prediction, test_labels, "NA")
-    pdb.set_trace()
+
+
+def epsilon():
+    pass
 
 
 #     farsec = pd.concat([train_df, test_df], ignore_index=True)
@@ -114,4 +114,4 @@ def main(dataset):
 #     print(dic_func)
 
 if __name__ == '__main__':
-    main('ambari')
+    demo('ambari')
