@@ -1,44 +1,168 @@
 __author__ = 'rshu'
 
 import os
+
 cwd = os.getcwd()
 root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
 
 import pandas as pd
 from ML import SMOTE, DT, RF, SVM, KNN, LR
 from utilities import get_score
+import numpy as np
 
 import pdb
 
+# initialize range for pre-processor and learners
+smote = {
+    'k': list(range(1,20)),
+    'm': list(range(50, 400)),
+    'r': list(range(1,6))
+}
+
+dt = {
+    'min_samples_split': list(range(0.0, 1.0, 0.1)),
+    'criterion': ['gini', 'entropy'],
+    'splitter': ['best', 'random']
+}
+
+rf = {
+    'n_estimators': list(range(10, 150)),
+    'min_samples_leaf': list(range(1, 20)),
+    'min_samples_split': list(range(2, 20)),
+    'max_leaf_nodes': list(range(2, 50)),
+    'max_features': list(range(0.01, 1, 0.01)),
+    'max_depth': list(range(1, 10))
+}
+
+svm = {
+    'C': list(range(1, 500)),
+    'kernel': ['linear', 'poly', 'rbf', 'sigmoid'],
+    'degree': list(range(2, 10)),
+    'gamma': list(range(0.0, 1.0, 0.1)),
+    'coef0': list(range(0.0, 0.1, 0.01)),
+    'tol': list(range(0.0, 0.1, 0.01)),
+}
+
+knn = {
+    'n_neighbors': list(range(1, 10)),
+    'weights': ['uniform', 'distance'],
+    'metric': ['minkowski', 'chebyshev']
+}
+
+lr = {
+    'penalty': ['l1', 'l2'],
+    'tol': list(range(0.0, 0.1, 0.01)),
+    'C': list(range(1, 500))
+}
+
+mp = {
+    'alpha': list(range(0.0001, 0.001, 0.0001)),
+    'learning_rate_init': list(range(0.001, 0.01, 0.001)),
+    'power_t': list(range(0.1, 1, 0.1)),
+    'max_iter': list(range(50, 300)),
+    'momentum': list(range(0.1, 1, 0.1)),
+    'n_iter_no_change': list(range(1, 100))
+}
+
+nb = {
+}
+
+def Merge(dict1, dict2):
+    res = {**dict1, **dict2}
+    return res
+
 
 def demo(dataset):
+    global HP
     HP = {
         'SMOTE': {
-            'm': 100,
+            'm': 200,
             'k': 5,
-            'r': 3
+            'r': 2
         },
         'DT': {
             'min_samples_split': 0.2,
             'criterion': 'entropy',
             'splitter': 'best'
+        },
+        'LR': {
+            'penalty': 'l1',
+            'tol': 0.05,
+            'C': 100
+        },
+        'RF': {
+            'n_estimators': 100,
+            'criterion': 'gini',
+            'min_samples_split': 0.5
         }
     }
-    # read csv file
-    train_df = pd.read_csv(f'{root}/data/FARSEC/{dataset}-train.csv').drop(
-        ['id'], axis=1)
-    test_df = pd.read_csv(f'{root}/data/FARSEC/{dataset}-train.csv').drop(
-        ['id'], axis=1)
+    # read csv file (windows)
+    train_df = pd.read_csv("C:\\Users\\Terry\\Documents\\e-dom\\data\\FARSEC\\ambari-train.csv").drop(['id'], axis=1)
+    test_df = pd.read_csv("C:\\Users\\Terry\\Documents\\e-dom\\data\\FARSEC\\ambari-test.csv").drop(['id'], axis=1)
+
+    # read csc file (MacBook)
+    # train_df = pd.read_csv(f'{root}/data/FARSEC/{dataset}-train.csv').drop(
+    #     ['id'], axis=1)
+    # test_df = pd.read_csv(f'{root}/data/FARSEC/{dataset}-test.csv').drop(
+    #     ['id'], axis=1)
 
     train_df = SMOTE(train_df, HP)
-    prediction = DT(train_df, test_df, HP)
+    prediction = RF(train_df, test_df, HP)
     test_labels = test_df.label.values.tolist()
 
+    global rec, fpr, gm
     rec = get_score('recall', prediction, test_labels, "NA")
-    fp = get_score('false_alarm', prediction, test_labels, "NA")
+    fpr = get_score('false_alarm', prediction, test_labels, "NA")
+    gm = get_score("g_measure", prediction, test_labels, "NA")
 
 
 def epsilon():
+    epsilon_value_obj1 = 0.2
+    epsilon_value_obj2 = 0.2
+
+    # Initialize an empty matrix
+
+    cell = {
+        "pd": 0.0,
+        "pf": 0.0,
+        "gm": 0.0,
+        # "combine": "",
+        "count": 0
+    }
+
+    epsilon_matrix = [[cell for i in range(int(1 / epsilon_value_obj1))] for j in
+                      range(int(1 / epsilon_value_obj2))]
+    print("recall:", rec)
+    print("false positive rate:", fpr)
+    print("g measure", gm)
+
+    # map pd and pf into grid
+    x = int(rec / epsilon_value_obj1)
+    y = int(rec / epsilon_value_obj2)
+
+    if epsilon_matrix[x][y]["count"] == 0:
+        epsilon_matrix[x][y]["pd"] = rec
+        epsilon_matrix[x][y]["pf"] = fpr
+        epsilon_matrix[x][y]['gm'] = gm
+        # epsilon_matrix[x][y]["combine"] = Merge(HP['SMOTE'], HP['RF'])
+        epsilon_matrix[x][y]["count"] = 1
+    elif epsilon_matrix[x][y]["count"] == 1:
+        if gm > epsilon_matrix[x][y]['gm']:
+            epsilon_matrix[x][y]["pd"] = rec
+            epsilon_matrix[x][y]["pf"] = fpr
+            epsilon_matrix[x][y]['gm'] = gm
+            # epsilon_matrix[x][y]["combine"] = Merge(HP['SMOTE'], HP['RF'])
+            # update range
+        else:
+            pass
+    else:
+        pass
+
+    print(epsilon_matrix)
+
+
+# print pareto frontier
+def pareto():
     pass
 
 
@@ -114,4 +238,5 @@ def epsilon():
 #     print(dic_func)
 
 if __name__ == '__main__':
-    demo('ambari')
+    demo('derby')
+    epsilon()

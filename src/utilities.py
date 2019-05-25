@@ -44,22 +44,22 @@ def get_performance(prediction, test_labels):
     spec = 1.0 * tn / (tn + fp) if (tn + fp) != 0 else 0
     fpr = 1 - spec
     npv = 1.0 * tn / (tn + fn) if (tn + fn) != 0 else 0
-    acc = 1.0 * (tp + tn) / (tp + tn + fp + fn) if (
-        tp + tn + fp + fn) != 0 else 0
+    acc = 1.0 * (tp + tn) / (tp + tn + fp + fn) if (tp + tn + fp + fn) != 0 else 0
     f1 = 2.0 * tp / (2.0 * tp + fp + fn) if (2.0 * tp + fp + fn) != 0 else 0
-    return [round(x, 3) for x in [pre, rec, spec, fpr, npv, acc, f1]]
+    gm = 2.0 * rec * (1 - fpr) / (rec + 1 - fpr) if (rec + 1 - fpr) != 0 else 0
+    return [round(x, 3) for x in [pre, rec, spec, fpr, npv, acc, f1, gm]]
 
 
 def get_score(criteria, prediction, test_labels, data):
     tn, fp, fn, tp = confusion_matrix(
         test_labels, prediction, labels=[0, 1]).ravel()
-    pre, rec, spec, fpr, npv, acc, f1 = get_performance(
+    pre, rec, spec, fpr, npv, acc, f1, gm = get_performance(
         test_labels, prediction)
     all_metrics = [tp, fp, tn, fn, pre, rec, spec, fpr, npv, acc, f1]
     if criteria == "Accuracy":
         score = -all_metrics[-ACC]
     elif criteria == "d2h":
-        score = all_metrics[-FPR]**2 + (1 - all_metrics[-REC])**2
+        score = all_metrics[-FPR] ** 2 + (1 - all_metrics[-REC]) ** 2
         score = math.sqrt(score) / math.sqrt(2)
     elif criteria == "Pf_Auc":
         score = auc_measure(prediction, test_labels)
@@ -70,11 +70,13 @@ def get_score(criteria, prediction, test_labels, data):
     elif criteria == "Gini":
         p1 = all_metrics[-PRE]  # target == 1 for the positive split
         p0 = 1 - all_metrics[-NPV]  # target == 1 for the negative split
-        score = 1 - p0**2 - p1**2
+        score = 1 - p0 ** 2 - p1 ** 2
     elif criteria == 'recall':
         score = rec
     elif criteria == 'false_alarm':
         score = fpr
+    elif criteria == 'g_measure':
+        score = gm
     else:  # Information Gain
         P, N = all_metrics[0] + all_metrics[3], all_metrics[1] + all_metrics[2]
         p = 1.0 * P / (P + N) if P + N > 0 else 0  # before the split
