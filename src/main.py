@@ -8,6 +8,7 @@ root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
 import pandas as pd
 from ML import SMOTE, DT, RF, SVM, KNN, LR
 from utilities import get_score
+from collections import namedtuple
 import numpy as np
 
 import pdb
@@ -116,41 +117,44 @@ def demo(dataset):
     gm = get_score("g_measure", prediction, test_labels, "NA")
 
 
+class CellInfo:
+    def __init__(self, pd=0.0, pf=0.0, gm=0.0, count=0):
+        self.pd = pd
+        self.pf = pf
+        self.gm = gm
+        self.count = count
+
+    def __str__(self):
+        return f'pd={self.pd}|pf={self.pf}|gm={self.gm}|count={self.count}'
+
+
 def epsilon():
     epsilon_value_obj1 = 0.2
     epsilon_value_obj2 = 0.2
 
-    # Initialize an empty matrix
-
-    cell = {
-        "pd": 0.0,
-        "pf": 0.0,
-        "gm": 0.0,
-        # "combine": "",
-        "count": 0
-    }
-
-    epsilon_matrix = [[cell for i in range(int(1 / epsilon_value_obj1))] for j in
+    epsilon_matrix = [[CellInfo() for i in range(int(1 / epsilon_value_obj1))] for j in
                       range(int(1 / epsilon_value_obj2))]
-    print("recall:", rec)
-    print("false positive rate:", fpr)
-    print("g measure", gm)
+    # pdb.set_trace()
+
+    # print("recall:", rec)
+    # print("false positive rate:", fpr)
+    # print("g measure", gm)
 
     # map pd and pf into grid
     x = int(rec / epsilon_value_obj1)
     y = int(rec / epsilon_value_obj2)
 
-    if epsilon_matrix[x][y]["count"] == 0:
-        epsilon_matrix[x][y]["pd"] = rec
-        epsilon_matrix[x][y]["pf"] = fpr
-        epsilon_matrix[x][y]['gm'] = gm
+    if epsilon_matrix[x][y].count == 0:
+        epsilon_matrix[x][y].pd = rec
+        epsilon_matrix[x][y].pf = fpr
+        epsilon_matrix[x][y].gm = gm
         # epsilon_matrix[x][y]["combine"] = Merge(HP['SMOTE'], HP['RF'])
-        epsilon_matrix[x][y]["count"] = 1
-    elif epsilon_matrix[x][y]["count"] == 1:
-        if gm > epsilon_matrix[x][y]['gm']:
-            epsilon_matrix[x][y]["pd"] = rec
-            epsilon_matrix[x][y]["pf"] = fpr
-            epsilon_matrix[x][y]['gm'] = gm
+        epsilon_matrix[x][y].count = 1
+    elif epsilon_matrix[x][y].count == 1:
+        if gm > epsilon_matrix[x][y].gm:
+            epsilon_matrix[x][y].pd = rec
+            epsilon_matrix[x][y].pf = fpr
+            epsilon_matrix[x][y].gm = gm
             # epsilon_matrix[x][y]["combine"] = Merge(HP['SMOTE'], HP['RF'])
             # update range
         else:
@@ -158,7 +162,10 @@ def epsilon():
     else:
         pass
 
-    print(epsilon_matrix)
+    for i in epsilon_matrix:
+        for j in i:
+            print(j)
+    pdb.set_trace()
 
 
 # print pareto frontier
