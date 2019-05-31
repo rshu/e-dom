@@ -14,54 +14,54 @@ import pdb
 
 # initialize range for pre-processor and learners
 smote = {
-    'k': list(range(1,20)),
-    'm': list(range(50, 400)),
-    'r': list(range(1,6))
+    'k': list(np.arange(1,20)),
+    'm': list(np.arange(50, 400)),
+    'r': list(np.arange(1,6))
 }
 
 dt = {
-    'min_samples_split': list(range(0.0, 1.0, 0.1)),
+    'min_samples_split': list(np.arange(2, 20, 1)),
     'criterion': ['gini', 'entropy'],
     'splitter': ['best', 'random']
 }
 
 rf = {
-    'n_estimators': list(range(10, 150)),
-    'min_samples_leaf': list(range(1, 20)),
-    'min_samples_split': list(range(2, 20)),
-    'max_leaf_nodes': list(range(2, 50)),
-    'max_features': list(range(0.01, 1, 0.01)),
-    'max_depth': list(range(1, 10))
+    'n_estimators': list(np.arange(10, 150)),
+    'min_samples_leaf': list(np.arange(1, 20)),
+    'min_samples_split': list(np.arange(2, 20)),
+    'max_leaf_nodes': list(np.arange(2, 50)),
+   'max_features': list(np.arange(0.01, 1, 0.01)),
+    'max_depth': list(np.arange(1, 10))
 }
 
 svm = {
-    'C': list(range(1, 500)),
-    'kernel': ['linear', 'poly', 'rbf', 'sigmoid'],
-    'degree': list(range(2, 10)),
-    'gamma': list(range(0.0, 1.0, 0.1)),
-    'coef0': list(range(0.0, 0.1, 0.01)),
-    'tol': list(range(0.0, 0.1, 0.01)),
+   'C': list(np.arange(1, 500)),
+   'kernel': ['linear', 'poly', 'rbf', 'sigmoid'],
+   'degree': list(np.arange(2, 10)),
+   'gamma': list(np.arange(0.0, 1.0, 0.1)),
+   'coef0': list(np.arange(0.0, 0.1, 0.01)),
+   'tol': list(np.arange(0.0, 0.1, 0.01)),
 }
 
 knn = {
-    'n_neighbors': list(range(1, 10)),
+    'n_neighbors': list(np.arange(1, 10)),
     'weights': ['uniform', 'distance'],
     'metric': ['minkowski', 'chebyshev']
 }
 
 lr = {
     'penalty': ['l1', 'l2'],
-    'tol': list(range(0.0, 0.1, 0.01)),
-    'C': list(range(1, 500))
+    'tol': list(np.arange(0.0, 0.1, 0.01)),
+    'C': list(np.arange(1, 500))
 }
 
 mp = {
-    'alpha': list(range(0.0001, 0.001, 0.0001)),
-    'learning_rate_init': list(range(0.001, 0.01, 0.001)),
-    'power_t': list(range(0.1, 1, 0.1)),
-    'max_iter': list(range(50, 300)),
-    'momentum': list(range(0.1, 1, 0.1)),
-    'n_iter_no_change': list(range(1, 100))
+    'alpha': list(np.arange(0.0001, 0.001, 0.0001)),
+    'learning_rate_init': list(np.arange(0.001, 0.01, 0.001)),
+    'power_t': list(np.arange(0.1, 1, 0.1)),
+    'max_iter': list(np.arange(50, 300)),
+    'momentum': list(np.arange(0.1, 1, 0.1)),
+    'n_iter_no_change': list(np.arange(1, 100))
 }
 
 nb = {
@@ -96,15 +96,15 @@ def demo(dataset):
             'min_samples_split': 0.5
         }
     }
-    # read csv file (windows)
-    train_df = pd.read_csv("C:\\Users\\Terry\\Documents\\e-dom\\data\\FARSEC\\ambari-train.csv").drop(['id'], axis=1)
-    test_df = pd.read_csv("C:\\Users\\Terry\\Documents\\e-dom\\data\\FARSEC\\ambari-test.csv").drop(['id'], axis=1)
+    # # read csv file (windows)
+    # train_df = pd.read_csv("C:\\Users\\Terry\\Documents\\e-dom\\data\\FARSEC\\ambari-train.csv").drop(['id'], axis=1)
+    # test_df = pd.read_csv("C:\\Users\\Terry\\Documents\\e-dom\\data\\FARSEC\\ambari-test.csv").drop(['id'], axis=1)
 
     # read csc file (MacBook)
-    # train_df = pd.read_csv(f'{root}/data/FARSEC/{dataset}-train.csv').drop(
-    #     ['id'], axis=1)
-    # test_df = pd.read_csv(f'{root}/data/FARSEC/{dataset}-test.csv').drop(
-    #     ['id'], axis=1)
+    train_df = pd.read_csv(f'{root}/data/FARSEC/{dataset}-train.csv').drop(
+        ['id'], axis=1)
+    test_df = pd.read_csv(f'{root}/data/FARSEC/{dataset}-test.csv').drop(
+        ['id'], axis=1)
 
     train_df = SMOTE(train_df, HP)
     prediction = RF(train_df, test_df, HP)
