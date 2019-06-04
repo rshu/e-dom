@@ -21,6 +21,11 @@
 #  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 #  THE SOFTWARE.
 
+import os
+
+cwd = os.getcwd()
+root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
+
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
@@ -28,11 +33,12 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import NearestNeighbors
+from utilities import _randuniform, _randchoice, _randint
+from utilities import get_score
 from random import randint, random
 import numpy as np
 import pandas as pd
 import pdb
-from utilities import _randuniform, _randchoice, _randint
 
 
 def _define_smote(data, num, k=5, r=1):
@@ -145,7 +151,7 @@ def KNN(train_df, test_df, HP):
 
 
 def NB(train_df, test_df, HP):
-    assert False, "TOTO HERE"
+    assert False, "TODO HERE"
     model = GaussianNB()
     return model, GaussianNB.__name__
 
@@ -163,3 +169,34 @@ def LR(train_df, test_df, HP):
         multi_class='warn',
         n_jobs=-1)
     return _apply_model(train_df, test_df, model)
+
+
+def evaluation(dataset, HP):
+    # read csc file (MacBook)
+    train_df = pd.read_csv(f'{root}/data/FARSEC/{dataset}-train.csv').drop(
+        ['id'], axis=1)
+    test_df = pd.read_csv(f'{root}/data/FARSEC/{dataset}-test.csv').drop(
+        ['id'], axis=1)
+    train_df = SMOTE(train_df, HP)
+
+    if 'DT' in HP.keys():
+        prediction = DT(train_df, test_df, HP)
+    elif 'RF' in HP.keys():
+        prediction = RF(train_df, test_df, HP)
+    elif 'SVM' in HP.keys():
+        prediction = SVM(train_df, test_df, HP)
+    elif 'KNN' in HP.keys():
+        prediction = KNN(train_df, test_df, HP)
+    elif 'LR' in HP.keys():
+        prediction = LR(train_df, test_df, HP)
+    elif 'NB' in HP.keys():
+        prediction = NB(train_df, test_df, HP)
+    else:
+        assert False, "check here"
+
+    test_labels = test_df.label.values.tolist()
+    rec = get_score('recall', prediction, test_labels, "NA")
+    fpr = get_score('false_alarm', prediction, test_labels, "NA")
+    gm = get_score("g_measure", prediction, test_labels, "NA")
+
+    return np.array([rec, 1 - fpr, gm])

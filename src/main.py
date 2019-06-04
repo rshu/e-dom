@@ -15,9 +15,9 @@ import pdb
 
 # initialize range for pre-processor and learners
 smote = {
-    'k': list(np.arange(1,20)),
+    'k': list(np.arange(1, 20)),
     'm': list(np.arange(50, 400)),
-    'r': list(np.arange(1,6))
+    'r': list(np.arange(1, 6))
 }
 
 dt = {
@@ -31,17 +31,17 @@ rf = {
     'min_samples_leaf': list(np.arange(1, 20)),
     'min_samples_split': list(np.arange(2, 20)),
     'max_leaf_nodes': list(np.arange(2, 50)),
-   'max_features': list(np.arange(0.01, 1, 0.01)),
+    'max_features': list(np.arange(0.01, 1, 0.01)),
     'max_depth': list(np.arange(1, 10))
 }
 
 svm = {
-   'C': list(np.arange(1, 500)),
-   'kernel': ['linear', 'poly', 'rbf', 'sigmoid'],
-   'degree': list(np.arange(2, 10)),
-   'gamma': list(np.arange(0.0, 1.0, 0.1)),
-   'coef0': list(np.arange(0.0, 0.1, 0.01)),
-   'tol': list(np.arange(0.0, 0.1, 0.01)),
+    'C': list(np.arange(1, 500)),
+    'kernel': ['linear', 'poly', 'rbf', 'sigmoid'],
+    'degree': list(np.arange(2, 10)),
+    'gamma': list(np.arange(0.0, 1.0, 0.1)),
+    'coef0': list(np.arange(0.0, 0.1, 0.01)),
+    'tol': list(np.arange(0.0, 0.1, 0.01)),
 }
 
 knn = {
@@ -65,8 +65,8 @@ mp = {
     'n_iter_no_change': list(np.arange(1, 100))
 }
 
-nb = {
-}
+nb = {}
+
 
 def Merge(dict1, dict2):
     res = {**dict1, **dict2}
@@ -80,16 +80,6 @@ def demo(dataset):
             'm': 200,
             'k': 5,
             'r': 2
-        },
-        'DT': {
-            'min_samples_split': 0.2,
-            'criterion': 'entropy',
-            'splitter': 'best'
-        },
-        'LR': {
-            'penalty': 'l1',
-            'tol': 0.05,
-            'C': 100
         },
         'RF': {
             'n_estimators': 100,
@@ -132,8 +122,8 @@ def epsilon():
     epsilon_value_obj1 = 0.2
     epsilon_value_obj2 = 0.2
 
-    epsilon_matrix = [[CellInfo() for i in range(int(1 / epsilon_value_obj1))] for j in
-                      range(int(1 / epsilon_value_obj2))]
+    epsilon_matrix = [[CellInfo() for i in range(int(1 / epsilon_value_obj1))]
+                      for j in range(int(1 / epsilon_value_obj2))]
     # pdb.set_trace()
 
     # print("recall:", rec)
