@@ -36,6 +36,7 @@ from sklearn.neighbors import NearestNeighbors
 from utilities import _randuniform, _randchoice, _randint
 from utilities import get_score
 from random import randint, random
+from hp import Hyperparameter
 import numpy as np
 import pandas as pd
 import pdb
@@ -111,7 +112,9 @@ def RF(train_df, test_df, HP):
         n_estimators=a,
         criterion=b,
         min_samples_split=c,
-        max_features=None,
+        max_features=HP['RF']['max_features'],
+        max_leaf_nodes=HP['RF']['max_leaf_nodes'],
+        max_depth=HP['RF']['max_depth'],
         min_impurity_decrease=0.0,
         n_jobs=-1)
     return _apply_model(train_df, test_df, model)
@@ -151,9 +154,8 @@ def KNN(train_df, test_df, HP):
 
 
 def NB(train_df, test_df, HP):
-    assert False, "TODO HERE"
-    model = GaussianNB()
-    return model, GaussianNB.__name__
+    model = GaussianNB(priors=None, var_smoothing=HP['NB']['var_smoothing'])
+    return _apply_model(train_df, test_df, model)
 
 
 def LR(train_df, test_df, HP):
@@ -200,3 +202,47 @@ def evaluation(dataset, HP):
     gm = get_score("g_measure", prediction, test_labels, "NA")
 
     return np.array([rec, 1 - fpr, gm])
+
+
+def get_HP_obj():
+    FARSEC_HP = Hyperparameter(
+        preprocessing_names=['SMOTE'],
+        learner_names=['DT', 'RF', 'SVM', 'KNN', 'NB', 'LR'])
+
+    FARSEC_HP.register_hp('SMOTE', 'k', np.arange(2, 20))
+    FARSEC_HP.register_hp('SMOTE', 'm', np.arange(50, 400))
+    FARSEC_HP.register_hp('SMOTE', 'r', np.arange(1, 6))
+
+    FARSEC_HP.register_hp('DT', 'min_samples_split', np.arange(2, 20, 1))
+    FARSEC_HP.register_hp('DT', 'criterion', ['gini', 'entropy'])
+    FARSEC_HP.register_hp('DT', 'splitter', ['best', 'random'])
+
+    FARSEC_HP.register_hp('RF', 'n_estimators', np.arange(10, 150))
+    FARSEC_HP.register_hp('RF', 'criterion', ['gini', 'entropy'])
+    FARSEC_HP.register_hp('RF', 'min_samples_leaf', np.arange(1, 20))
+    FARSEC_HP.register_hp('RF', 'min_samples_split', np.arange(2, 20))
+    FARSEC_HP.register_hp('RF', 'max_leaf_nodes', np.arange(2, 50))
+    FARSEC_HP.register_hp('RF', 'max_features', np.arange(0.01, 1, 0.01))
+    FARSEC_HP.register_hp('RF', 'max_depth', np.arange(1, 10))
+
+    FARSEC_HP.register_hp('SVM', 'C', np.arange(1, 500))
+    FARSEC_HP.register_hp('SVM', 'kernel',
+                          ['linear', 'poly', 'rbf', 'sigmoid'])
+    FARSEC_HP.register_hp('SVM', 'degree', np.arange(2, 10))
+    FARSEC_HP.register_hp('SVM', 'gamma', np.random.uniform(0, 1.0, 20))
+    FARSEC_HP.register_hp('SVM', 'coef0', np.random.uniform(0, 0.1, 20))
+    FARSEC_HP.register_hp('SVM', 'tol', np.random.uniform(0, 0.1, 20))
+
+    FARSEC_HP.register_hp('KNN', 'n_neighbors', np.arange(2, 25))
+    FARSEC_HP.register_hp('KNN', 'weights', ['uniform', 'distance'])
+    FARSEC_HP.register_hp('KNN', 'metric', ['minkowski', 'chebyshev'])
+    FARSEC_HP.register_hp('KNN', 'p', np.arange(1, 5))
+
+    FARSEC_HP.register_hp('NB', 'var_smoothing',
+                          [10**(-i) for i in range(3, 10)])
+
+    FARSEC_HP.register_hp('LR', 'penalty', ['l1', 'l2'])
+    FARSEC_HP.register_hp('LR', 'tol', np.random.uniform(0, 0.1, 20))
+    FARSEC_HP.register_hp('LR', 'C', np.arange(1, 500))
+
+    return FARSEC_HP

@@ -22,57 +22,37 @@
 #  THE SOFTWARE.
 
 import os
-
+import pdb
 cwd = os.getcwd()
 root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
 
-from hp import Hyperparameter
 import collections
 import numpy as np
+import random
 import ML
 
-
-def get_HP_obj():
-    FARSEC_HP = Hyperparameter(
-        preprocessing_names=['SMOTE'],
-        # learner_names=['DT', 'RF', 'SVM', 'KNN', 'LR'])
-        learner_names=['DT', 'RF'])
-
-    # TODO fill here
-    FARSEC_HP.register_hp('SMOTE', 'k', np.arange(1, 20))
-    FARSEC_HP.register_hp('SMOTE', 'm', np.arange(50, 400))
-    FARSEC_HP.register_hp('SMOTE', 'r', np.arange(1, 6))
-
-    FARSEC_HP.register_hp('DT', 'min_samples_split', np.arange(2, 20, 1))
-    FARSEC_HP.register_hp('DT', 'criterion', ['gini', 'entropy'])
-    FARSEC_HP.register_hp('DT', 'splitter', ['best', 'random'])
-
-    FARSEC_HP.register_hp('RF', 'n_estimators', np.arange(10, 150))
-    FARSEC_HP.register_hp('RF', 'min_samples_leaf', np.arange(1, 20))
-    FARSEC_HP.register_hp('RF', 'min_samples_split', np.arange(2, 20))
-    # FARSEC_HP.register_hp('RF', 'max_leaf_nodes', np.arange(2, 50))
-    # FARSEC_HP.register_hp('RF', 'max_features', np.arange(0.01, 1, 0.01))
-    # FARSEC_HP.register_hp('RF', 'max_depth', np.arange(1, 10))
-
-    return FARSEC_HP
+import debug
 
 
 # Assumping all objectives are to maximize
 def epsilon(dataset, HP_obj, eval_func, N1, epsilon_lst):
     weights = dict()
+    epsilon_lst = np.array(epsilon_lst)
     for name in HP_obj.pres + HP_obj.learns:
         weights[name] = 0
 
     # Step1: find the best preprocessor and best learner
-    best_values = [np.NINF for _ in range(len(epsilon_lst))]
+    best_values = np.array([np.NINF for _ in range(len(epsilon_lst))])
 
     for _ in range(N1):
         rnd_hp, pre, learner = HP_obj.get_rnd_hp_without_range()
+        print(rnd_hp)
         values = eval_func(dataset, rnd_hp)
 
         diff_weight = 0
         diff_weight += collections.Counter(
             (values - best_values) > epsilon_lst)[True] / len(epsilon_lst)
+        # pdb.set_trace()
         diff_weight -= collections.Counter(
             (values - best_values) < -epsilon_lst)[True] / len(epsilon_lst)
 
@@ -94,5 +74,6 @@ def epsilon(dataset, HP_obj, eval_func, N1, epsilon_lst):
 
 
 if __name__ == '__main__':
-    FARSEC_HP = get_HP_obj()
+    random.seed(2019)
+    FARSEC_HP = ML.get_HP_obj()
     epsilon('derby', FARSEC_HP, ML.evaluation, 100, [0.2, 0.2, 0.2])

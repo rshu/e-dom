@@ -22,45 +22,10 @@
 #  THE SOFTWARE.
 
 import os
-
+import sys
+import pdb
 cwd = os.getcwd()
 root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
 
-import pandas as pd
-from utilities import get_score
-from collections import namedtuple
-import random
-import numpy as np
-
-
-class Hyperparameter:
-    def __init__(self, preprocessing_names, learner_names):
-        self.pres = preprocessing_names  # [SMOTE, ...]
-        self.learns = learner_names  # ['DT', 'RF', ...]
-        self.hp_names = dict(
-        )  # {'SMOTE':['m','k','r'], 'RF':['n_estimators',...]}
-        self.ranges = dict()
-
-    def register_hp(self, alg, name, lst):
-        if alg not in self.hp_names:
-            self.hp_names[alg] = [name]
-        else:
-            self.hp_names[alg].append(name)
-
-        self.ranges[f'{alg}_{name}'] = lst
-
-    def get_rnd_hp_without_range(self):
-        # pdb.set_trace()
-        res_HP = dict()
-
-        pre = random.choice(self.pres)
-        res_HP[pre] = dict()
-        for hp in self.hp_names[pre]:
-            res_HP[pre][hp] = random.choice(self.ranges[f'{pre}_{hp}'])
-
-        learner = random.choice(self.learns)
-        res_HP[learner] = dict()
-        for hp in self.hp_names[learner]:
-            res_HP[learner][hp] = random.choice(self.ranges[f'{learner}_{hp}'])
-
-        return res_HP, pre, learner
+if __name__ == '__main__':
+    pass

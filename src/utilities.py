@@ -44,7 +44,8 @@ def get_performance(prediction, test_labels):
     spec = 1.0 * tn / (tn + fp) if (tn + fp) != 0 else 0
     fpr = 1 - spec
     npv = 1.0 * tn / (tn + fn) if (tn + fn) != 0 else 0
-    acc = 1.0 * (tp + tn) / (tp + tn + fp + fn) if (tp + tn + fp + fn) != 0 else 0
+    acc = 1.0 * (tp + tn) / (tp + tn + fp + fn) if (
+        tp + tn + fp + fn) != 0 else 0
     f1 = 2.0 * tp / (2.0 * tp + fp + fn) if (2.0 * tp + fp + fn) != 0 else 0
     gm = 2.0 * rec * (1 - fpr) / (rec + 1 - fpr) if (rec + 1 - fpr) != 0 else 0
     return [round(x, 3) for x in [pre, rec, spec, fpr, npv, acc, f1, gm]]
@@ -59,7 +60,7 @@ def get_score(criteria, prediction, test_labels, data):
     if criteria == "Accuracy":
         score = -all_metrics[-ACC]
     elif criteria == "d2h":
-        score = all_metrics[-FPR] ** 2 + (1 - all_metrics[-REC]) ** 2
+        score = all_metrics[-FPR]**2 + (1 - all_metrics[-REC])**2
         score = math.sqrt(score) / math.sqrt(2)
     elif criteria == "Pf_Auc":
         score = auc_measure(prediction, test_labels)
@@ -70,7 +71,7 @@ def get_score(criteria, prediction, test_labels, data):
     elif criteria == "Gini":
         p1 = all_metrics[-PRE]  # target == 1 for the positive split
         p0 = 1 - all_metrics[-NPV]  # target == 1 for the negative split
-        score = 1 - p0 ** 2 - p1 ** 2
+        score = 1 - p0**2 - p1**2
     elif criteria == 'recall':
         score = rec
     elif criteria == 'false_alarm':
