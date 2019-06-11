@@ -22,9 +22,11 @@
 #  THE SOFTWARE.
 
 import os
+import sys
 
 cwd = os.getcwd()
 root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
+sys.path.append(f'{root}/src/model')
 
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier

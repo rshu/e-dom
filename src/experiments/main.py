@@ -23,9 +23,62 @@
 
 import os
 import sys
+import argparse
+import random
 import pdb
+
 cwd = os.getcwd()
 root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
+sys.path.append(f'{root}/src/model')
+sys.path.append(f'{root}/src/algorithms')
 
-if __name__ == '__main__':
+import ML
+import randomN
+
+
+def run_random100(model):
+    FARSEC_HP = ML.get_HP_obj()
+    randomN.exec_(model, FARSEC_HP, ML.evaluation, 100)
+
+
+def run_epsilon(model):
+    # TODO here
     pass
+
+
+# initial call as "python experiments/main.py -h"
+# NOTE this func is just a task dispatcher
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Entrance of the program.')
+    parser.add_argument(
+        '-db',
+        '--database',
+        help='Name of the database',
+        default="ambari",
+        metavar='DB')
+    parser.add_argument(
+        '-r',
+        '--repeat',
+        help='Number of repeats',
+        type=int,
+        metavar='N',
+        default=1)
+    parser.add_argument(
+        '-alg',
+        '--algorithm',
+        help='Algorithm - random100/epsilon/...',
+        choices=['random100', 'epsilon'],
+        metavar='ALG',
+        required=True)
+    parser.add_argument(
+        '-seed', '--seed', help='Seed of random number', default=None)
+    args = vars(parser.parse_args())
+
+    if args['seed'] is not None:
+        random.seed(int(args['seed']))
+
+    for r in range(args['repeat']):
+        if args['algorithm'] == 'random100':
+            run_random100(args['database'])
+        if args['algorithm'] == 'epsilon':
+            run_epsilon(args['database'])

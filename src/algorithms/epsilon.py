@@ -22,16 +22,15 @@
 #  THE SOFTWARE.
 
 import os
-import pdb
+import sys
+import collections
+import random
+import numpy as np
+
 cwd = os.getcwd()
 root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
-
-import collections
-import numpy as np
-import random
+sys.path.append(f'{root}/src/model')
 import ML
-
-import debug
 
 
 # Assumping all objectives are to maximize

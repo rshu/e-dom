@@ -22,13 +22,13 @@
 #  THE SOFTWARE.
 
 import os
-
+import sys
 cwd = os.getcwd()
 root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
+sys.path.append(f'{root}/src/model')
 
 import pandas as pd
 from utilities import get_score
-from collections import namedtuple
 import random
 import numpy as np
 
