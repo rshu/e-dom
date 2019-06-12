@@ -97,3 +97,8 @@ if __name__ == '__main__':
             run_random100(args['database'])
         if args['algorithm'] == 'epsilon':
             run_epsilon(args['database'])
+
+    f = open(f'{root}/results/randomOut.txt', 'r')
+    if f.mode == 'r':
+        contents = f.read()
+        print(contents)
