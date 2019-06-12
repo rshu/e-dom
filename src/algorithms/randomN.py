@@ -21,15 +21,33 @@
 #  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 #  THE SOFTWARE.
 
-import pdb
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning)
+
+import os
+import sys
+cwd = os.getcwd()
+root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
+sys.path.append(f'{root}/src')
+
+from model.utilities import get_best
 
 
 # Assumping all objectives are to maximize
 # Random evaluatate N hyperparameters. return the best ones.
 # for the multiobjs, return the pareto frontier
 def exec_(dataset, HP_obj, eval_func, N):
-    for _ in range(N):
+    Values = list()
+    HPs = list()
+    for repeat in range(N):
+        if repeat % 20 == 0:
+            print(f'Random hyperparemter generated for {dataset} {repeat}/{N}')
         rnd_hp, _, _ = HP_obj.get_rnd_hp_without_range()
         values = eval_func(dataset, rnd_hp)
-        pdb.set_trace()
-    # TODO calculating the pareto frontier
+
+        HPs.append(rnd_hp)
+        Values.append(values)
+    best_indices = get_best(Values, ignore_idx=[2])
+
+    res = [(HPs[i], Values[i]) for i in best_indices]
+    return res

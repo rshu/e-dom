@@ -23,10 +23,9 @@
 
 import os
 import sys
-
-cwd = os.getcwd()
-root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
-sys.path.append(f'{root}/src/model')
+import random
+import numpy as np
+import pandas as pd
 
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
@@ -35,13 +34,12 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import NearestNeighbors
-from utilities import _randuniform, _randchoice, _randint
-from utilities import get_score
-from random import randint, random
-from hp import Hyperparameter
-import numpy as np
-import pandas as pd
-import pdb
+cwd = os.getcwd()
+root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
+sys.path.append(f'{root}/src')
+
+from model.utilities import get_score
+from model.hp import Hyperparameter
 
 
 def _define_smote(data, num, k=5, r=1):
@@ -52,11 +50,11 @@ def _define_smote(data, num, k=5, r=1):
         n_neighbors=k, algorithm='ball_tree', p=r).fit(data)
     _, indices = nbrs.kneighbors(data)
     for _ in range(0, num):
-        mid = randint(0, len(data) - 1)
-        nn = indices[mid, randint(1, k - 1)]
+        mid = random.randint(0, len(data) - 1)
+        nn = indices[mid, random.randint(1, k - 1)]
         datamade = []
         for j in range(0, len(data[mid])):
-            gap = random()
+            gap = random.random()
             datamade.append((data[nn, j] - data[mid, j]) * gap + data[mid, j])
         corpus.append(datamade)
     corpus = np.array(corpus)

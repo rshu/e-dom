@@ -1,10 +1,12 @@
 __author__ = 'amrit'
 
+import math
+import pygmo as pg
+import numpy as np
+
 from random import randint, uniform, choice, sample
 from sklearn.metrics import roc_curve, auc
 from sklearn.metrics import confusion_matrix
-import math
-import numpy as np
 
 PRE, REC, SPEC, FPR, NPV, ACC, F1 = 7, 6, 5, 4, 3, 2, 1
 
@@ -13,7 +15,7 @@ def _randint(a=0, b=0):
     return randint(a, b)
 
 
-def _randchoice(a=[]):
+def _randchoice(a):
     return choice(a)
 
 
@@ -21,7 +23,7 @@ def _randuniform(a=0.0, b=0.0):
     return uniform(a, b)
 
 
-def _randsample(a=[], b=1):
+def _randsample(a, b=1):
     return sample(a, b)
 
 
@@ -97,7 +99,7 @@ def auc_measure(prediction, test_labels):
 
 def subtotal(x):
     xx = [0]
-    for i, t in enumerate(x):
+    for _, t in enumerate(x):
         xx += [xx[-1] + t]
     return xx[1:]
 
@@ -166,3 +168,16 @@ def get_popt20(data):
 
     Popt = (s_m - s_wst) / (s_opt - s_wst)
     return round(Popt, 3)
+
+
+def get_best(values, ignore_idx=None):
+    """Assumping everything are to MAXIMIZED.
+        Return the best value indices
+       https://esa.github.io/pagmo2/docs/python/utils/py_mo_utils.html
+    """
+    V = np.array(values)
+    for idx in ignore_idx:
+        V[:, idx] = 0
+    _, _, dc, _ = pg.fast_non_dominated_sorting(points=-1 * V)
+
+    return [i for i, v in enumerate(dc) if v == 0]

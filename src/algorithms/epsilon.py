@@ -29,8 +29,8 @@ import numpy as np
 
 cwd = os.getcwd()
 root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
-sys.path.append(f'{root}/src/model')
-import ML
+sys.path.append(f'{root}/src')
+from model import ML
 
 
 # Assumping all objectives are to maximize
@@ -53,7 +53,7 @@ def epsilon(dataset, HP_obj, eval_func, N1, epsilon_lst):
             (values - best_values) > epsilon_lst)[True] / len(epsilon_lst)
         # pdb.set_trace()
         diff_weight -= collections.Counter(
-            (values - best_values) < -epsilon_lst)[True] / len(epsilon_lst)
+            (values - best_values) < -1 * epsilon_lst)[True] / len(epsilon_lst)
 
         weights[pre] += diff_weight
         weights[learner] += diff_weight

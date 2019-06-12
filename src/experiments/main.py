@@ -29,11 +29,10 @@ import pdb
 
 cwd = os.getcwd()
 root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
-sys.path.append(f'{root}/src/model')
-sys.path.append(f'{root}/src/algorithms')
+sys.path.append(f'{root}/src/')
 
-import ML
-import randomN
+from model import ML
+from algorithms import randomN
 
 
 def run_random100(model):
