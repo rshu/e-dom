@@ -37,7 +37,9 @@ from algorithms import randomN
 
 def run_random100(model):
     FARSEC_HP = ML.get_HP_obj()
-    randomN.exec_(model, FARSEC_HP, ML.evaluation, 100)
+    result = randomN.exec_(model, FARSEC_HP, ML.evaluation, 100)
+    with open(f'{root}/results/randomOut.txt', 'a') as f:
+        print(result, file=f)
 
 
 def run_epsilon(model):
@@ -81,3 +83,8 @@ if __name__ == '__main__':
             run_random100(args['database'])
         if args['algorithm'] == 'epsilon':
             run_epsilon(args['database'])
+
+    f = open(f'{root}/results/randomOut.txt', 'r')
+    if f.mode == 'r':
+        contents = f.read()
+        print(contents)
