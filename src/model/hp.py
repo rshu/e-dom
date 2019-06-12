@@ -26,6 +26,7 @@ import sys
 import random
 import numpy as np
 import pandas as pd
+import pdb
 
 cwd = os.getcwd()
 root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
@@ -64,3 +65,28 @@ class Hyperparameter:
             res_HP[learner][hp] = random.choice(self.ranges[f'{learner}_{hp}'])
 
         return res_HP, pre, learner
+
+    def flatten_hp(self, hp_dict):
+        res = ""
+        for alg in hp_dict.keys():
+            for sub in self.hp_names[alg]:
+                res += f"{alg}.{sub}={hp_dict[alg][sub]} | "
+        return res
+
+    def unflatten_hp(self, hp_str):
+        res = dict()
+        for component in hp_str.split(' '):
+            if len(component) <= 2:
+                continue
+            alg, rest = component.split('.')[0], component.split('.')[1]
+            sub, v = rest.split('=')[0], rest.split('=')[1]
+            try:
+                v = int(v)
+            except ValueError:
+                try:
+                    v = float(v)
+                except ValueError:
+                    pass
+            if alg not in res: res[alg] = dict()
+            res[alg][sub] = v
+        return res

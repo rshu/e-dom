@@ -1,0 +1,8 @@
+** Jun-12-2019 17:44:41
+H SMOTE.k=17 | SMOTE.m=389 | SMOTE.r=2 | RF.n_estimators=80 | RF.criterion=entropy | RF.min_samples_leaf=11 | RF.min_samples_split=7 | RF.max_leaf_nodes=41 | RF.max_features=0.34 | RF.max_depth=4 | 
+V 0.174 0.994 0.296
+H SMOTE.k=12 | SMOTE.m=394 | SMOTE.r=1 | DT.min_samples_split=12 | DT.criterion=gini | DT.splitter=best | 
+V 0.056 0.995 0.105
+H SMOTE.k=19 | SMOTE.m=138 | SMOTE.r=3 | DT.min_samples_split=9 | DT.criterion=entropy | DT.splitter=random | 
+V 0.051 1.    0.098
+## END

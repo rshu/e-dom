@@ -23,6 +23,7 @@
 
 import os
 import sys
+import datetime
 import argparse
 import json
 import random
@@ -37,23 +38,21 @@ from model import ML
 from algorithms import randomN
 
 
-class NumpyEncoder(
-        json.JSONEncoder
-):  # https://stackoverflow.com/questions/26646362/numpy-array-is-not-json-serializable
-    def default(self, obj):
-        if isinstance(obj, np.ndarray):
-            return obj.tolist()
-        return json.JSONEncoder.default(self, obj)
-
-
 def run_random100(model):
     FARSEC_HP = ML.get_HP_obj()
-    res = randomN.exec_(model, FARSEC_HP, ML.evaluation, 10)
+    res = randomN.exec_(model, FARSEC_HP, ML.evaluation, 30)
+
     # writing results to file
-    outfile = open(f'{root}/res/{model}_random100.json', 'w')
-    pdb.set_trace()
-    # with open(f'{root}/res/{model}_random100.json', 'w') as outfile:
-    # pdb.set_trace()
+    outfile = open(f'{root}/results/{model}_random100.txt', 'a+')
+    outfile.write(
+        f'** {datetime.datetime.today().strftime("%b-%d-%Y %H:%M:%S")}\n')
+
+    for resi in res:
+        hp, values = resi[0], resi[1]
+        outfile.write(f'H {FARSEC_HP.flatten_hp(hp)}\n')
+        outfile.write(f'V {np.array2string(values)[1:-1]}\n')
+    outfile.write('## END\n')
+    outfile.close()
 
 
 def run_epsilon(model):
@@ -97,8 +96,3 @@ if __name__ == '__main__':
             run_random100(args['database'])
         if args['algorithm'] == 'epsilon':
             run_epsilon(args['database'])
-
-    f = open(f'{root}/results/randomOut.txt', 'r')
-    if f.mode == 'r':
-        contents = f.read()
-        print(contents)
