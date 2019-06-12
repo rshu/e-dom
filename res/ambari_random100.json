@@ -1,1 +1,0 @@
-{"SMOTE": {"k": {'SMOTE': {'k': 7, 'm': 86, 'r': 2}, 'DT': {'min_samples_split': 3, 'criterion': 'gini', 'splitter': 'best'}}
