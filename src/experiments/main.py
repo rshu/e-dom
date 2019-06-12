@@ -24,8 +24,10 @@
 import os
 import sys
 import argparse
+import json
 import random
 import pdb
+import numpy as np
 
 cwd = os.getcwd()
 root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
@@ -35,9 +37,23 @@ from model import ML
 from algorithms import randomN
 
 
+class NumpyEncoder(
+        json.JSONEncoder
+):  # https://stackoverflow.com/questions/26646362/numpy-array-is-not-json-serializable
+    def default(self, obj):
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return json.JSONEncoder.default(self, obj)
+
+
 def run_random100(model):
     FARSEC_HP = ML.get_HP_obj()
-    randomN.exec_(model, FARSEC_HP, ML.evaluation, 100)
+    res = randomN.exec_(model, FARSEC_HP, ML.evaluation, 10)
+    # writing results to file
+    outfile = open(f'{root}/res/{model}_random100.json', 'w')
+    pdb.set_trace()
+    # with open(f'{root}/res/{model}_random100.json', 'w') as outfile:
+    # pdb.set_trace()
 
 
 def run_epsilon(model):

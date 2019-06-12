@@ -40,7 +40,7 @@ def exec_(dataset, HP_obj, eval_func, N):
     Values = list()
     HPs = list()
     for repeat in range(N):
-        if repeat % 20 == 0:
+        if repeat % 10 == 1:
             print(f'Random hyperparemter generated for {dataset} {repeat}/{N}')
         rnd_hp, _, _ = HP_obj.get_rnd_hp_without_range()
         values = eval_func(dataset, rnd_hp)
