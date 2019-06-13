@@ -66,6 +66,20 @@ class Hyperparameter:
 
         return res_HP, pre, learner
 
+    def get_rnd_hp_from_best(self, pre, learner):
+
+        res_HP = dict()
+        res_HP[pre] = dict()
+        for hp in self.hp_names[pre]:
+            res_HP[pre][hp] = random.choice(self.ranges[f'{pre}_{hp}'])
+
+        res_HP[learner] = dict()
+        for hp in self.hp_names[learner]:
+            res_HP[learner][hp] = random.choice(self.ranges[f'{learner}_{hp}'])
+
+        return res_HP
+
+
     def flatten_hp(self, hp_dict):
         res = ""
         for alg in hp_dict.keys():

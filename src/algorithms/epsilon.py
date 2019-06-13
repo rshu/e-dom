@@ -45,7 +45,7 @@ def epsilon(dataset, HP_obj, eval_func, N1, epsilon_lst):
 
     for _ in range(N1):
         rnd_hp, pre, learner = HP_obj.get_rnd_hp_without_range()
-        print(rnd_hp)
+        # print(rnd_hp)
         values = eval_func(dataset, rnd_hp)
 
         diff_weight = 0
@@ -68,9 +68,60 @@ def epsilon(dataset, HP_obj, eval_func, N1, epsilon_lst):
         if weights[j] > weights[best_learner]:
             best_learner = j
 
-    # Step2
-    # TODO ...
+    print('best_pre', best_pre)
+    print('best_learner', best_learner)
 
+
+    # Step2, start from best pre and best learner
+    N2 = 100
+    best_weights = dict()
+
+    for i in range(N2):
+        rnd_hp = HP_obj.get_rnd_hp_from_best(best_pre, best_learner)
+        # print(rnd_hp)
+        best_weights[str(rnd_hp)] = 0
+
+    best_values_n2 = np.array([np.NINF for _ in range(len(epsilon_lst))])
+    print(best_weights)
+
+    for key in best_weights:
+        rnd_hp = eval(key)
+        print(rnd_hp)
+        values_n2 = eval_func(dataset, rnd_hp)
+        print(values_n2)
+
+        diff_weight = 0
+        diff_weight += collections.Counter(
+            (values_n2 - best_values_n2) > epsilon_lst)[True] / len(epsilon_lst)
+
+        # pdb.set_trace()
+        diff_weight -= collections.Counter(
+            (values_n2 - best_values_n2) < -1 * epsilon_lst)[True] / len(epsilon_lst)
+
+        best_weights[key] += diff_weight
+
+        best_values_n2 = np.maximum(best_values, values)
+
+    print(best_weights)
+
+    # find best and worst in N2
+    best_candidate = list(best_weights.keys())[0]
+    worst_candidate = list(best_weights.keys())[0]
+
+    for key in best_weights.keys():
+        if best_weights[key] > best_weights[best_candidate]:
+            best_candidate = key
+
+        if best_weights[key] < best_weights[worst_candidate]:
+            worst_candidate = key
+
+    print(type(eval(best_candidate)))
+    print(best_candidate)
+    print(type(eval(worst_candidate)))
+    print(worst_candidate)
+
+    # update range in N3 stage
+    
 
 if __name__ == '__main__':
     random.seed(2019)
