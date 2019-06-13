@@ -72,7 +72,7 @@ class Hyperparameter:
         res = {l: dict() for l in best_hp.keys()}
         for l in res:
             for para in self.hp_names[l]:
-                if type(self.ranges[f'{l}_{para}'][0]) is str:
+                if isinstance(self.ranges[f'{l}_{para}'][0], str):
                     res[l][para] = best_hp[l][para]
                 else:  # numpy.int64 or numpy.float64
                     mid = (best_hp[l][para] + worse_hp[l][para]) / 2
@@ -81,6 +81,7 @@ class Hyperparameter:
                                             best_hp[l][para])
                     if idx_a == idx_b:
                         res[l][para] = best_hp[l][para]
+                        continue
                     if idx_a > idx_b:
                         idx_a, idx_b = idx_b, idx_a
                     res[l][para] = self.ranges[f'{l}_{para}'][

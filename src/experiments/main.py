@@ -35,7 +35,7 @@ root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
 sys.path.append(f'{root}/src/')
 
 from model import ML
-from algorithms import randomN
+from algorithms import randomN, epsilon
 
 
 def run_random100(model):
@@ -56,8 +56,20 @@ def run_random100(model):
 
 
 def run_epsilon(model):
-    # TODO here
-    pass
+    FARSEC_HP = ML.get_HP_obj()
+    res = epsilon.exec_(model, FARSEC_HP, ML.evaluation, 10, [0.2, 0.2, 0.2])
+
+    # writing results to file
+    outfile = open(f'{root}/results/{model}_epsilon.txt', 'a+')
+    outfile.write(
+        f'** {datetime.datetime.today().strftime("%b-%d-%Y %H:%M:%S")}\n')
+
+    for resi in res:
+        hp, values = resi[0], resi[1]
+        outfile.write(f'H {FARSEC_HP.flatten_hp(hp)}\n')
+        outfile.write(f'V {np.array2string(values)[1:-1]}\n')
+    outfile.write('## END\n')
+    outfile.close()
 
 
 # initial call as "python experiments/main.py -h"

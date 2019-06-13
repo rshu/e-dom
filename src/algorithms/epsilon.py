@@ -47,7 +47,7 @@ def get_diff_weights(values, best_values, epsilon_lst):
 
 
 # Assumping all objectives are to maximize
-def epsilon(dataset, HP_obj, eval_func, N1, epsilon_lst):
+def exec_(dataset, HP_obj, eval_func, N1, epsilon_lst):
     weights = dict()
     epsilon_lst = np.array(epsilon_lst)
     for name in HP_obj.pres + HP_obj.learns:
@@ -82,7 +82,7 @@ def epsilon(dataset, HP_obj, eval_func, N1, epsilon_lst):
         np.ones(len(epsilon_lst)), size=10)  # TODO change size?
 
     for k in ks:
-        hp_lst, v_lst, w_lst = list(), list(), list()
+        hp_lst, v_lst, w_lst, values_lst = list(), list(), list(), list()
 
         ep = epsilon_lst.dot(k)
 
@@ -113,8 +113,9 @@ def epsilon(dataset, HP_obj, eval_func, N1, epsilon_lst):
 
             hp_lst.append(rnd_hp)
             v_lst.append(tmp_v)
+            values_lst.append(values)
         best_idx = np.argmax(v_lst)
-        RES.append((hp_lst[best_idx], v_lst[best_idx]))
+        RES.append((hp_lst[best_idx], values_lst[best_idx]))
 
     return RES
 
@@ -122,4 +123,4 @@ def epsilon(dataset, HP_obj, eval_func, N1, epsilon_lst):
 if __name__ == '__main__':
     random.seed(2019)
     FARSEC_HP = ML.get_HP_obj()
-    epsilon('derby', FARSEC_HP, ML.evaluation, 20, [0.2, 0.2, 0.2])
+    exec_('derby', FARSEC_HP, ML.evaluation, 20, [0.2, 0.2, 0.2])
