@@ -25,12 +25,25 @@ import os
 import sys
 import collections
 import random
+import pdb
 import numpy as np
 
 cwd = os.getcwd()
 root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
 sys.path.append(f'{root}/src')
 from model import ML
+
+
+def get_diff_weights(values, best_values, epsilon_lst):
+    """
+    return the diff_weights
+    """
+    diff_weight = 0
+    diff_weight += collections.Counter(
+        (values - best_values) > epsilon_lst)[True] / len(epsilon_lst)
+    diff_weight -= collections.Counter(
+        (values - best_values) < -1 * epsilon_lst)[True] / len(epsilon_lst)
+    return diff_weight
 
 
 # Assumping all objectives are to maximize
@@ -47,17 +60,10 @@ def epsilon(dataset, HP_obj, eval_func, N1, epsilon_lst):
         rnd_hp, pre, learner = HP_obj.get_rnd_hp_without_range()
         # print(rnd_hp)
         values = eval_func(dataset, rnd_hp)
-
-        diff_weight = 0
-        diff_weight += collections.Counter(
-            (values - best_values) > epsilon_lst)[True] / len(epsilon_lst)
-        # pdb.set_trace()
-        diff_weight -= collections.Counter(
-            (values - best_values) < -1 * epsilon_lst)[True] / len(epsilon_lst)
+        diff_weight = get_diff_weights(values, best_values, epsilon_lst)
 
         weights[pre] += diff_weight
         weights[learner] += diff_weight
-
         best_values = np.maximum(best_values, values)
 
     best_pre, best_learner = HP_obj.pres[0], HP_obj.learns[0]
@@ -71,59 +77,49 @@ def epsilon(dataset, HP_obj, eval_func, N1, epsilon_lst):
     print('best_pre', best_pre)
     print('best_learner', best_learner)
 
+    RES = list()
+    ks = np.random.dirichlet(
+        np.ones(len(epsilon_lst)), size=10)  # TODO change size?
 
-    # Step2, start from best pre and best learner
-    N2 = 100
-    best_weights = dict()
+    for k in ks:
+        hp_lst, v_lst, w_lst = list(), list(), list()
 
-    for i in range(N2):
-        rnd_hp = HP_obj.get_rnd_hp_from_best(best_pre, best_learner)
-        # print(rnd_hp)
-        best_weights[str(rnd_hp)] = 0
+        ep = epsilon_lst.dot(k)
 
-    best_values_n2 = np.array([np.NINF for _ in range(len(epsilon_lst))])
-    print(best_weights)
+        for i in range(20):
+            if i < 10:  # burn in process of stage II
+                rnd_hp, _, _ = HP_obj.get_rnd_hp_without_range(
+                    best_pre, best_learner)
+            else:
+                best_hp, worse_hp = hp_lst[np.argmax(w_lst)], hp_lst[np.argmin(
+                    w_lst)]
+                rnd_hp = HP_obj.get_ran_between_half_of(best_hp, worse_hp)
 
-    for key in best_weights:
-        rnd_hp = eval(key)
-        print(rnd_hp)
-        values_n2 = eval_func(dataset, rnd_hp)
-        print(values_n2)
+            values = eval_func(dataset, rnd_hp)
+            tmp_v = values.dot(k)
 
-        diff_weight = 0
-        diff_weight += collections.Counter(
-            (values_n2 - best_values_n2) > epsilon_lst)[True] / len(epsilon_lst)
+            if i == 0:
+                hp_lst.append(rnd_hp)
+                v_lst.append(tmp_v)
+                w_lst.append(0)
+                continue
 
-        # pdb.set_trace()
-        diff_weight -= collections.Counter(
-            (values_n2 - best_values_n2) < -1 * epsilon_lst)[True] / len(epsilon_lst)
+            if tmp_v > max(v_lst) + ep:
+                w_lst.append(max(w_lst) + 1)
+            elif tmp_v < min(v_lst) - ep:
+                w_lst.append(min(w_lst) - 1)
+            else:
+                w_lst.append(sum(w_lst) / len(w_lst))
 
-        best_weights[key] += diff_weight
+            hp_lst.append(rnd_hp)
+            v_lst.append(tmp_v)
+        best_idx = np.argmax(v_lst)
+        RES.append((hp_lst[best_idx], v_lst[best_idx]))
 
-        best_values_n2 = np.maximum(best_values, values)
+    return RES
 
-    print(best_weights)
-
-    # find best and worst in N2
-    best_candidate = list(best_weights.keys())[0]
-    worst_candidate = list(best_weights.keys())[0]
-
-    for key in best_weights.keys():
-        if best_weights[key] > best_weights[best_candidate]:
-            best_candidate = key
-
-        if best_weights[key] < best_weights[worst_candidate]:
-            worst_candidate = key
-
-    print(type(eval(best_candidate)))
-    print(best_candidate)
-    print(type(eval(worst_candidate)))
-    print(worst_candidate)
-
-    # update range in N3 stage
-    
 
 if __name__ == '__main__':
     random.seed(2019)
     FARSEC_HP = ML.get_HP_obj()
-    epsilon('derby', FARSEC_HP, ML.evaluation, 100, [0.2, 0.2, 0.2])
+    epsilon('derby', FARSEC_HP, ML.evaluation, 20, [0.2, 0.2, 0.2])

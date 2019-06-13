@@ -50,35 +50,42 @@ class Hyperparameter:
 
         self.ranges[f'{alg}_{name}'] = lst
 
-    def get_rnd_hp_without_range(self):
+    def get_rnd_hp_without_range(self, pre=None, learner=None):
         # pdb.set_trace()
         res_HP = dict()
 
-        pre = random.choice(self.pres)
+        if pre is None:
+            pre = random.choice(self.pres)
         res_HP[pre] = dict()
         for hp in self.hp_names[pre]:
             res_HP[pre][hp] = random.choice(self.ranges[f'{pre}_{hp}'])
 
-        learner = random.choice(self.learns)
+        if learner is None:
+            learner = random.choice(self.learns)
         res_HP[learner] = dict()
         for hp in self.hp_names[learner]:
             res_HP[learner][hp] = random.choice(self.ranges[f'{learner}_{hp}'])
 
         return res_HP, pre, learner
 
-    def get_rnd_hp_from_best(self, pre, learner):
-
-        res_HP = dict()
-        res_HP[pre] = dict()
-        for hp in self.hp_names[pre]:
-            res_HP[pre][hp] = random.choice(self.ranges[f'{pre}_{hp}'])
-
-        res_HP[learner] = dict()
-        for hp in self.hp_names[learner]:
-            res_HP[learner][hp] = random.choice(self.ranges[f'{learner}_{hp}'])
-
-        return res_HP
-
+    def get_ran_between_half_of(self, best_hp, worse_hp):
+        res = {l: dict() for l in best_hp.keys()}
+        for l in res:
+            for para in self.hp_names[l]:
+                if type(self.ranges[f'{l}_{para}'][0]) is str:
+                    res[l][para] = best_hp[l][para]
+                else:  # numpy.int64 or numpy.float64
+                    mid = (best_hp[l][para] + worse_hp[l][para]) / 2
+                    idx_a = np.searchsorted(self.ranges[f'{l}_{para}'], mid)
+                    idx_b = np.searchsorted(self.ranges[f'{l}_{para}'],
+                                            best_hp[l][para])
+                    if idx_a == idx_b:
+                        res[l][para] = best_hp[l][para]
+                    if idx_a > idx_b:
+                        idx_a, idx_b = idx_b, idx_a
+                    res[l][para] = self.ranges[f'{l}_{para}'][
+                        np.random.randint(idx_a, idx_b)]
+        return res
 
     def flatten_hp(self, hp_dict):
         res = ""
