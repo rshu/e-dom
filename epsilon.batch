@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+#SBATCH --job-name=runEpsilon
+#SBATCH --ntasks=1
+#SBATCH --time=02:30:00
+#SBATCH --error=err/%j.err
+#SBATCH --output=out/%j.out
+
+cd /home/rshu/e-dom/src/experiments
+/home/rshu/anaconda3/bin/python /home/rshu/e-dom/src/experiments/main.py -db $mid -alg epsilon
