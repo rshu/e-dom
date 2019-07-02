@@ -1,0 +1,22 @@
+** Jul-01-2019 23:07:28
+H SMOTE.k=18 | SMOTE.m=375 | SMOTE.r=5 | KNN.n_neighbors=6 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=4 | 
+V 0.713 0.631 0.67 
+H SMOTE.k=7 | SMOTE.m=282 | SMOTE.r=3 | KNN.n_neighbors=10 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=2 | 
+V 0.826 0.537 0.651
+H SMOTE.k=14 | SMOTE.m=283 | SMOTE.r=3 | KNN.n_neighbors=21 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=2 | 
+V 0.835 0.414 0.554
+H SMOTE.k=17 | SMOTE.m=391 | SMOTE.r=1 | KNN.n_neighbors=19 | KNN.weights=uniform | KNN.metric=minkowski | KNN.p=2 | 
+V 0.887 0.449 0.596
+H SMOTE.k=9 | SMOTE.m=287 | SMOTE.r=3 | KNN.n_neighbors=7 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=4 | 
+V 0.696 0.54  0.608
+H SMOTE.k=2 | SMOTE.m=365 | SMOTE.r=1 | KNN.n_neighbors=23 | KNN.weights=uniform | KNN.metric=minkowski | KNN.p=2 | 
+V 0.843 0.557 0.671
+H SMOTE.k=9 | SMOTE.m=398 | SMOTE.r=5 | KNN.n_neighbors=22 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=3 | 
+V 0.8   0.51  0.623
+H SMOTE.k=18 | SMOTE.m=291 | SMOTE.r=5 | KNN.n_neighbors=8 | KNN.weights=distance | KNN.metric=chebyshev | KNN.p=4 | 
+V 0.53  0.654 0.586
+H SMOTE.k=7 | SMOTE.m=154 | SMOTE.r=1 | KNN.n_neighbors=15 | KNN.weights=distance | KNN.metric=chebyshev | KNN.p=4 | 
+V 0.522 0.641 0.575
+H SMOTE.k=4 | SMOTE.m=299 | SMOTE.r=3 | KNN.n_neighbors=24 | KNN.weights=uniform | KNN.metric=minkowski | KNN.p=1 | 
+V 0.835 0.535 0.652
+## END

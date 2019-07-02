@@ -20,3 +20,91 @@ V 0.029 0.992 0.057
 H SMOTE.k=11 | SMOTE.m=199 | SMOTE.r=4 | NB.var_smoothing=1e-06 | 
 V 0.021 0.99  0.041
 ## END
+** Jun-19-2019 16:30:16
+H SMOTE.k=18 | SMOTE.m=78 | SMOTE.r=3 | RF.n_estimators=68 | RF.criterion=gini | RF.min_samples_leaf=1 | RF.min_samples_split=5 | RF.max_leaf_nodes=8 | RF.max_features=0.42000000000000004 | RF.max_depth=6 | 
+V 0.028 0.994 0.055
+H SMOTE.k=2 | SMOTE.m=223 | SMOTE.r=5 | RF.n_estimators=136 | RF.criterion=gini | RF.min_samples_leaf=2 | RF.min_samples_split=10 | RF.max_leaf_nodes=28 | RF.max_features=0.99 | RF.max_depth=2 | 
+V 0.022 0.993 0.043
+H SMOTE.k=2 | SMOTE.m=329 | SMOTE.r=3 | RF.n_estimators=24 | RF.criterion=entropy | RF.min_samples_leaf=11 | RF.min_samples_split=6 | RF.max_leaf_nodes=34 | RF.max_features=0.86 | RF.max_depth=4 | 
+V 0.029 0.992 0.056
+H SMOTE.k=15 | SMOTE.m=144 | SMOTE.r=3 | RF.n_estimators=119 | RF.criterion=gini | RF.min_samples_leaf=4 | RF.min_samples_split=4 | RF.max_leaf_nodes=12 | RF.max_features=0.9400000000000001 | RF.max_depth=3 | 
+V 0.026 0.996 0.05 
+H SMOTE.k=19 | SMOTE.m=178 | SMOTE.r=4 | RF.n_estimators=111 | RF.criterion=entropy | RF.min_samples_leaf=3 | RF.min_samples_split=14 | RF.max_leaf_nodes=36 | RF.max_features=0.67 | RF.max_depth=1 | 
+V 0.023 0.993 0.045
+H SMOTE.k=11 | SMOTE.m=109 | SMOTE.r=2 | RF.n_estimators=76 | RF.criterion=entropy | RF.min_samples_leaf=10 | RF.min_samples_split=4 | RF.max_leaf_nodes=5 | RF.max_features=0.92 | RF.max_depth=4 | 
+V 0.026 0.991 0.05 
+H SMOTE.k=14 | SMOTE.m=357 | SMOTE.r=4 | RF.n_estimators=137 | RF.criterion=gini | RF.min_samples_leaf=8 | RF.min_samples_split=14 | RF.max_leaf_nodes=17 | RF.max_features=0.64 | RF.max_depth=1 | 
+V 0.036 0.994 0.069
+H SMOTE.k=15 | SMOTE.m=242 | SMOTE.r=3 | RF.n_estimators=104 | RF.criterion=gini | RF.min_samples_leaf=1 | RF.min_samples_split=9 | RF.max_leaf_nodes=27 | RF.max_features=0.7000000000000001 | RF.max_depth=2 | 
+V 0.018 0.991 0.035
+H SMOTE.k=18 | SMOTE.m=192 | SMOTE.r=3 | RF.n_estimators=130 | RF.criterion=entropy | RF.min_samples_leaf=3 | RF.min_samples_split=16 | RF.max_leaf_nodes=13 | RF.max_features=0.93 | RF.max_depth=3 | 
+V 0.02  0.995 0.04 
+H SMOTE.k=14 | SMOTE.m=118 | SMOTE.r=4 | RF.n_estimators=104 | RF.criterion=entropy | RF.min_samples_leaf=11 | RF.min_samples_split=8 | RF.max_leaf_nodes=8 | RF.max_features=0.8300000000000001 | RF.max_depth=9 | 
+V 0.105 0.994 0.19 
+## END
+** Jun-27-2019 23:03:22
+H SMOTE.k=19 | SMOTE.m=380 | SMOTE.r=1 | LR.penalty=l1 | LR.tol=0.0870619940923073 | LR.C=445 | 
+V 0.033 0.99  0.064
+H SMOTE.k=9 | SMOTE.m=363 | SMOTE.r=4 | LR.penalty=l2 | LR.tol=0.04476022100098809 | LR.C=450 | 
+V 0.032 0.99  0.062
+H SMOTE.k=12 | SMOTE.m=235 | SMOTE.r=1 | LR.penalty=l1 | LR.tol=0.036663703043535535 | LR.C=25 | 
+V 0.02  0.987 0.038
+H SMOTE.k=19 | SMOTE.m=288 | SMOTE.r=1 | LR.penalty=l2 | LR.tol=0.05272265588759045 | LR.C=457 | 
+V 0.02  0.987 0.038
+H SMOTE.k=18 | SMOTE.m=376 | SMOTE.r=3 | LR.penalty=l2 | LR.tol=0.09958770560982956 | LR.C=264 | 
+V 0.041 0.993 0.078
+H SMOTE.k=14 | SMOTE.m=305 | SMOTE.r=5 | LR.penalty=l2 | LR.tol=0.0870619940923073 | LR.C=84 | 
+V 0.029 0.992 0.057
+H SMOTE.k=17 | SMOTE.m=385 | SMOTE.r=5 | LR.penalty=l2 | LR.tol=0.025200054864344235 | LR.C=98 | 
+V 0.038 0.992 0.074
+H SMOTE.k=9 | SMOTE.m=395 | SMOTE.r=2 | LR.penalty=l2 | LR.tol=0.042176978787276345 | LR.C=208 | 
+V 0.026 0.99  0.05 
+H SMOTE.k=2 | SMOTE.m=313 | SMOTE.r=5 | LR.penalty=l2 | LR.tol=0.08005444738150452 | LR.C=313 | 
+V 0.054 0.995 0.102
+H SMOTE.k=4 | SMOTE.m=397 | SMOTE.r=2 | LR.penalty=l2 | LR.tol=0.009786512145783645 | LR.C=180 | 
+V 0.026 0.99  0.051
+## END
+** Jul-01-2019 22:55:20
+H SMOTE.k=19 | SMOTE.m=390 | SMOTE.r=3 | LR.penalty=l1 | LR.tol=0.029672108524228615 | LR.C=239 | 
+V 0.714 0.819 0.763
+H SMOTE.k=16 | SMOTE.m=68 | SMOTE.r=1 | LR.penalty=l2 | LR.tol=0.003054848786108877 | LR.C=276 | 
+V 1.    0.639 0.78 
+H SMOTE.k=14 | SMOTE.m=355 | SMOTE.r=3 | LR.penalty=l2 | LR.tol=0.08362508368173184 | LR.C=361 | 
+V 0.714 0.815 0.762
+H SMOTE.k=10 | SMOTE.m=170 | SMOTE.r=4 | LR.penalty=l2 | LR.tol=0.04955864192615657 | LR.C=187 | 
+V 0.714 0.805 0.757
+H SMOTE.k=16 | SMOTE.m=268 | SMOTE.r=2 | LR.penalty=l2 | LR.tol=0.01970737125086526 | LR.C=197 | 
+V 0.714 0.785 0.748
+H SMOTE.k=3 | SMOTE.m=245 | SMOTE.r=5 | LR.penalty=l2 | LR.tol=0.06582576202387967 | LR.C=192 | 
+V 0.714 0.801 0.755
+H SMOTE.k=6 | SMOTE.m=344 | SMOTE.r=5 | LR.penalty=l2 | LR.tol=0.06799927518432522 | LR.C=474 | 
+V 0.714 0.809 0.759
+H SMOTE.k=18 | SMOTE.m=373 | SMOTE.r=3 | LR.penalty=l1 | LR.tol=0.04955864192615657 | LR.C=229 | 
+V 0.714 0.817 0.762
+H SMOTE.k=5 | SMOTE.m=294 | SMOTE.r=4 | LR.penalty=l2 | LR.tol=0.0165906876335971 | LR.C=182 | 
+V 0.857 0.781 0.817
+H SMOTE.k=2 | SMOTE.m=253 | SMOTE.r=4 | LR.penalty=l2 | LR.tol=0.06799927518432522 | LR.C=114 | 
+V 0.714 0.807 0.758
+## END
+** Jul-01-2019 22:59:06
+H SMOTE.k=7 | SMOTE.m=326 | SMOTE.r=2 | LR.penalty=l2 | LR.tol=0.056063478675761017 | LR.C=467 | 
+V 0.714 0.815 0.762
+H SMOTE.k=6 | SMOTE.m=360 | SMOTE.r=4 | LR.penalty=l2 | LR.tol=0.045636995225553506 | LR.C=438 | 
+V 0.714 0.828 0.767
+H SMOTE.k=17 | SMOTE.m=276 | SMOTE.r=1 | LR.penalty=l1 | LR.tol=0.06977875181556052 | LR.C=270 | 
+V 0.714 0.805 0.757
+H SMOTE.k=3 | SMOTE.m=252 | SMOTE.r=4 | LR.penalty=l2 | LR.tol=0.04437232919666459 | LR.C=384 | 
+V 0.857 0.785 0.819
+H SMOTE.k=17 | SMOTE.m=399 | SMOTE.r=3 | LR.penalty=l2 | LR.tol=0.011425007601339233 | LR.C=444 | 
+V 0.714 0.826 0.766
+H SMOTE.k=6 | SMOTE.m=137 | SMOTE.r=2 | LR.penalty=l2 | LR.tol=0.041458701779943555 | LR.C=324 | 
+V 0.714 0.773 0.742
+H SMOTE.k=5 | SMOTE.m=241 | SMOTE.r=5 | LR.penalty=l2 | LR.tol=0.08998967886191714 | LR.C=258 | 
+V 0.714 0.824 0.765
+H SMOTE.k=14 | SMOTE.m=388 | SMOTE.r=3 | LR.penalty=l2 | LR.tol=0.07857526708059637 | LR.C=381 | 
+V 0.714 0.832 0.769
+H SMOTE.k=15 | SMOTE.m=387 | SMOTE.r=5 | LR.penalty=l1 | LR.tol=0.04437232919666459 | LR.C=49 | 
+V 0.714 0.84  0.772
+H SMOTE.k=2 | SMOTE.m=293 | SMOTE.r=4 | LR.penalty=l2 | LR.tol=0.09570676774692632 | LR.C=469 | 
+V 0.714 0.824 0.765
+## END
