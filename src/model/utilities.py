@@ -57,7 +57,7 @@ def get_score(criteria, prediction, test_labels, data):
     tn, fp, fn, tp = confusion_matrix(
         test_labels, prediction, labels=[0, 1]).ravel()
     pre, rec, spec, fpr, npv, acc, f1, gm = get_performance(
-        test_labels, prediction)
+        prediction, test_labels)
     all_metrics = [tp, fp, tn, fn, pre, rec, spec, fpr, npv, acc, f1]
     if criteria == "Accuracy":
         score = -all_metrics[-ACC]
