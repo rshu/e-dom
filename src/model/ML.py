@@ -218,7 +218,7 @@ def evaluation(dataset, HP):
 def get_HP_obj():
     FARSEC_HP = Hyperparameter(
         preprocessing_names=['SMOTE'],
-        learner_names=['DT', 'RF', 'SVM', 'KNN', 'NB', 'LR'])
+        learner_names=['DT', 'RF', 'SVM', 'KNN', 'NB', 'LR', 'MLP'])
 
     FARSEC_HP.register_hp('SMOTE', 'k', np.arange(2, 20))
     FARSEC_HP.register_hp('SMOTE', 'm', np.arange(50, 400))
