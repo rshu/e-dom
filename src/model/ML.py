@@ -34,6 +34,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import NearestNeighbors
+from sklearn.neural_network import MLPClassifier
 cwd = os.getcwd()
 root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
 sys.path.append(f'{root}/src')
@@ -173,6 +174,14 @@ def LR(train_df, test_df, HP):
     return _apply_model(train_df, test_df, model)
 
 
+def MLP(train_df, test_df, HP):
+    a, b, c, d, e, f = HP['MLP']['alpha'], HP['MLP']['learning_rate_init'], HP['MLP']['power_t'], HP['MLP']['max_iter'], \
+                       HP['MLP']['momentum'], HP['MLP']['n_iter_no_change']
+    model = MLPClassifier(alpha=a, learning_rate_init=b, power_t=c, max_iter=d,
+                         momentum=e, n_iter_no_change=f, solver="sgd")
+    return _apply_model(train_df, test_df, model)
+
+
 def evaluation(dataset, HP):
     # read csc file (MacBook)
     train_df = pd.read_csv(f'{root}/data/FARSEC/{dataset}-train.csv').drop(
@@ -193,6 +202,8 @@ def evaluation(dataset, HP):
         prediction = LR(train_df, test_df, HP)
     elif 'NB' in HP.keys():
         prediction = NB(train_df, test_df, HP)
+    elif 'MLP' in HP.keys():
+        prediction = MLP(train_df, test_df, HP)
     else:
         assert False, "check here"
 
@@ -244,5 +255,12 @@ def get_HP_obj():
     FARSEC_HP.register_hp('LR', 'penalty', ['l1', 'l2'])
     FARSEC_HP.register_hp('LR', 'tol', np.random.uniform(0, 0.1, 20))
     FARSEC_HP.register_hp('LR', 'C', np.arange(1, 500))
+
+    FARSEC_HP.register_hp('MLP', 'alpha', [10**(-i) for i in range(3, 4)])
+    FARSEC_HP.register_hp('MLP', 'learning_rate_init', [10**(-i) for i in range(2, 3)])
+    FARSEC_HP.register_hp('MLP', 'power_t', np.arange(0.1, 1, 0.1))
+    FARSEC_HP.register_hp('MLP', 'max_iter', np.arange(50, 300))
+    FARSEC_HP.register_hp('MLP', 'momentum', np.arange(0.1, 1, 0.1))
+    FARSEC_HP.register_hp('MLP', 'n_iter_no_change', np.arange(1, 100))
 
     return FARSEC_HP
