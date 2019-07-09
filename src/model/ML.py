@@ -188,7 +188,11 @@ def evaluation(dataset, HP):
         ['id'], axis=1)
     test_df = pd.read_csv(f'{root}/data/FARSEC/{dataset}-test.csv').drop(
         ['id'], axis=1)
-    train_df = SMOTE(train_df, HP)
+
+    if 'SMOTE' in HP.keys():
+        train_df = SMOTE(train_df, HP)
+    else:
+        pass
 
     if 'DT' in HP.keys():
         prediction = DT(train_df, test_df, HP)
@@ -205,7 +209,7 @@ def evaluation(dataset, HP):
     elif 'MLP' in HP.keys():
         prediction = MLP(train_df, test_df, HP)
     else:
-        assert False, "check here"
+        pass
 
     test_labels = test_df.label.values.tolist()
     rec = get_score('recall', prediction, test_labels, "NA")

@@ -5,10 +5,14 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.naive_bayes import ComplementNB
 from sklearn.naive_bayes import BernoulliNB
+from sklearn import preprocessing
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, classification_report, \
     confusion_matrix
 from sklearn.neighbors import NearestNeighbors
 from random import randint, random
+
+import warnings
+warnings.filterwarnings("ignore")
 
 cwd = os.getcwd()
 root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
@@ -101,17 +105,76 @@ test_y = test_df.iloc[:, -1:]
 
 # print(train_x)
 
-lab = [y for x in train_y.values.tolist() for y in x]
+# lab = [y for x in train_y.values.tolist() for y in x]
 
-print("Process train_x and train_y with SMOTE balancing")
-train_balanced_x, train_balanced_y = balance(train_x.values, lab, m=256, r=3, neighbors=15)
+# print("Process train_x and train_y with SMOTE balancing")
+# train_balanced_x, train_balanced_y = balance(train_x.values, lab, m=256, r=3, neighbors=15)
+
 
 print("")
-print("---------- Default Naive Bayes----------")
+print("---------- Default Naive Bayes with StandardScaler----------")
 
-nb = naive_bayes(train_x, train_y)
-# print("Trained model:", nb)
+standard_scaler = preprocessing.StandardScaler().fit(train_x)
+print(standard_scaler)
 
-nb_predictions = nb.predict(test_x)
-# print("Train Accuracy :: ", accuracy_score(train_y, nb.predict(train_x)))
-result_statistics(nb_predictions)
+train_x_standard_scaled = standard_scaler.transform(train_x)
+test_x_standard_scaled = standard_scaler.transform(test_x)
+
+nb_standardScaler = naive_bayes(train_x_standard_scaled, train_y)
+nb_standardScaler_predictions = nb_standardScaler.predict(test_x_standard_scaled)
+result_statistics(nb_standardScaler_predictions)
+
+print("")
+print("---------- Default Naive Bayes with MinMaxScaler----------")
+
+min_max_scaler = preprocessing.MinMaxScaler()
+print(min_max_scaler)
+
+train_x_min_max_scaler = min_max_scaler.fit_transform(train_x)
+test_x_min_max_scaler = min_max_scaler.transform(test_x)
+
+nb_min_max_scaler = naive_bayes(train_x_min_max_scaler, train_y)
+nb_min_max_scaler_predictions = nb_min_max_scaler.predict(test_x_min_max_scaler)
+result_statistics(nb_min_max_scaler_predictions)
+
+
+print("")
+print("---------- Default Naive Bayes with MaxAbsScaler----------")
+
+max_abs_scaler = preprocessing.MaxAbsScaler()
+print(max_abs_scaler)
+
+train_x_max_abs_scaler = max_abs_scaler.fit_transform(train_x)
+test_x_max_abs_scaler = max_abs_scaler.transform(test_x)
+
+nb_max_abs_scaler = naive_bayes(train_x_max_abs_scaler, train_y)
+nb_max_abs_scaler_predictions = nb_max_abs_scaler.predict(test_x_max_abs_scaler)
+result_statistics(nb_max_abs_scaler_predictions)
+
+
+print("")
+print("---------- Default Naive Bayes with RobustScaler----------")
+
+robust_scaler = preprocessing.RobustScaler().fit(train_x)
+print(robust_scaler)
+
+train_x_robust_scaler = robust_scaler.transform(train_x)
+test_x_robust_scaler = robust_scaler.transform(test_x)
+
+nb_robust_scaler = naive_bayes(train_x_robust_scaler, train_y)
+nb_robust_scaler_predictions = nb_robust_scaler.predict(test_x_robust_scaler)
+result_statistics(nb_robust_scaler_predictions)
+
+
+print("")
+print("---------- Default Naive Bayes with Quantile Transformation----------")
+
+quantile_transformer = preprocessing.QuantileTransformer(random_state=0)
+print(quantile_transformer)
+
+X_train_trans = quantile_transformer.fit_transform(train_x)
+X_test_trans = quantile_transformer.transform(test_x)
+
+nb_quantile_transform = naive_bayes(X_train_trans, train_y)
+nb_quantile_transform_predictions = nb_quantile_transform.predict(X_test_trans)
+result_statistics(nb_quantile_transform_predictions)
