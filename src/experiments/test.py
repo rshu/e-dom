@@ -12,15 +12,17 @@ from sklearn.neighbors import NearestNeighbors
 from random import randint, random
 
 import warnings
+
 warnings.filterwarnings("ignore")
 
 cwd = os.getcwd()
 root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
 
 train_df = pd.read_csv(f'{root}/data/FARSEC/ambari-train.csv').drop(
-        ['id'], axis=1)
+    ['id'], axis=1)
 test_df = pd.read_csv(f'{root}/data/FARSEC/ambari-test.csv').drop(
-        ['id'], axis=1)
+    ['id'], axis=1)
+
 
 # print(train_df)
 # print(test_df)
@@ -65,6 +67,7 @@ def balance(data_train, train_label, m=0, r=0, neighbors=0):
     label_train = [1] * len(pos_train) + [0] * len(neg_train)
     return data_train1, label_train
 
+
 def naive_bayes(features, target):
     nb = GaussianNB()
     # nb = MultinomialNB()
@@ -72,6 +75,7 @@ def naive_bayes(features, target):
     # nb = BernoulliNB()
     nb.fit(features, target)
     return nb
+
 
 def result_statistics(predictions):
     # print("Test Accuracy  :: ", accuracy_score(test_y, predictions))
@@ -95,7 +99,6 @@ def result_statistics(predictions):
     print("g-measure: ", G_MEASURE)
 
 
-
 train_x = train_df.iloc[:, :-1]
 train_y = train_df.iloc[:, -1:]
 # train_y = train_dataset['label']
@@ -114,10 +117,10 @@ test_y = test_df.iloc[:, -1:]
 print("")
 print("---------- Default Naive Bayes with StandardScaler----------")
 
-standard_scaler = preprocessing.StandardScaler().fit(train_x)
+standard_scaler = preprocessing.StandardScaler()
 print(standard_scaler)
 
-train_x_standard_scaled = standard_scaler.transform(train_x)
+train_x_standard_scaled = standard_scaler.fit_transform(train_x)
 test_x_standard_scaled = standard_scaler.transform(test_x)
 
 nb_standardScaler = naive_bayes(train_x_standard_scaled, train_y)
@@ -137,7 +140,6 @@ nb_min_max_scaler = naive_bayes(train_x_min_max_scaler, train_y)
 nb_min_max_scaler_predictions = nb_min_max_scaler.predict(test_x_min_max_scaler)
 result_statistics(nb_min_max_scaler_predictions)
 
-
 print("")
 print("---------- Default Naive Bayes with MaxAbsScaler----------")
 
@@ -151,30 +153,94 @@ nb_max_abs_scaler = naive_bayes(train_x_max_abs_scaler, train_y)
 nb_max_abs_scaler_predictions = nb_max_abs_scaler.predict(test_x_max_abs_scaler)
 result_statistics(nb_max_abs_scaler_predictions)
 
-
 print("")
 print("---------- Default Naive Bayes with RobustScaler----------")
 
-robust_scaler = preprocessing.RobustScaler().fit(train_x)
+robust_scaler = preprocessing.RobustScaler()
 print(robust_scaler)
 
-train_x_robust_scaler = robust_scaler.transform(train_x)
+train_x_robust_scaler = robust_scaler.fit_transform(train_x)
 test_x_robust_scaler = robust_scaler.transform(test_x)
 
 nb_robust_scaler = naive_bayes(train_x_robust_scaler, train_y)
 nb_robust_scaler_predictions = nb_robust_scaler.predict(test_x_robust_scaler)
 result_statistics(nb_robust_scaler_predictions)
 
+print("")
+print("---------- Default Naive Bayes with Kernel Centerer----------")
+
+kernel_center = preprocessing.KernelCenterer()
+print(kernel_center)
+
+train_x_kernel_center = kernel_center.fit_transform(train_x)
+test_x_kernel_center = kernel_center.transform(test_x)
+
+nb_kernel_center = naive_bayes(train_x_kernel_center, train_y)
+nb_kernel_center_predictions = nb_kernel_center.predict(test_x_kernel_center)
+result_statistics(nb_kernel_center_predictions)
 
 print("")
 print("---------- Default Naive Bayes with Quantile Transformation----------")
 
-quantile_transformer = preprocessing.QuantileTransformer(random_state=0)
+quantile_transformer = preprocessing.QuantileTransformer(copy=True, n_quantiles=1000, output_distribution='normal', random_state=0)
 print(quantile_transformer)
 
-X_train_trans = quantile_transformer.fit_transform(train_x)
-X_test_trans = quantile_transformer.transform(test_x)
+train_x_quantile_transformer = quantile_transformer.fit_transform(train_x)
+test_x_quantile_transformer = quantile_transformer.transform(test_x)
 
-nb_quantile_transform = naive_bayes(X_train_trans, train_y)
-nb_quantile_transform_predictions = nb_quantile_transform.predict(X_test_trans)
+nb_quantile_transform = naive_bayes(train_x_quantile_transformer, train_y)
+nb_quantile_transform_predictions = nb_quantile_transform.predict(test_x_quantile_transformer)
 result_statistics(nb_quantile_transform_predictions)
+
+print("")
+print("---------- Default Naive Bayes with Power Transformation----------")
+
+power_tranformer = preprocessing.PowerTransformer(copy=True, method='yeo-johnson', standardize=True)
+print(power_tranformer)
+
+train_x_power_transformer = power_tranformer.fit_transform(train_x)  # fit to data, then transform it
+test_x_power_transformer = power_tranformer.transform(test_x)
+
+nb_power_transform = naive_bayes(train_x_power_transformer, train_y)
+nb_power_transform_predictions = nb_power_transform.predict(test_x_power_transformer)
+result_statistics(nb_power_transform_predictions)
+
+print("")
+print("---------- Default Naive Bayes with Normalization----------")
+
+normalizer = preprocessing.Normalizer(copy=True, norm='l2')
+print(normalizer)
+
+train_x_normalizer = normalizer.fit_transform(train_x)
+test_x_normalizer = normalizer.transform(test_x)
+
+nb_normalizer = naive_bayes(train_x_normalizer, train_y)
+nb_normalizer_predictions = nb_normalizer.predict(test_x_normalizer)
+result_statistics(nb_normalizer_predictions)
+
+print("")
+print("---------- Default Naive Bayes with Feature Binarization----------")
+
+binarizer = preprocessing.Binarizer(copy=True, threshold=1.0) # Feature values below or equal to this are replaced by 0, above it by 1.
+print(binarizer)
+
+train_x_binarizer = binarizer.fit_transform(train_x)
+test_x_binarizer = binarizer.transform(test_x)
+
+nb_binarizer = naive_bayes(train_x_binarizer, train_y)
+nb_binarizer_predictions = nb_binarizer.predict(test_x_binarizer)
+result_statistics(nb_binarizer_predictions)
+
+
+print("")
+print("---------- Default Naive Bayes with Polynomial Features----------")
+
+polynomial = preprocessing.PolynomialFeatures(2, interaction_only=False) # The degree of the polynomial features.
+print(polynomial)
+
+train_x_polynomial = polynomial.fit_transform(train_x)
+test_x_polynomial = polynomial.transform(test_x)
+
+nb_polynomial = naive_bayes(train_x_polynomial, train_y)
+nb_polynomial_predictions = nb_polynomial.predict(test_x_polynomial)
+result_statistics(nb_polynomial_predictions)
