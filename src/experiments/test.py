@@ -117,7 +117,7 @@ test_y = test_df.iloc[:, -1:]
 print("")
 print("---------- Default Naive Bayes with StandardScaler----------")
 
-standard_scaler = preprocessing.StandardScaler()
+standard_scaler = preprocessing.StandardScaler(copy=True, with_mean=True, with_std=True)
 print(standard_scaler)
 
 train_x_standard_scaled = standard_scaler.fit_transform(train_x)
@@ -130,7 +130,11 @@ result_statistics(nb_standardScaler_predictions)
 print("")
 print("---------- Default Naive Bayes with MinMaxScaler----------")
 
-min_max_scaler = preprocessing.MinMaxScaler()
+# Here we scale feature 3 (f3) to a scale between -3 and 3.
+# As expected our maximum value (25) is transformed to 3 and
+# our minimum value (-1) is transformed to -3.
+# All the other values are linearly scaled between these values.
+min_max_scaler = preprocessing.MinMaxScaler(copy=True, feature_range=(-3, 3))
 print(min_max_scaler)
 
 train_x_min_max_scaler = min_max_scaler.fit_transform(train_x)
@@ -156,7 +160,10 @@ result_statistics(nb_max_abs_scaler_predictions)
 print("")
 print("---------- Default Naive Bayes with RobustScaler----------")
 
-robust_scaler = preprocessing.RobustScaler()
+# By default, the scaler uses the Inter Quartile Range (IQR),
+# which is the range between the 1st quartile and the 3rd quartile.
+robust_scaler = preprocessing.RobustScaler(copy=True, quantile_range=(25.0, 75.0), with_centering=True,
+                                           with_scaling=True)
 print(robust_scaler)
 
 train_x_robust_scaler = robust_scaler.fit_transform(train_x)
@@ -182,7 +189,8 @@ result_statistics(nb_kernel_center_predictions)
 print("")
 print("---------- Default Naive Bayes with Quantile Transformation----------")
 
-quantile_transformer = preprocessing.QuantileTransformer(copy=True, n_quantiles=1000, output_distribution='normal', random_state=0)
+quantile_transformer = preprocessing.QuantileTransformer(copy=True, n_quantiles=1000, output_distribution='normal',
+                                                         random_state=0)
 print(quantile_transformer)
 
 train_x_quantile_transformer = quantile_transformer.fit_transform(train_x)
@@ -208,6 +216,11 @@ result_statistics(nb_power_transform_predictions)
 print("")
 print("---------- Default Naive Bayes with Normalization----------")
 
+# The max norm uses the absolute maximum and does for samples what the MaxAbsScaler does for features.
+# The l1 norm uses the sum of all the values as and thus gives equal penalty to all parameters, enforcing sparsity.
+# The l2 norm uses the square root of the sum of all the squared values. This creates smoothness and rotational invariance.
+# Some models, like PCA, assume rotational invariance, and so l2 will perform better.
+
 normalizer = preprocessing.Normalizer(copy=True, norm='l2')
 print(normalizer)
 
@@ -221,7 +234,8 @@ result_statistics(nb_normalizer_predictions)
 print("")
 print("---------- Default Naive Bayes with Feature Binarization----------")
 
-binarizer = preprocessing.Binarizer(copy=True, threshold=1.0) # Feature values below or equal to this are replaced by 0, above it by 1.
+binarizer = preprocessing.Binarizer(copy=True,
+                                    threshold=1.0)  # Feature values below or equal to this are replaced by 0, above it by 1.
 print(binarizer)
 
 train_x_binarizer = binarizer.fit_transform(train_x)
@@ -231,11 +245,12 @@ nb_binarizer = naive_bayes(train_x_binarizer, train_y)
 nb_binarizer_predictions = nb_binarizer.predict(test_x_binarizer)
 result_statistics(nb_binarizer_predictions)
 
-
 print("")
 print("---------- Default Naive Bayes with Polynomial Features----------")
 
-polynomial = preprocessing.PolynomialFeatures(2, interaction_only=False) # The degree of the polynomial features.
+# when degree is set to two and X=x1, x2, the features created will be 1, x1, x2, x1², x1x2 and x2²
+# The interaction_only parameter let the function know we only want the interaction features, i.e. 1, x1, x2 and x1x2.
+polynomial = preprocessing.PolynomialFeatures(2, interaction_only=False)  # The degree of the polynomial features.
 print(polynomial)
 
 train_x_polynomial = polynomial.fit_transform(train_x)
