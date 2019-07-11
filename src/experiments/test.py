@@ -259,3 +259,33 @@ test_x_polynomial = polynomial.transform(test_x)
 nb_polynomial = naive_bayes(train_x_polynomial, train_y)
 nb_polynomial_predictions = nb_polynomial.predict(test_x_polynomial)
 result_statistics(nb_polynomial_predictions)
+
+
+
+print("")
+print("")
+print("test...")
+
+print("training data set")
+print(train_df)
+
+print("train_x")
+print(type(train_x))
+
+print("train_y")
+print(train_y)
+
+print("processed training data set")
+process_training = train_x.copy()
+sLength = len(process_training.index)
+process_training['label'] = train_y.values
+
+process_training_cp = process_training.assign(label=train_y.values)
+print(process_training_cp)
+
+# print(process_training)
+
+print(train_df.equals(process_training))
+print(train_df.equals(process_training_cp))
+
+# KNN(train_df, test_df, HP)
