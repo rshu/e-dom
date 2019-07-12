@@ -20,3 +20,47 @@ V 0.524 0.928 0.67
 H SMOTE.k=6 | SMOTE.m=60 | SMOTE.r=1 | RF.n_estimators=27 | RF.criterion=gini | RF.min_samples_leaf=13 | RF.min_samples_split=16 | RF.max_leaf_nodes=38 | RF.max_features=0.11 | RF.max_depth=8 | 
 V 0.595 0.731 0.656
 ## END
+** Jul-12-2019 11:18:58
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=True | RobustScaler.q_min=30 | RobustScaler.q_max=68 | RobustScaler.copy=False | LR.penalty=l1 | LR.tol=0.036998659727730636 | LR.C=285 | 
+V 0.429 0.974 0.595
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=False | RobustScaler.q_min=27 | RobustScaler.q_max=81 | RobustScaler.copy=True | LR.penalty=l1 | LR.tol=0.045824881132521124 | LR.C=324 | 
+V 0.452 0.972 0.617
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=True | RobustScaler.q_min=27 | RobustScaler.q_max=86 | RobustScaler.copy=False | LR.penalty=l1 | LR.tol=0.0890829554193259 | LR.C=186 | 
+V 0.452 0.965 0.616
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=False | RobustScaler.q_min=22 | RobustScaler.q_max=83 | RobustScaler.copy=True | LR.penalty=l1 | LR.tol=0.0435913866739998 | LR.C=176 | 
+V 0.405 0.974 0.572
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=False | RobustScaler.q_min=29 | RobustScaler.q_max=78 | RobustScaler.copy=True | LR.penalty=l2 | LR.tol=0.08707086032150388 | LR.C=242 | 
+V 0.405 0.967 0.571
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=True | RobustScaler.q_min=20 | RobustScaler.q_max=89 | RobustScaler.copy=True | LR.penalty=l1 | LR.tol=0.0435913866739998 | LR.C=352 | 
+V 0.429 0.969 0.594
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=False | RobustScaler.q_min=17 | RobustScaler.q_max=86 | RobustScaler.copy=False | LR.penalty=l1 | LR.tol=0.0435913866739998 | LR.C=278 | 
+V 0.429 0.967 0.594
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=True | RobustScaler.q_min=17 | RobustScaler.q_max=65 | RobustScaler.copy=True | LR.penalty=l1 | LR.tol=0.06903576348924645 | LR.C=194 | 
+V 0.452 0.974 0.618
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=True | RobustScaler.q_min=33 | RobustScaler.q_max=89 | RobustScaler.copy=False | LR.penalty=l1 | LR.tol=0.06903576348924645 | LR.C=157 | 
+V 0.452 0.965 0.616
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=True | RobustScaler.q_min=28 | RobustScaler.q_max=67 | RobustScaler.copy=False | LR.penalty=l1 | LR.tol=0.0435913866739998 | LR.C=166 | 
+V 0.429 0.972 0.595
+## END
+** Jul-12-2019 11:29:11
+H KernelCenterer.null=True | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.4 | MLP.max_iter=134 | MLP.momentum=0.9 | MLP.n_iter_no_change=67 | 
+V 0.19  0.993 0.32 
+H KernelCenterer.null=False | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.5 | MLP.max_iter=212 | MLP.momentum=0.9 | MLP.n_iter_no_change=84 | 
+V 0.262 0.987 0.414
+H KernelCenterer.null=False | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.7000000000000001 | MLP.max_iter=251 | MLP.momentum=0.9 | MLP.n_iter_no_change=69 | 
+V 0.214 0.989 0.352
+H KernelCenterer.null=True | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.30000000000000004 | MLP.max_iter=293 | MLP.momentum=0.9 | MLP.n_iter_no_change=17 | 
+V 0.214 0.987 0.352
+H KernelCenterer.null=True | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.8 | MLP.max_iter=222 | MLP.momentum=0.9 | MLP.n_iter_no_change=15 | 
+V 0.214 0.991 0.352
+H KernelCenterer.null=False | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.30000000000000004 | MLP.max_iter=278 | MLP.momentum=0.9 | MLP.n_iter_no_change=26 | 
+V 0.238 0.98  0.383
+H KernelCenterer.null=False | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.9 | MLP.max_iter=256 | MLP.momentum=0.6 | MLP.n_iter_no_change=67 | 
+V 0.167 0.991 0.285
+H KernelCenterer.null=True | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.30000000000000004 | MLP.max_iter=55 | MLP.momentum=0.7000000000000001 | MLP.n_iter_no_change=44 | 
+V 0.095 0.998 0.174
+H KernelCenterer.null=True | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.7000000000000001 | MLP.max_iter=277 | MLP.momentum=0.7000000000000001 | MLP.n_iter_no_change=13 | 
+V 0.19  0.993 0.32 
+H KernelCenterer.null=False | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.2 | MLP.max_iter=211 | MLP.momentum=0.7000000000000001 | MLP.n_iter_no_change=54 | 
+V 0.119 0.998 0.213
+## END
