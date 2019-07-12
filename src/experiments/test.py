@@ -289,3 +289,40 @@ print(train_df.equals(process_training))
 print(train_df.equals(process_training_cp))
 
 # KNN(train_df, test_df, HP)
+
+print("")
+print("---------- Default Naive Bayes with StandardScaler----------")
+
+transformer = preprocessing.StandardScaler(copy=True, with_mean=True, with_std=True)
+print(standard_scaler)
+
+train_x_copy = train_x.copy()
+train_x_transformed = transformer.fit_transform(train_x_copy)
+test_x_copy = test_x.copy()
+test_x_transformed = transformer.transform(test_x_copy)  # TODO check here
+
+
+print(type(train_x_copy))
+print(train_x_copy)
+
+column_name = list(train_x_copy.columns)
+print(column_name)
+
+print(type(train_x_transformed))
+train_x_transformed_df = pd.DataFrame(train_x_transformed)
+train_x_transformed_df.columns = column_name
+
+print(train_x_transformed_df)
+
+# train_df_transformed = csvDf(train_x_transformed).assign(label=train_y.values)
+# test_df_transformed = csvDf(test_x_transformed).assign(label=test_y.values)
+#
+# print(train_df_transformed)
+# print(test_df_transformed)
+
+# train_x_standard_scaled = standard_scaler.fit_transform(train_x)
+# test_x_standard_scaled = standard_scaler.transform(test_x)
+#
+# nb_standardScaler = naive_bayes(train_x_standard_scaled, train_y)
+# nb_standardScaler_predictions = nb_standardScaler.predict(test_x_standard_scaled)
+# result_statistics(nb_standardScaler_predictions)
