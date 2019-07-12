@@ -314,10 +314,10 @@ train_x_transformed_df.columns = column_name
 
 print(train_x_transformed_df)
 
-# train_df_transformed = csvDf(train_x_transformed).assign(label=train_y.values)
-# test_df_transformed = csvDf(test_x_transformed).assign(label=test_y.values)
-#
-# print(train_df_transformed)
+train_df_transformed = train_x_transformed_df.assign(label=train_y.values)
+# test_df_transformed = test_x_transformed_df.assign(label=test_y.values)
+
+print(train_df_transformed)
 # print(test_df_transformed)
 
 # train_x_standard_scaled = standard_scaler.fit_transform(train_x)
