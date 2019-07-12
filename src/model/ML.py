@@ -229,8 +229,7 @@ def QuantileTransformer(train_df, test_df, HP):
     test_y = test_df.iloc[:, -1:]
 
     transformer = preprocessing.QuantileTransformer(n_quantiles=n_quantiles, output_distribution=output_distribution,
-                                                    ignore_implicit_zeros=ignore_implicit_zeros, subsample=subsample,
-                                                    copy=copy)
+                                                    ignore_implicit_zeros=ignore_implicit_zeros, copy=copy)
     train_x_copy = train_x.copy()
     train_x_transformed = transformer.fit_transform(train_x_copy)
     test_x_copy = test_x.copy()
