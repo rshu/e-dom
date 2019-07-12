@@ -1,0 +1,44 @@
+** Jul-08-2019 16:15:37
+H SMOTE.k=9 | SMOTE.m=69 | SMOTE.r=2 | LR.penalty=l2 | LR.tol=0.08692516251283247 | LR.C=391 | 
+V 0.738 0.345 0.47 
+H SMOTE.k=5 | SMOTE.m=50 | SMOTE.r=2 | LR.penalty=l1 | LR.tol=0.013023991708183158 | LR.C=147 | 
+V 0.762 0.354 0.483
+H SMOTE.k=16 | SMOTE.m=94 | SMOTE.r=4 | LR.penalty=l1 | LR.tol=0.09379402889039175 | LR.C=294 | 
+V 0.786 0.4   0.53 
+H SMOTE.k=8 | SMOTE.m=65 | SMOTE.r=1 | LR.penalty=l1 | LR.tol=0.005118444036000114 | LR.C=202 | 
+V 0.714 0.432 0.539
+H SMOTE.k=18 | SMOTE.m=83 | SMOTE.r=3 | LR.penalty=l2 | LR.tol=0.07053300542390833 | LR.C=260 | 
+V 0.81  0.4   0.535
+H SMOTE.k=17 | SMOTE.m=75 | SMOTE.r=2 | LR.penalty=l1 | LR.tol=0.03557234293335855 | LR.C=265 | 
+V 0.714 0.371 0.489
+H SMOTE.k=7 | SMOTE.m=72 | SMOTE.r=3 | LR.penalty=l2 | LR.tol=0.06613689237807488 | LR.C=453 | 
+V 0.738 0.452 0.561
+H SMOTE.k=11 | SMOTE.m=122 | SMOTE.r=2 | LR.penalty=l2 | LR.tol=0.07938713507651429 | LR.C=54 | 
+V 1.    0.218 0.358
+H SMOTE.k=15 | SMOTE.m=280 | SMOTE.r=5 | LR.penalty=l2 | LR.tol=0.07938713507651429 | LR.C=332 | 
+V 0.905 0.282 0.43 
+H SMOTE.k=8 | SMOTE.m=74 | SMOTE.r=2 | LR.penalty=l2 | LR.tol=0.07938713507651429 | LR.C=273 | 
+V 0.857 0.334 0.481
+## END
+** Jul-12-2019 11:49:15
+H MaxAbsScaler.copy=False | LR.penalty=l1 | LR.tol=0.024412955930438685 | LR.C=276 | 
+V 0.762 0.389 0.515
+H MaxAbsScaler.copy=False | LR.penalty=l1 | LR.tol=0.0672597840989924 | LR.C=297 | 
+V 0.81  0.395 0.531
+H MaxAbsScaler.copy=False | LR.penalty=l1 | LR.tol=0.07742355999478133 | LR.C=148 | 
+V 0.762 0.38  0.507
+H MaxAbsScaler.copy=True | LR.penalty=l1 | LR.tol=0.006830792844926548 | LR.C=225 | 
+V 0.643 0.419 0.507
+H MaxAbsScaler.copy=True | LR.penalty=l1 | LR.tol=0.019988516682032845 | LR.C=420 | 
+V 0.762 0.391 0.517
+H MaxAbsScaler.copy=True | LR.penalty=l1 | LR.tol=0.039693462924520584 | LR.C=205 | 
+V 0.69 0.43 0.53
+H MaxAbsScaler.copy=True | LR.penalty=l1 | LR.tol=0.0401838713971768 | LR.C=439 | 
+V 0.714 0.397 0.511
+H MaxAbsScaler.copy=True | LR.penalty=l1 | LR.tol=0.024103908831711287 | LR.C=452 | 
+V 0.714 0.386 0.502
+H MaxAbsScaler.copy=False | LR.penalty=l1 | LR.tol=0.03206249903557014 | LR.C=418 | 
+V 0.714 0.434 0.54 
+H MaxAbsScaler.copy=False | LR.penalty=l1 | LR.tol=0.03620639293962038 | LR.C=103 | 
+V 0.714 0.408 0.52 
+## END

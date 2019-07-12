@@ -1,0 +1,22 @@
+** Jul-08-2019 16:22:24
+H SMOTE.k=15 | SMOTE.m=314 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.667 0.474 0.554
+H SMOTE.k=15 | SMOTE.m=113 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
+V 0.333 0.751 0.462
+H SMOTE.k=19 | SMOTE.m=103 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.5   0.67  0.573
+H SMOTE.k=15 | SMOTE.m=228 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.667 0.453 0.54 
+H SMOTE.k=14 | SMOTE.m=287 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.667 0.455 0.541
+H SMOTE.k=4 | SMOTE.m=235 | SMOTE.r=3 | NB.var_smoothing=0.001 | 
+V 0.333 0.789 0.469
+H SMOTE.k=9 | SMOTE.m=59 | SMOTE.r=2 | NB.var_smoothing=0.001 | 
+V 0.5   0.676 0.575
+H SMOTE.k=6 | SMOTE.m=97 | SMOTE.r=3 | NB.var_smoothing=0.001 | 
+V 0.5   0.626 0.556
+H SMOTE.k=9 | SMOTE.m=387 | SMOTE.r=2 | NB.var_smoothing=0.0001 | 
+V 0.667 0.46  0.544
+H SMOTE.k=4 | SMOTE.m=174 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.333 0.783 0.468
+## END

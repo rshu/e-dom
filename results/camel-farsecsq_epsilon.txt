@@ -1,0 +1,22 @@
+** Jul-08-2019 16:11:35
+H SMOTE.k=8 | SMOTE.m=333 | SMOTE.r=2 | DT.min_samples_split=11 | DT.criterion=entropy | DT.splitter=random | 
+V 0.667 0.587 0.624
+H SMOTE.k=3 | SMOTE.m=172 | SMOTE.r=5 | DT.min_samples_split=18 | DT.criterion=gini | DT.splitter=random | 
+V 0.778 0.546 0.641
+H SMOTE.k=5 | SMOTE.m=85 | SMOTE.r=2 | DT.min_samples_split=10 | DT.criterion=gini | DT.splitter=best | 
+V 0.778 0.51  0.616
+H SMOTE.k=17 | SMOTE.m=304 | SMOTE.r=1 | DT.min_samples_split=9 | DT.criterion=entropy | DT.splitter=random | 
+V 0.778 0.508 0.615
+H SMOTE.k=8 | SMOTE.m=248 | SMOTE.r=1 | DT.min_samples_split=18 | DT.criterion=gini | DT.splitter=best | 
+V 0.722 0.562 0.632
+H SMOTE.k=6 | SMOTE.m=362 | SMOTE.r=1 | DT.min_samples_split=14 | DT.criterion=gini | DT.splitter=random | 
+V 0.722 0.546 0.622
+H SMOTE.k=9 | SMOTE.m=248 | SMOTE.r=2 | DT.min_samples_split=10 | DT.criterion=gini | DT.splitter=random | 
+V 0.611 0.664 0.636
+H SMOTE.k=17 | SMOTE.m=75 | SMOTE.r=4 | DT.min_samples_split=6 | DT.criterion=entropy | DT.splitter=best | 
+V 0.611 0.664 0.636
+H SMOTE.k=2 | SMOTE.m=55 | SMOTE.r=2 | DT.min_samples_split=10 | DT.criterion=gini | DT.splitter=random | 
+V 0.833 0.51  0.633
+H SMOTE.k=16 | SMOTE.m=253 | SMOTE.r=4 | DT.min_samples_split=10 | DT.criterion=gini | DT.splitter=random | 
+V 0.611 0.656 0.633
+## END

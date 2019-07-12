@@ -1,0 +1,22 @@
+** Jul-08-2019 20:14:10
+H SMOTE.k=2 | SMOTE.m=384 | SMOTE.r=4 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.1 | MLP.max_iter=194 | MLP.momentum=0.8 | MLP.n_iter_no_change=9 | 
+V 0.714 0.862 0.781
+H SMOTE.k=13 | SMOTE.m=264 | SMOTE.r=5 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.8 | MLP.max_iter=294 | MLP.momentum=0.6 | MLP.n_iter_no_change=39 | 
+V 0.857 0.799 0.827
+H SMOTE.k=18 | SMOTE.m=297 | SMOTE.r=2 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.5 | MLP.max_iter=106 | MLP.momentum=0.4 | MLP.n_iter_no_change=19 | 
+V 1.    0.791 0.883
+H SMOTE.k=4 | SMOTE.m=177 | SMOTE.r=3 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.30000000000000004 | MLP.max_iter=195 | MLP.momentum=0.4 | MLP.n_iter_no_change=52 | 
+V 1.    0.742 0.852
+H SMOTE.k=2 | SMOTE.m=310 | SMOTE.r=4 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.9 | MLP.max_iter=237 | MLP.momentum=0.9 | MLP.n_iter_no_change=67 | 
+V 0.714 0.854 0.778
+H SMOTE.k=3 | SMOTE.m=160 | SMOTE.r=5 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.7000000000000001 | MLP.max_iter=224 | MLP.momentum=0.4 | MLP.n_iter_no_change=43 | 
+V 1.    0.753 0.859
+H SMOTE.k=17 | SMOTE.m=160 | SMOTE.r=2 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.30000000000000004 | MLP.max_iter=227 | MLP.momentum=0.2 | MLP.n_iter_no_change=74 | 
+V 1.    0.759 0.863
+H SMOTE.k=5 | SMOTE.m=258 | SMOTE.r=3 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.6 | MLP.max_iter=65 | MLP.momentum=0.4 | MLP.n_iter_no_change=40 | 
+V 1.    0.773 0.872
+H SMOTE.k=11 | SMOTE.m=238 | SMOTE.r=5 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.1 | MLP.max_iter=298 | MLP.momentum=0.6 | MLP.n_iter_no_change=53 | 
+V 0.857 0.795 0.825
+H SMOTE.k=9 | SMOTE.m=345 | SMOTE.r=2 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.5 | MLP.max_iter=119 | MLP.momentum=0.30000000000000004 | MLP.n_iter_no_change=50 | 
+V 1.    0.765 0.867
+## END
