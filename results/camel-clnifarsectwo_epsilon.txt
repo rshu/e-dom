@@ -20,3 +20,47 @@ V 0.556 0.564 0.56
 H SMOTE.k=6 | SMOTE.m=372 | SMOTE.r=2 | NB.var_smoothing=0.001 | 
 V 0.167 0.77  0.274
 ## END
+** Jul-12-2019 12:41:27
+H SMOTE.k=4 | SMOTE.m=344 | SMOTE.r=1 | NB.var_smoothing=1e-08 | 
+V 0.611 0.506 0.554
+H SMOTE.k=17 | SMOTE.m=111 | SMOTE.r=2 | NB.var_smoothing=1e-08 | 
+V 0.667 0.454 0.54 
+H SMOTE.k=9 | SMOTE.m=353 | SMOTE.r=5 | NB.var_smoothing=0.0001 | 
+V 0.556 0.537 0.546
+H SMOTE.k=9 | SMOTE.m=332 | SMOTE.r=5 | NB.var_smoothing=0.0001 | 
+V 0.556 0.548 0.552
+H SMOTE.k=10 | SMOTE.m=357 | SMOTE.r=5 | NB.var_smoothing=1e-09 | 
+V 0.611 0.506 0.554
+H SMOTE.k=5 | SMOTE.m=78 | SMOTE.r=5 | NB.var_smoothing=1e-09 | 
+V 0.667 0.429 0.522
+H SMOTE.k=2 | SMOTE.m=382 | SMOTE.r=1 | NB.var_smoothing=1e-08 | 
+V 0.611 0.506 0.554
+H SMOTE.k=6 | SMOTE.m=195 | SMOTE.r=2 | NB.var_smoothing=0.0001 | 
+V 0.556 0.546 0.551
+H SMOTE.k=12 | SMOTE.m=63 | SMOTE.r=4 | NB.var_smoothing=0.0001 | 
+V 0.722 0.373 0.492
+H SMOTE.k=2 | SMOTE.m=292 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.278 0.737 0.403
+## END
+** Jul-14-2019 11:48:36
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | NB.var_smoothing=1e-07 | 
+V 0.611 0.548 0.578
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | NB.var_smoothing=1e-08 | 
+V 0.611 0.548 0.578
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | NB.var_smoothing=1e-07 | 
+V 0.611 0.548 0.578
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | NB.var_smoothing=1e-06 | 
+V 0.611 0.548 0.578
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | NB.var_smoothing=0.0001 | 
+V 0.611 0.548 0.578
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | NB.var_smoothing=1e-09 | 
+V 0.611 0.548 0.578
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | NB.var_smoothing=1e-08 | 
+V 0.611 0.548 0.578
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | NB.var_smoothing=1e-08 | 
+V 0.611 0.548 0.578
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | NB.var_smoothing=1e-09 | 
+V 0.611 0.548 0.578
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | NB.var_smoothing=1e-05 | 
+V 0.611 0.548 0.578
+## END

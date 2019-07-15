@@ -20,3 +20,47 @@ V 0.738 0.764 0.751
 H SMOTE.k=11 | SMOTE.m=216 | SMOTE.r=3 | DT.min_samples_split=2 | DT.criterion=gini | DT.splitter=random | 
 V 0.762 0.655 0.704
 ## END
+** Jul-12-2019 12:08:23
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=F | LR.penalty=l1 | LR.tol=0.08107906111223269 | LR.C=133 | 
+V 0.571 0.806 0.669
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=C | LR.penalty=l2 | LR.tol=0.04848880103869838 | LR.C=6 | 
+V 0.571 0.793 0.664
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=C | LR.penalty=l1 | LR.tol=0.004515411310620998 | LR.C=100 | 
+V 0.571 0.81  0.67 
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=F | LR.penalty=l1 | LR.tol=0.0401397284169323 | LR.C=399 | 
+V 0.476 0.869 0.615
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=C | LR.penalty=l1 | LR.tol=0.08044759485391138 | LR.C=8 | 
+V 0.571 0.788 0.663
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=C | LR.penalty=l2 | LR.tol=0.004515411310620998 | LR.C=48 | 
+V 0.595 0.777 0.674
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=C | LR.penalty=l2 | LR.tol=0.004515411310620998 | LR.C=12 | 
+V 0.595 0.779 0.675
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=F | LR.penalty=l2 | LR.tol=0.01699772081824832 | LR.C=20 | 
+V 0.595 0.773 0.673
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=F | LR.penalty=l1 | LR.tol=0.08248433944868805 | LR.C=389 | 
+V 0.5   0.845 0.628
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=C | LR.penalty=l2 | LR.tol=0.0695925763846669 | LR.C=7 | 
+V 0.571 0.803 0.668
+## END
+** Jul-14-2019 11:40:36
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | LR.penalty=l1 | LR.tol=0.040796121388485075 | LR.C=364 | 
+V 0.69  0.766 0.726
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | LR.penalty=l1 | LR.tol=0.040796121388485075 | LR.C=444 | 
+V 0.69  0.753 0.721
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | LR.penalty=l1 | LR.tol=0.009852572232538426 | LR.C=24 | 
+V 0.667 0.755 0.708
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | LR.penalty=l1 | LR.tol=0.016363005059197435 | LR.C=301 | 
+V 0.667 0.707 0.686
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | LR.penalty=l1 | LR.tol=0.0672685149025784 | LR.C=261 | 
+V 0.69  0.736 0.712
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | LR.penalty=l1 | LR.tol=0.02432643593811683 | LR.C=227 | 
+V 0.69  0.712 0.701
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | LR.penalty=l1 | LR.tol=0.04866996294409575 | LR.C=29 | 
+V 0.667 0.742 0.702
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | LR.penalty=l1 | LR.tol=0.0672685149025784 | LR.C=227 | 
+V 0.643 0.825 0.723
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | LR.penalty=l1 | LR.tol=0.09233659327542276 | LR.C=272 | 
+V 0.714 0.786 0.748
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | LR.penalty=l1 | LR.tol=0.03258183197771958 | LR.C=414 | 
+V 0.619 0.758 0.681
+## END

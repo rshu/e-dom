@@ -20,3 +20,47 @@ V 0.889 0.297 0.445
 H SMOTE.k=14 | SMOTE.m=125 | SMOTE.r=5 | KNN.n_neighbors=24 | KNN.weights=uniform | KNN.metric=minkowski | KNN.p=1 | 
 V 0.056 0.938 0.105
 ## END
+** Jul-12-2019 12:15:39
+H SMOTE.k=7 | SMOTE.m=120 | SMOTE.r=4 | NB.var_smoothing=1e-08 | 
+V 0.444 0.834 0.58 
+H SMOTE.k=17 | SMOTE.m=124 | SMOTE.r=4 | NB.var_smoothing=1e-09 | 
+V 0.389 0.844 0.533
+H SMOTE.k=16 | SMOTE.m=62 | SMOTE.r=1 | NB.var_smoothing=1e-09 | 
+V 0.5   0.685 0.578
+H SMOTE.k=3 | SMOTE.m=323 | SMOTE.r=3 | NB.var_smoothing=1e-09 | 
+V 0.222 0.94  0.359
+H SMOTE.k=16 | SMOTE.m=87 | SMOTE.r=4 | NB.var_smoothing=1e-08 | 
+V 0.389 0.784 0.52 
+H SMOTE.k=7 | SMOTE.m=87 | SMOTE.r=5 | NB.var_smoothing=1e-05 | 
+V 0.556 0.676 0.61 
+H SMOTE.k=16 | SMOTE.m=54 | SMOTE.r=2 | NB.var_smoothing=1e-05 | 
+V 0.5   0.676 0.575
+H SMOTE.k=3 | SMOTE.m=276 | SMOTE.r=2 | NB.var_smoothing=1e-05 | 
+V 0.278 0.915 0.426
+H SMOTE.k=7 | SMOTE.m=93 | SMOTE.r=5 | NB.var_smoothing=1e-07 | 
+V 0.444 0.755 0.56 
+H SMOTE.k=2 | SMOTE.m=273 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
+V 0.389 0.664 0.49 
+## END
+** Jul-14-2019 11:31:32
+H QuantileTransformer.n_quantiles=802 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=False | QuantileTransformer.subsample=40843 | QuantileTransformer.copy=True | DT.min_samples_split=16 | DT.criterion=entropy | DT.splitter=random | 
+V 0.111 0.992 0.2  
+H QuantileTransformer.n_quantiles=817 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=70062 | QuantileTransformer.copy=True | DT.min_samples_split=10 | DT.criterion=gini | DT.splitter=random | 
+V 0.167 0.975 0.285
+H QuantileTransformer.n_quantiles=1696 | QuantileTransformer.output_distribution=uniform | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=96713 | QuantileTransformer.copy=True | DT.min_samples_split=6 | DT.criterion=gini | DT.splitter=best | 
+V 0.111 0.983 0.2  
+H QuantileTransformer.n_quantiles=1649 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=128352 | QuantileTransformer.copy=False | DT.min_samples_split=18 | DT.criterion=entropy | DT.splitter=random | 
+V 0.111 0.985 0.2  
+H QuantileTransformer.n_quantiles=740 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=False | QuantileTransformer.subsample=70581 | QuantileTransformer.copy=True | DT.min_samples_split=4 | DT.criterion=gini | DT.splitter=best | 
+V 0.111 0.983 0.2  
+H QuantileTransformer.n_quantiles=1817 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=False | QuantileTransformer.subsample=84966 | QuantileTransformer.copy=False | DT.min_samples_split=18 | DT.criterion=entropy | DT.splitter=best | 
+V 0.111 0.983 0.2  
+H QuantileTransformer.n_quantiles=1365 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=False | QuantileTransformer.subsample=36817 | QuantileTransformer.copy=True | DT.min_samples_split=10 | DT.criterion=entropy | DT.splitter=best | 
+V 0.111 0.983 0.2  
+H QuantileTransformer.n_quantiles=1908 | QuantileTransformer.output_distribution=uniform | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=10112 | QuantileTransformer.copy=False | DT.min_samples_split=16 | DT.criterion=entropy | DT.splitter=best | 
+V 0.111 0.983 0.2  
+H QuantileTransformer.n_quantiles=735 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=24458 | QuantileTransformer.copy=True | DT.min_samples_split=11 | DT.criterion=entropy | DT.splitter=best | 
+V 0.111 0.983 0.2  
+H QuantileTransformer.n_quantiles=334 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=False | QuantileTransformer.subsample=20379 | QuantileTransformer.copy=False | DT.min_samples_split=10 | DT.criterion=entropy | DT.splitter=best | 
+V 0.111 0.983 0.2  
+## END

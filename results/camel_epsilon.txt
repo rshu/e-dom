@@ -20,3 +20,25 @@ V 0.389 0.77  0.517
 H SMOTE.k=3 | SMOTE.m=55 | SMOTE.r=1 | DT.min_samples_split=12 | DT.criterion=gini | DT.splitter=random | 
 V 0.444 0.776 0.565
 ## END
+** Jul-14-2019 11:52:24
+H SMOTE.k=12 | SMOTE.m=160 | SMOTE.r=2 | KNN.n_neighbors=21 | KNN.weights=uniform | KNN.metric=chebyshev | KNN.p=2 | 
+V 0.944 0.386 0.548
+H SMOTE.k=15 | SMOTE.m=235 | SMOTE.r=3 | KNN.n_neighbors=5 | KNN.weights=uniform | KNN.metric=minkowski | KNN.p=1 | 
+V 0.167 0.973 0.285
+H SMOTE.k=15 | SMOTE.m=301 | SMOTE.r=5 | KNN.n_neighbors=22 | KNN.weights=uniform | KNN.metric=chebyshev | KNN.p=3 | 
+V 0.833 0.515 0.636
+H SMOTE.k=19 | SMOTE.m=173 | SMOTE.r=4 | KNN.n_neighbors=18 | KNN.weights=uniform | KNN.metric=chebyshev | KNN.p=1 | 
+V 0.556 0.606 0.58 
+H SMOTE.k=18 | SMOTE.m=381 | SMOTE.r=4 | KNN.n_neighbors=19 | KNN.weights=uniform | KNN.metric=chebyshev | KNN.p=3 | 
+V 0.667 0.622 0.644
+H SMOTE.k=12 | SMOTE.m=70 | SMOTE.r=2 | KNN.n_neighbors=21 | KNN.weights=uniform | KNN.metric=chebyshev | KNN.p=3 | 
+V 0.722 0.539 0.618
+H SMOTE.k=11 | SMOTE.m=153 | SMOTE.r=1 | KNN.n_neighbors=14 | KNN.weights=uniform | KNN.metric=chebyshev | KNN.p=1 | 
+V 0.889 0.427 0.577
+H SMOTE.k=14 | SMOTE.m=288 | SMOTE.r=5 | KNN.n_neighbors=23 | KNN.weights=uniform | KNN.metric=chebyshev | KNN.p=2 | 
+V 0.889 0.461 0.607
+H SMOTE.k=2 | SMOTE.m=210 | SMOTE.r=2 | KNN.n_neighbors=12 | KNN.weights=uniform | KNN.metric=chebyshev | KNN.p=3 | 
+V 0.556 0.734 0.633
+H SMOTE.k=9 | SMOTE.m=230 | SMOTE.r=5 | KNN.n_neighbors=20 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=1 | 
+V 0.278 0.911 0.426
+## END

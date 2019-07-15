@@ -20,3 +20,47 @@ V 1.    0.696 0.821
 H SMOTE.k=14 | SMOTE.m=138 | SMOTE.r=3 | LR.penalty=l1 | LR.tol=0.07412712759128648 | LR.C=356 | 
 V 1.    0.722 0.839
 ## END
+** Jul-12-2019 12:16:26
+H SMOTE.k=7 | SMOTE.m=216 | SMOTE.r=5 | DT.min_samples_split=8 | DT.criterion=entropy | DT.splitter=best | 
+V 1.    0.641 0.781
+H SMOTE.k=8 | SMOTE.m=117 | SMOTE.r=1 | DT.min_samples_split=6 | DT.criterion=gini | DT.splitter=best | 
+V 0.714 0.834 0.769
+H SMOTE.k=14 | SMOTE.m=101 | SMOTE.r=2 | DT.min_samples_split=14 | DT.criterion=entropy | DT.splitter=best | 
+V 0.857 0.828 0.842
+H SMOTE.k=3 | SMOTE.m=305 | SMOTE.r=2 | DT.min_samples_split=19 | DT.criterion=gini | DT.splitter=best | 
+V 1.    0.677 0.808
+H SMOTE.k=9 | SMOTE.m=58 | SMOTE.r=1 | DT.min_samples_split=14 | DT.criterion=gini | DT.splitter=random | 
+V 0.857 0.811 0.834
+H SMOTE.k=13 | SMOTE.m=123 | SMOTE.r=1 | DT.min_samples_split=6 | DT.criterion=gini | DT.splitter=best | 
+V 0.857 0.815 0.836
+H SMOTE.k=18 | SMOTE.m=234 | SMOTE.r=3 | DT.min_samples_split=2 | DT.criterion=entropy | DT.splitter=best | 
+V 0.857 0.775 0.814
+H SMOTE.k=8 | SMOTE.m=237 | SMOTE.r=4 | DT.min_samples_split=4 | DT.criterion=gini | DT.splitter=best | 
+V 1.    0.653 0.79 
+H SMOTE.k=7 | SMOTE.m=148 | SMOTE.r=5 | DT.min_samples_split=9 | DT.criterion=gini | DT.splitter=best | 
+V 0.857 0.789 0.822
+H SMOTE.k=18 | SMOTE.m=152 | SMOTE.r=5 | DT.min_samples_split=19 | DT.criterion=gini | DT.splitter=best | 
+V 0.857 0.807 0.831
+## END
+** Jul-14-2019 11:16:34
+H Binarization.threshold=1 | Binarization.copy=False | LR.penalty=l2 | LR.tol=0.06435031781676137 | LR.C=494 | 
+V 0.429 0.935 0.588
+H Binarization.threshold=1 | Binarization.copy=False | LR.penalty=l2 | LR.tol=0.03859070474401774 | LR.C=170 | 
+V 0.429 0.939 0.589
+H Binarization.threshold=0 | Binarization.copy=True | LR.penalty=l1 | LR.tol=0.010434872888448112 | LR.C=205 | 
+V 0.571 0.903 0.7  
+H Binarization.threshold=2 | Binarization.copy=False | LR.penalty=l1 | LR.tol=0.040608843662406774 | LR.C=102 | 
+V 0.286 0.982 0.443
+H Binarization.threshold=0 | Binarization.copy=True | LR.penalty=l1 | LR.tol=0.008978999755452799 | LR.C=44 | 
+V 0.571 0.921 0.705
+H Binarization.threshold=0 | Binarization.copy=True | LR.penalty=l1 | LR.tol=0.06546233516513288 | LR.C=4 | 
+V 0.571 0.899 0.699
+H Binarization.threshold=1 | Binarization.copy=True | LR.penalty=l2 | LR.tol=0.010434872888448112 | LR.C=16 | 
+V 0.429 0.951 0.591
+H Binarization.threshold=1 | Binarization.copy=False | LR.penalty=l1 | LR.tol=0.040608843662406774 | LR.C=140 | 
+V 0.429 0.943 0.589
+H Binarization.threshold=0 | Binarization.copy=False | LR.penalty=l1 | LR.tol=0.0010345560827257573 | LR.C=375 | 
+V 0.571 0.874 0.691
+H Binarization.threshold=1 | Binarization.copy=True | LR.penalty=l2 | LR.tol=0.013959298912656327 | LR.C=26 | 
+V 0.429 0.949 0.591
+## END

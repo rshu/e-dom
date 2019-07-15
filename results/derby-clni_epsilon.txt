@@ -20,3 +20,47 @@ V 0.714 0.799 0.754
 H SMOTE.k=9 | SMOTE.m=151 | SMOTE.r=5 | DT.min_samples_split=11 | DT.criterion=gini | DT.splitter=random | 
 V 0.476 0.95  0.634
 ## END
+** Jul-12-2019 12:15:00
+H SMOTE.k=15 | SMOTE.m=312 | SMOTE.r=5 | DT.min_samples_split=18 | DT.criterion=gini | DT.splitter=best | 
+V 0.619 0.88  0.727
+H SMOTE.k=12 | SMOTE.m=88 | SMOTE.r=1 | DT.min_samples_split=17 | DT.criterion=gini | DT.splitter=best | 
+V 0.714 0.797 0.753
+H SMOTE.k=2 | SMOTE.m=111 | SMOTE.r=4 | DT.min_samples_split=17 | DT.criterion=entropy | DT.splitter=best | 
+V 0.429 0.934 0.588
+H SMOTE.k=13 | SMOTE.m=118 | SMOTE.r=4 | DT.min_samples_split=18 | DT.criterion=gini | DT.splitter=best | 
+V 0.857 0.493 0.626
+H SMOTE.k=19 | SMOTE.m=356 | SMOTE.r=5 | DT.min_samples_split=6 | DT.criterion=entropy | DT.splitter=random | 
+V 0.69  0.81  0.745
+H SMOTE.k=8 | SMOTE.m=300 | SMOTE.r=5 | DT.min_samples_split=2 | DT.criterion=entropy | DT.splitter=random | 
+V 0.643 0.867 0.738
+H SMOTE.k=2 | SMOTE.m=370 | SMOTE.r=4 | DT.min_samples_split=8 | DT.criterion=entropy | DT.splitter=random | 
+V 0.452 0.939 0.611
+H SMOTE.k=19 | SMOTE.m=272 | SMOTE.r=5 | DT.min_samples_split=14 | DT.criterion=entropy | DT.splitter=random | 
+V 0.714 0.832 0.769
+H SMOTE.k=17 | SMOTE.m=293 | SMOTE.r=5 | DT.min_samples_split=4 | DT.criterion=entropy | DT.splitter=random | 
+V 0.69  0.843 0.759
+H SMOTE.k=11 | SMOTE.m=209 | SMOTE.r=5 | DT.min_samples_split=19 | DT.criterion=entropy | DT.splitter=best | 
+V 0.738 0.764 0.751
+## END
+** Jul-14-2019 11:17:33
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=False | RobustScaler.q_min=29 | RobustScaler.q_max=88 | RobustScaler.copy=True | SVM.C=6 | SVM.kernel=linear | SVM.degree=2 | SVM.gamma=0.2212551657464341 | SVM.coef0=0.02167790282011424 | SVM.tol=0.09716433170058737 | 
+V 0.357 0.941 0.518
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=False | RobustScaler.q_min=25 | RobustScaler.q_max=69 | RobustScaler.copy=True | SVM.C=5 | SVM.kernel=linear | SVM.degree=3 | SVM.gamma=0.5948712579692218 | SVM.coef0=0.07043973724027346 | SVM.tol=0.03580401879793075 | 
+V 0.357 0.945 0.518
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=True | RobustScaler.q_min=39 | RobustScaler.q_max=89 | RobustScaler.copy=False | SVM.C=380 | SVM.kernel=linear | SVM.degree=7 | SVM.gamma=0.5800998540058722 | SVM.coef0=0.09761619676491808 | SVM.tol=0.03580401879793075 | 
+V 0.357 0.932 0.516
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=True | RobustScaler.q_min=26 | RobustScaler.q_max=88 | RobustScaler.copy=False | SVM.C=497 | SVM.kernel=linear | SVM.degree=3 | SVM.gamma=0.22454903604577592 | SVM.coef0=0.06902067251281375 | SVM.tol=0.09716433170058737 | 
+V 0.357 0.932 0.516
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=True | RobustScaler.q_min=15 | RobustScaler.q_max=89 | RobustScaler.copy=False | SVM.C=313 | SVM.kernel=linear | SVM.degree=6 | SVM.gamma=0.51185978688168 | SVM.coef0=0.02842650476978638 | SVM.tol=0.08808380058675912 | 
+V 0.357 0.932 0.516
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=True | RobustScaler.q_min=18 | RobustScaler.q_max=88 | RobustScaler.copy=False | SVM.C=45 | SVM.kernel=linear | SVM.degree=9 | SVM.gamma=0.23205479134451656 | SVM.coef0=0.09819694982893508 | SVM.tol=0.03580401879793075 | 
+V 0.357 0.932 0.516
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=True | RobustScaler.q_min=32 | RobustScaler.q_max=74 | RobustScaler.copy=True | SVM.C=7 | SVM.kernel=linear | SVM.degree=7 | SVM.gamma=0.6059411517701467 | SVM.coef0=0.049018798484133055 | SVM.tol=0.08469403824498982 | 
+V 0.357 0.943 0.518
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=True | RobustScaler.q_min=39 | RobustScaler.q_max=88 | RobustScaler.copy=True | SVM.C=121 | SVM.kernel=linear | SVM.degree=9 | SVM.gamma=0.6274027793961915 | SVM.coef0=0.08959304122996277 | SVM.tol=0.02206452856214136 | 
+V 0.357 0.932 0.516
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=True | RobustScaler.q_min=27 | RobustScaler.q_max=63 | RobustScaler.copy=False | SVM.C=6 | SVM.kernel=linear | SVM.degree=9 | SVM.gamma=0.5438910474432217 | SVM.coef0=0.05792450496783347 | SVM.tol=0.09170315376708144 | 
+V 0.357 0.941 0.518
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=False | RobustScaler.q_min=20 | RobustScaler.q_max=88 | RobustScaler.copy=False | SVM.C=365 | SVM.kernel=linear | SVM.degree=7 | SVM.gamma=0.22454903604577592 | SVM.coef0=0.061626143341822905 | SVM.tol=0.05164744833927867 | 
+V 0.357 0.932 0.516
+## END

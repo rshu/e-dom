@@ -42,3 +42,47 @@ V 0.667 0.777 0.718
 H MinMaxScaler.copy=False | MinMaxScaler.min=-1 | MinMaxScaler.max=2 | NB.var_smoothing=0.001 | 
 V 0.667 0.777 0.718
 ## END
+** Jul-12-2019 12:01:05
+H StandardScaler.copy=False | StandardScaler.with_mean=True | StandardScaler.with_std=False | NB.var_smoothing=1e-09 | 
+V 0.667 0.771 0.715
+H StandardScaler.copy=True | StandardScaler.with_mean=True | StandardScaler.with_std=False | NB.var_smoothing=1e-08 | 
+V 0.667 0.771 0.715
+H StandardScaler.copy=False | StandardScaler.with_mean=True | StandardScaler.with_std=True | NB.var_smoothing=1e-07 | 
+V 0.667 0.771 0.715
+H StandardScaler.copy=False | StandardScaler.with_mean=True | StandardScaler.with_std=False | NB.var_smoothing=1e-07 | 
+V 0.667 0.771 0.715
+H StandardScaler.copy=True | StandardScaler.with_mean=True | StandardScaler.with_std=True | NB.var_smoothing=1e-09 | 
+V 0.667 0.771 0.715
+H StandardScaler.copy=True | StandardScaler.with_mean=True | StandardScaler.with_std=True | NB.var_smoothing=1e-07 | 
+V 0.667 0.771 0.715
+H StandardScaler.copy=False | StandardScaler.with_mean=False | StandardScaler.with_std=True | NB.var_smoothing=1e-09 | 
+V 0.667 0.771 0.715
+H StandardScaler.copy=False | StandardScaler.with_mean=True | StandardScaler.with_std=False | NB.var_smoothing=1e-07 | 
+V 0.667 0.771 0.715
+H StandardScaler.copy=False | StandardScaler.with_mean=True | StandardScaler.with_std=False | NB.var_smoothing=1e-09 | 
+V 0.667 0.771 0.715
+H StandardScaler.copy=False | StandardScaler.with_mean=False | StandardScaler.with_std=True | NB.var_smoothing=1e-07 | 
+V 0.667 0.771 0.715
+## END
+** Jul-14-2019 11:14:52
+H MinMaxScaler.copy=True | MinMaxScaler.min=-5 | MinMaxScaler.max=3 | NB.var_smoothing=0.001 | 
+V 0.667 0.777 0.718
+H MinMaxScaler.copy=False | MinMaxScaler.min=-3 | MinMaxScaler.max=3 | NB.var_smoothing=0.001 | 
+V 0.667 0.777 0.718
+H MinMaxScaler.copy=True | MinMaxScaler.min=-4 | MinMaxScaler.max=4 | NB.var_smoothing=0.001 | 
+V 0.667 0.777 0.718
+H MinMaxScaler.copy=False | MinMaxScaler.min=-2 | MinMaxScaler.max=3 | NB.var_smoothing=0.001 | 
+V 0.667 0.777 0.718
+H MinMaxScaler.copy=False | MinMaxScaler.min=-3 | MinMaxScaler.max=4 | NB.var_smoothing=0.001 | 
+V 0.667 0.777 0.718
+H MinMaxScaler.copy=True | MinMaxScaler.min=-3 | MinMaxScaler.max=1 | NB.var_smoothing=0.001 | 
+V 0.667 0.777 0.718
+H MinMaxScaler.copy=False | MinMaxScaler.min=-1 | MinMaxScaler.max=4 | NB.var_smoothing=0.001 | 
+V 0.667 0.777 0.718
+H MinMaxScaler.copy=False | MinMaxScaler.min=-5 | MinMaxScaler.max=4 | NB.var_smoothing=0.001 | 
+V 0.667 0.777 0.718
+H MinMaxScaler.copy=False | MinMaxScaler.min=-1 | MinMaxScaler.max=1 | NB.var_smoothing=0.001 | 
+V 0.667 0.777 0.718
+H MinMaxScaler.copy=True | MinMaxScaler.min=-1 | MinMaxScaler.max=4 | NB.var_smoothing=0.001 | 
+V 0.667 0.777 0.718
+## END

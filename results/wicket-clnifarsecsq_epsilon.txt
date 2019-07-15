@@ -20,3 +20,47 @@ V 0.667 0.611 0.638
 H SMOTE.k=4 | SMOTE.m=252 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
 V 0.333 0.777 0.467
 ## END
+** Jul-12-2019 12:17:20
+H SMOTE.k=11 | SMOTE.m=324 | SMOTE.r=5 | NB.var_smoothing=0.0001 | 
+V 0.833 0.393 0.534
+H SMOTE.k=8 | SMOTE.m=351 | SMOTE.r=4 | NB.var_smoothing=0.001 | 
+V 0.5   0.715 0.588
+H SMOTE.k=13 | SMOTE.m=362 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.419 0.558
+H SMOTE.k=18 | SMOTE.m=282 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.5   0.692 0.581
+H SMOTE.k=5 | SMOTE.m=396 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.433 0.57 
+H SMOTE.k=12 | SMOTE.m=118 | SMOTE.r=3 | NB.var_smoothing=0.001 | 
+V 0.667 0.607 0.636
+H SMOTE.k=5 | SMOTE.m=343 | SMOTE.r=2 | NB.var_smoothing=0.001 | 
+V 0.5   0.658 0.568
+H SMOTE.k=4 | SMOTE.m=352 | SMOTE.r=2 | NB.var_smoothing=0.001 | 
+V 0.333 0.785 0.468
+H SMOTE.k=10 | SMOTE.m=381 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.445 0.58 
+H SMOTE.k=6 | SMOTE.m=332 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.435 0.572
+## END
+** Jul-14-2019 11:10:02
+H Binarization.threshold=9 | Binarization.copy=False | NB.var_smoothing=0.0001 | 
+V 0.    0.966 0.   
+H Binarization.threshold=0 | Binarization.copy=False | NB.var_smoothing=1e-07 | 
+V 0.833 0.332 0.475
+H Binarization.threshold=0 | Binarization.copy=False | NB.var_smoothing=0.0001 | 
+V 0.833 0.332 0.475
+H Binarization.threshold=9 | Binarization.copy=False | NB.var_smoothing=1e-08 | 
+V 0.    0.966 0.   
+H Binarization.threshold=0 | Binarization.copy=True | NB.var_smoothing=1e-06 | 
+V 0.833 0.332 0.475
+H Binarization.threshold=9 | Binarization.copy=True | NB.var_smoothing=1e-07 | 
+V 0.    0.966 0.   
+H Binarization.threshold=0 | Binarization.copy=True | NB.var_smoothing=1e-07 | 
+V 0.833 0.332 0.475
+H Binarization.threshold=0 | Binarization.copy=False | NB.var_smoothing=1e-07 | 
+V 0.833 0.332 0.475
+H Binarization.threshold=9 | Binarization.copy=False | NB.var_smoothing=1e-06 | 
+V 0.    0.966 0.   
+H Binarization.threshold=9 | Binarization.copy=False | NB.var_smoothing=1e-09 | 
+V 0.    0.966 0.   
+## END

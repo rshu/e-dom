@@ -42,3 +42,47 @@ V 0.333 0.96  0.495
 H SMOTE.k=15 | SMOTE.m=97 | SMOTE.r=1 | NB.var_smoothing=1e-07 | 
 V 0.667 0.852 0.748
 ## END
+** Jul-12-2019 12:05:14
+H Normalization.norm=l1 | Normalization.copy=False | NB.var_smoothing=0.001 | 
+V 0.667 0.769 0.714
+H Normalization.norm=l1 | Normalization.copy=True | NB.var_smoothing=0.001 | 
+V 0.667 0.769 0.714
+H Normalization.norm=l2 | Normalization.copy=True | NB.var_smoothing=0.0001 | 
+V 0.5   0.935 0.652
+H Normalization.norm=l1 | Normalization.copy=True | NB.var_smoothing=0.001 | 
+V 0.667 0.769 0.714
+H Normalization.norm=l2 | Normalization.copy=False | NB.var_smoothing=0.0001 | 
+V 0.5   0.935 0.652
+H Normalization.norm=l1 | Normalization.copy=False | NB.var_smoothing=0.001 | 
+V 0.667 0.769 0.714
+H Normalization.norm=l1 | Normalization.copy=True | NB.var_smoothing=0.001 | 
+V 0.667 0.769 0.714
+H Normalization.norm=l2 | Normalization.copy=True | NB.var_smoothing=0.0001 | 
+V 0.5   0.935 0.652
+H Normalization.norm=l1 | Normalization.copy=False | NB.var_smoothing=0.001 | 
+V 0.667 0.769 0.714
+H Normalization.norm=l1 | Normalization.copy=True | NB.var_smoothing=0.001 | 
+V 0.667 0.769 0.714
+## END
+** Jul-14-2019 11:15:03
+H Binarization.threshold=0 | Binarization.copy=False | NB.var_smoothing=0.001 | 
+V 0.167 0.949 0.284
+H Binarization.threshold=1 | Binarization.copy=False | NB.var_smoothing=1e-07 | 
+V 1.    0.239 0.386
+H Binarization.threshold=0 | Binarization.copy=False | NB.var_smoothing=0.0001 | 
+V 0.167 0.949 0.284
+H Binarization.threshold=0 | Binarization.copy=False | NB.var_smoothing=0.001 | 
+V 0.167 0.949 0.284
+H Binarization.threshold=0 | Binarization.copy=True | NB.var_smoothing=0.001 | 
+V 0.167 0.949 0.284
+H Binarization.threshold=1 | Binarization.copy=False | NB.var_smoothing=1e-08 | 
+V 1.    0.239 0.386
+H Binarization.threshold=1 | Binarization.copy=False | NB.var_smoothing=0.001 | 
+V 1.    0.239 0.386
+H Binarization.threshold=1 | Binarization.copy=False | NB.var_smoothing=1e-08 | 
+V 1.    0.239 0.386
+H Binarization.threshold=1 | Binarization.copy=True | NB.var_smoothing=1e-08 | 
+V 1.    0.239 0.386
+H Binarization.threshold=0 | Binarization.copy=True | NB.var_smoothing=0.001 | 
+V 0.167 0.949 0.284
+## END

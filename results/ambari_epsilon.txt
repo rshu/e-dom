@@ -130,3 +130,47 @@ V 1.    0.755 0.86
 H SMOTE.k=13 | SMOTE.m=152 | SMOTE.r=4 | DT.min_samples_split=15 | DT.criterion=entropy | DT.splitter=best | 
 V 1.    0.799 0.888
 ## END
+** Jul-12-2019 13:49:25
+H SMOTE.k=18 | SMOTE.m=137 | SMOTE.r=1 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.6 | MLP.max_iter=167 | MLP.momentum=0.4 | MLP.n_iter_no_change=76 | 
+V 1.    0.744 0.853
+H SMOTE.k=5 | SMOTE.m=246 | SMOTE.r=1 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.2 | MLP.max_iter=124 | MLP.momentum=0.5 | MLP.n_iter_no_change=35 | 
+V 1.    0.767 0.868
+H SMOTE.k=14 | SMOTE.m=358 | SMOTE.r=1 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.30000000000000004 | MLP.max_iter=118 | MLP.momentum=0.5 | MLP.n_iter_no_change=52 | 
+V 0.857 0.83  0.843
+H SMOTE.k=18 | SMOTE.m=202 | SMOTE.r=4 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.8 | MLP.max_iter=197 | MLP.momentum=0.7000000000000001 | MLP.n_iter_no_change=80 | 
+V 0.714 0.86  0.78 
+H SMOTE.k=19 | SMOTE.m=58 | SMOTE.r=2 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.1 | MLP.max_iter=259 | MLP.momentum=0.5 | MLP.n_iter_no_change=30 | 
+V 1.    0.647 0.786
+H SMOTE.k=4 | SMOTE.m=91 | SMOTE.r=5 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.2 | MLP.max_iter=244 | MLP.momentum=0.5 | MLP.n_iter_no_change=63 | 
+V 1.    0.742 0.852
+H SMOTE.k=6 | SMOTE.m=194 | SMOTE.r=2 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.2 | MLP.max_iter=134 | MLP.momentum=0.6 | MLP.n_iter_no_change=79 | 
+V 1.    0.777 0.874
+H SMOTE.k=6 | SMOTE.m=300 | SMOTE.r=2 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.30000000000000004 | MLP.max_iter=284 | MLP.momentum=0.5 | MLP.n_iter_no_change=69 | 
+V 0.857 0.822 0.839
+H SMOTE.k=13 | SMOTE.m=108 | SMOTE.r=1 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.7000000000000001 | MLP.max_iter=235 | MLP.momentum=0.8 | MLP.n_iter_no_change=91 | 
+V 1.    0.775 0.873
+H SMOTE.k=2 | SMOTE.m=96 | SMOTE.r=4 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.5 | MLP.max_iter=229 | MLP.momentum=0.7000000000000001 | MLP.n_iter_no_change=80 | 
+V 1.    0.751 0.857
+## END
+** Jul-14-2019 11:17:08
+H MaxAbsScaler.copy=True | DT.min_samples_split=16 | DT.criterion=entropy | DT.splitter=random | 
+V 0.429 0.974 0.595
+H MaxAbsScaler.copy=False | DT.min_samples_split=7 | DT.criterion=entropy | DT.splitter=random | 
+V 0.571 0.968 0.719
+H MaxAbsScaler.copy=False | DT.min_samples_split=3 | DT.criterion=gini | DT.splitter=random | 
+V 0.429 0.99  0.598
+H MaxAbsScaler.copy=False | DT.min_samples_split=14 | DT.criterion=entropy | DT.splitter=random | 
+V 0.429 0.982 0.597
+H MaxAbsScaler.copy=False | DT.min_samples_split=4 | DT.criterion=entropy | DT.splitter=random | 
+V 0.571 0.982 0.722
+H MaxAbsScaler.copy=True | DT.min_samples_split=12 | DT.criterion=gini | DT.splitter=random | 
+V 0.429 0.986 0.597
+H MaxAbsScaler.copy=True | DT.min_samples_split=8 | DT.criterion=entropy | DT.splitter=random | 
+V 0.429 0.988 0.598
+H MaxAbsScaler.copy=False | DT.min_samples_split=11 | DT.criterion=entropy | DT.splitter=random | 
+V 0.571 0.976 0.721
+H MaxAbsScaler.copy=False | DT.min_samples_split=9 | DT.criterion=gini | DT.splitter=random | 
+V 0.429 0.99  0.598
+H MaxAbsScaler.copy=True | DT.min_samples_split=6 | DT.criterion=gini | DT.splitter=random | 
+V 0.429 0.982 0.597
+## END

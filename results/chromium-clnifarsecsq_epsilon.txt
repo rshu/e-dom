@@ -20,3 +20,25 @@ V 0.722 0.891 0.797
 H SMOTE.k=9 | SMOTE.m=272 | SMOTE.r=1 | NB.var_smoothing=1e-09 | 
 V 0.6   0.925 0.728
 ## END
+** Jul-14-2019 18:11:13
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=C | NB.var_smoothing=1e-05 | 
+V 0.722 0.868 0.788
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=F | NB.var_smoothing=1e-05 | 
+V 0.722 0.868 0.788
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=F | NB.var_smoothing=1e-05 | 
+V 0.722 0.868 0.788
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=F | NB.var_smoothing=1e-05 | 
+V 0.722 0.868 0.788
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=C | NB.var_smoothing=1e-05 | 
+V 0.722 0.868 0.788
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=F | NB.var_smoothing=1e-05 | 
+V 0.722 0.868 0.788
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=C | NB.var_smoothing=1e-05 | 
+V 0.722 0.868 0.788
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=F | NB.var_smoothing=1e-09 | 
+V 0.678 0.894 0.771
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=C | NB.var_smoothing=1e-09 | 
+V 0.678 0.894 0.771
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=F | NB.var_smoothing=1e-05 | 
+V 0.722 0.868 0.788
+## END

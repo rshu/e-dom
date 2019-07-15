@@ -20,3 +20,47 @@ V 0.667 0.6   0.631
 H SMOTE.k=17 | SMOTE.m=73 | SMOTE.r=3 | KNN.n_neighbors=12 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=2 | 
 V 0.167 0.925 0.282
 ## END
+** Jul-12-2019 12:49:23
+H SMOTE.k=17 | SMOTE.m=371 | SMOTE.r=2 | NB.var_smoothing=1e-06 | 
+V 0.222 0.932 0.359
+H SMOTE.k=4 | SMOTE.m=78 | SMOTE.r=2 | NB.var_smoothing=1e-07 | 
+V 0.444 0.722 0.55 
+H SMOTE.k=9 | SMOTE.m=77 | SMOTE.r=3 | NB.var_smoothing=1e-09 | 
+V 0.5   0.761 0.604
+H SMOTE.k=5 | SMOTE.m=78 | SMOTE.r=2 | NB.var_smoothing=1e-05 | 
+V 0.5   0.73  0.594
+H SMOTE.k=12 | SMOTE.m=84 | SMOTE.r=2 | NB.var_smoothing=1e-08 | 
+V 0.556 0.759 0.642
+H SMOTE.k=19 | SMOTE.m=390 | SMOTE.r=4 | NB.var_smoothing=1e-09 | 
+V 0.222 0.936 0.359
+H SMOTE.k=5 | SMOTE.m=89 | SMOTE.r=1 | NB.var_smoothing=1e-07 | 
+V 0.5   0.728 0.593
+H SMOTE.k=11 | SMOTE.m=75 | SMOTE.r=5 | NB.var_smoothing=1e-08 | 
+V 0.5   0.67  0.573
+H SMOTE.k=11 | SMOTE.m=56 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.556 0.651 0.6  
+H SMOTE.k=9 | SMOTE.m=370 | SMOTE.r=2 | NB.var_smoothing=0.0001 | 
+V 0.167 0.956 0.284
+## END
+** Jul-14-2019 12:12:02
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | KNN.n_neighbors=2 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=3 | 
+V 0.056 0.994 0.105
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | KNN.n_neighbors=2 | KNN.weights=uniform | KNN.metric=minkowski | KNN.p=4 | 
+V 0.056 1.    0.105
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | KNN.n_neighbors=4 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=4 | 
+V 0.056 1.    0.105
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | KNN.n_neighbors=2 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=3 | 
+V 0.056 0.994 0.105
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | KNN.n_neighbors=2 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=3 | 
+V 0.056 0.994 0.105
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | KNN.n_neighbors=3 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=4 | 
+V 0.056 1.    0.105
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | KNN.n_neighbors=2 | KNN.weights=uniform | KNN.metric=minkowski | KNN.p=4 | 
+V 0.056 1.    0.105
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | KNN.n_neighbors=14 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=3 | 
+V 0. 1. 0.
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | KNN.n_neighbors=3 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=4 | 
+V 0.056 1.    0.105
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | KNN.n_neighbors=3 | KNN.weights=uniform | KNN.metric=minkowski | KNN.p=4 | 
+V 0.056 1.    0.105
+## END

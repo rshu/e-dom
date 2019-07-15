@@ -20,3 +20,47 @@ V 1.    0.761 0.864
 H SMOTE.k=13 | SMOTE.m=225 | SMOTE.r=3 | DT.min_samples_split=7 | DT.criterion=gini | DT.splitter=best | 
 V 1.    0.797 0.887
 ## END
+** Jul-12-2019 12:15:27
+H SMOTE.k=6 | SMOTE.m=70 | SMOTE.r=1 | DT.min_samples_split=6 | DT.criterion=entropy | DT.splitter=best | 
+V 1.    0.761 0.864
+H SMOTE.k=17 | SMOTE.m=238 | SMOTE.r=5 | DT.min_samples_split=6 | DT.criterion=entropy | DT.splitter=random | 
+V 1.    0.791 0.883
+H SMOTE.k=12 | SMOTE.m=243 | SMOTE.r=3 | DT.min_samples_split=4 | DT.criterion=gini | DT.splitter=best | 
+V 1.    0.805 0.892
+H SMOTE.k=7 | SMOTE.m=245 | SMOTE.r=5 | DT.min_samples_split=18 | DT.criterion=entropy | DT.splitter=best | 
+V 1.    0.801 0.89 
+H SMOTE.k=5 | SMOTE.m=109 | SMOTE.r=1 | DT.min_samples_split=7 | DT.criterion=entropy | DT.splitter=random | 
+V 1.    0.781 0.877
+H SMOTE.k=11 | SMOTE.m=237 | SMOTE.r=3 | DT.min_samples_split=3 | DT.criterion=entropy | DT.splitter=best | 
+V 1.    0.783 0.878
+H SMOTE.k=10 | SMOTE.m=111 | SMOTE.r=5 | DT.min_samples_split=12 | DT.criterion=entropy | DT.splitter=best | 
+V 1.    0.789 0.882
+H SMOTE.k=16 | SMOTE.m=151 | SMOTE.r=2 | DT.min_samples_split=10 | DT.criterion=entropy | DT.splitter=best | 
+V 1.    0.807 0.893
+H SMOTE.k=8 | SMOTE.m=313 | SMOTE.r=2 | DT.min_samples_split=10 | DT.criterion=entropy | DT.splitter=best | 
+V 1.    0.777 0.874
+H SMOTE.k=5 | SMOTE.m=251 | SMOTE.r=4 | DT.min_samples_split=9 | DT.criterion=entropy | DT.splitter=best | 
+V 1.    0.801 0.89 
+## END
+** Jul-14-2019 11:13:30
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=C | DT.min_samples_split=7 | DT.criterion=entropy | DT.splitter=best | 
+V 0.571 0.976 0.721
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=C | DT.min_samples_split=7 | DT.criterion=entropy | DT.splitter=best | 
+V 0.571 0.978 0.721
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=F | DT.min_samples_split=9 | DT.criterion=entropy | DT.splitter=best | 
+V 0.571 0.976 0.721
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=C | DT.min_samples_split=5 | DT.criterion=entropy | DT.splitter=best | 
+V 0.571 0.976 0.721
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=F | DT.min_samples_split=5 | DT.criterion=entropy | DT.splitter=best | 
+V 0.571 0.976 0.721
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=F | DT.min_samples_split=7 | DT.criterion=gini | DT.splitter=best | 
+V 0.571 0.976 0.721
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=C | DT.min_samples_split=8 | DT.criterion=entropy | DT.splitter=random | 
+V 0.571 0.978 0.721
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=C | DT.min_samples_split=4 | DT.criterion=entropy | DT.splitter=best | 
+V 0.571 0.976 0.721
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=C | DT.min_samples_split=8 | DT.criterion=entropy | DT.splitter=best | 
+V 0.571 0.976 0.721
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=C | DT.min_samples_split=8 | DT.criterion=entropy | DT.splitter=best | 
+V 0.571 0.976 0.721
+## END

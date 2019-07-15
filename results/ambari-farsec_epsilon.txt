@@ -20,3 +20,47 @@ V 1.    0.811 0.896
 H SMOTE.k=4 | SMOTE.m=332 | SMOTE.r=3 | DT.min_samples_split=14 | DT.criterion=gini | DT.splitter=random | 
 V 1.    0.838 0.912
 ## END
+** Jul-12-2019 12:17:23
+H SMOTE.k=3 | SMOTE.m=157 | SMOTE.r=1 | DT.min_samples_split=11 | DT.criterion=entropy | DT.splitter=best | 
+V 0.714 0.83  0.768
+H SMOTE.k=10 | SMOTE.m=348 | SMOTE.r=4 | DT.min_samples_split=11 | DT.criterion=entropy | DT.splitter=best | 
+V 1.    0.838 0.912
+H SMOTE.k=9 | SMOTE.m=154 | SMOTE.r=4 | DT.min_samples_split=4 | DT.criterion=gini | DT.splitter=random | 
+V 1.    0.791 0.883
+H SMOTE.k=11 | SMOTE.m=92 | SMOTE.r=1 | DT.min_samples_split=6 | DT.criterion=entropy | DT.splitter=best | 
+V 1.    0.769 0.869
+H SMOTE.k=15 | SMOTE.m=68 | SMOTE.r=5 | DT.min_samples_split=15 | DT.criterion=entropy | DT.splitter=best | 
+V 0.857 0.846 0.851
+H SMOTE.k=11 | SMOTE.m=155 | SMOTE.r=1 | DT.min_samples_split=10 | DT.criterion=gini | DT.splitter=random | 
+V 1.    0.744 0.853
+H SMOTE.k=8 | SMOTE.m=234 | SMOTE.r=3 | DT.min_samples_split=15 | DT.criterion=gini | DT.splitter=random | 
+V 1.    0.791 0.883
+H SMOTE.k=15 | SMOTE.m=266 | SMOTE.r=4 | DT.min_samples_split=6 | DT.criterion=entropy | DT.splitter=best | 
+V 1.    0.789 0.882
+H SMOTE.k=11 | SMOTE.m=51 | SMOTE.r=4 | DT.min_samples_split=7 | DT.criterion=gini | DT.splitter=random | 
+V 1.    0.736 0.848
+H SMOTE.k=11 | SMOTE.m=399 | SMOTE.r=4 | DT.min_samples_split=17 | DT.criterion=gini | DT.splitter=best | 
+V 1.    0.807 0.893
+## END
+** Jul-14-2019 12:09:55
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | DT.min_samples_split=11 | DT.criterion=entropy | DT.splitter=best | 
+V 0.571 0.974 0.72 
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | DT.min_samples_split=5 | DT.criterion=gini | DT.splitter=best | 
+V 0.571 0.974 0.72 
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | DT.min_samples_split=8 | DT.criterion=gini | DT.splitter=best | 
+V 0.571 0.974 0.72 
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | DT.min_samples_split=5 | DT.criterion=entropy | DT.splitter=best | 
+V 0.571 0.976 0.721
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | DT.min_samples_split=9 | DT.criterion=entropy | DT.splitter=best | 
+V 0.571 0.976 0.721
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | DT.min_samples_split=6 | DT.criterion=entropy | DT.splitter=best | 
+V 0.571 0.976 0.721
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | DT.min_samples_split=9 | DT.criterion=entropy | DT.splitter=best | 
+V 0.571 0.976 0.721
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | DT.min_samples_split=8 | DT.criterion=entropy | DT.splitter=best | 
+V 0.571 0.976 0.721
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | DT.min_samples_split=5 | DT.criterion=entropy | DT.splitter=best | 
+V 0.571 0.976 0.721
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | DT.min_samples_split=7 | DT.criterion=entropy | DT.splitter=best | 
+V 0.571 0.976 0.721
+## END

@@ -20,3 +20,47 @@ V 0.667 0.83  0.739
 H SMOTE.k=12 | SMOTE.m=91 | SMOTE.r=5 | NB.var_smoothing=1e-08 | 
 V 0.667 0.911 0.77 
 ## END
+** Jul-12-2019 12:17:12
+H SMOTE.k=4 | SMOTE.m=66 | SMOTE.r=2 | NB.var_smoothing=1e-09 | 
+V 0.667 0.907 0.768
+H SMOTE.k=12 | SMOTE.m=280 | SMOTE.r=3 | NB.var_smoothing=1e-07 | 
+V 0.5   0.951 0.656
+H SMOTE.k=12 | SMOTE.m=248 | SMOTE.r=4 | NB.var_smoothing=1e-09 | 
+V 0.333 0.968 0.496
+H SMOTE.k=19 | SMOTE.m=63 | SMOTE.r=4 | NB.var_smoothing=1e-07 | 
+V 0.667 0.773 0.716
+H SMOTE.k=18 | SMOTE.m=158 | SMOTE.r=1 | NB.var_smoothing=1e-07 | 
+V 0.5   0.917 0.647
+H SMOTE.k=2 | SMOTE.m=129 | SMOTE.r=2 | NB.var_smoothing=1e-09 | 
+V 0.667 0.899 0.766
+H SMOTE.k=3 | SMOTE.m=99 | SMOTE.r=2 | NB.var_smoothing=1e-08 | 
+V 0.667 0.881 0.759
+H SMOTE.k=15 | SMOTE.m=61 | SMOTE.r=3 | NB.var_smoothing=1e-06 | 
+V 0.667 0.852 0.748
+H SMOTE.k=8 | SMOTE.m=204 | SMOTE.r=5 | NB.var_smoothing=1e-05 | 
+V 0.667 0.919 0.773
+H SMOTE.k=17 | SMOTE.m=59 | SMOTE.r=4 | NB.var_smoothing=0.0001 | 
+V 0.667 0.773 0.716
+## END
+** Jul-14-2019 11:20:25
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=False | RobustScaler.q_min=21 | RobustScaler.q_max=80 | RobustScaler.copy=True | SVM.C=13 | SVM.kernel=rbf | SVM.degree=9 | SVM.gamma=0.008224850405773587 | SVM.coef0=0.01955538554798464 | SVM.tol=0.06954513197765393 | 
+V 0. 1. 0.
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=True | RobustScaler.q_min=16 | RobustScaler.q_max=80 | RobustScaler.copy=False | SVM.C=54 | SVM.kernel=rbf | SVM.degree=9 | SVM.gamma=0.1258856179043245 | SVM.coef0=0.08107918032783501 | SVM.tol=0.030224180931421554 | 
+V 0. 1. 0.
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=False | RobustScaler.q_min=18 | RobustScaler.q_max=89 | RobustScaler.copy=False | SVM.C=82 | SVM.kernel=rbf | SVM.degree=2 | SVM.gamma=0.44228767932178004 | SVM.coef0=0.04245548724714038 | SVM.tol=0.07102136426775899 | 
+V 0. 1. 0.
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=False | RobustScaler.q_min=26 | RobustScaler.q_max=64 | RobustScaler.copy=True | SVM.C=122 | SVM.kernel=poly | SVM.degree=5 | SVM.gamma=0.3098456722301436 | SVM.coef0=0.043063203604534084 | SVM.tol=0.06954513197765393 | 
+V 0. 1. 0.
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=True | RobustScaler.q_min=35 | RobustScaler.q_max=62 | RobustScaler.copy=True | SVM.C=27 | SVM.kernel=poly | SVM.degree=7 | SVM.gamma=0.6385386701971546 | SVM.coef0=0.043063203604534084 | SVM.tol=0.008671313800137914 | 
+V 0. 1. 0.
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=False | RobustScaler.q_min=27 | RobustScaler.q_max=61 | RobustScaler.copy=False | SVM.C=96 | SVM.kernel=rbf | SVM.degree=7 | SVM.gamma=0.16880894999991214 | SVM.coef0=0.04245548724714038 | SVM.tol=0.04924797981088093 | 
+V 0. 1. 0.
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=True | RobustScaler.q_min=13 | RobustScaler.q_max=72 | RobustScaler.copy=False | SVM.C=381 | SVM.kernel=poly | SVM.degree=5 | SVM.gamma=0.23138358702167516 | SVM.coef0=0.01955538554798464 | SVM.tol=0.017578821754588914 | 
+V 0. 1. 0.
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=True | RobustScaler.q_min=34 | RobustScaler.q_max=77 | RobustScaler.copy=False | SVM.C=305 | SVM.kernel=rbf | SVM.degree=9 | SVM.gamma=0.6901182228106939 | SVM.coef0=0.008175609870245437 | SVM.tol=0.008671313800137914 | 
+V 0. 1. 0.
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=True | RobustScaler.q_min=30 | RobustScaler.q_max=70 | RobustScaler.copy=False | SVM.C=276 | SVM.kernel=rbf | SVM.degree=8 | SVM.gamma=0.0895959328517082 | SVM.coef0=0.008175609870245437 | SVM.tol=0.06954513197765393 | 
+V 0. 1. 0.
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=False | RobustScaler.q_min=34 | RobustScaler.q_max=61 | RobustScaler.copy=False | SVM.C=458 | SVM.kernel=rbf | SVM.degree=2 | SVM.gamma=0.38549481102629446 | SVM.coef0=0.06653557905157108 | SVM.tol=0.012340150864900347 | 
+V 0. 1. 0.
+## END

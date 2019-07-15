@@ -20,3 +20,47 @@ V 0.857 0.69  0.764
 H SMOTE.k=6 | SMOTE.m=126 | SMOTE.r=4 | DT.min_samples_split=11 | DT.criterion=entropy | DT.splitter=random | 
 V 1.    0.653 0.79 
 ## END
+** Jul-12-2019 12:17:49
+H QuantileTransformer.n_quantiles=1354 | QuantileTransformer.output_distribution=uniform | QuantileTransformer.ignore_implicit_zeros=False | QuantileTransformer.subsample=84338 | QuantileTransformer.copy=True | DT.min_samples_split=6 | DT.criterion=entropy | DT.splitter=random | 
+V 0.571 0.895 0.697
+H QuantileTransformer.n_quantiles=1039 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=False | QuantileTransformer.subsample=110826 | QuantileTransformer.copy=False | DT.min_samples_split=2 | DT.criterion=entropy | DT.splitter=random | 
+V 0.571 0.895 0.697
+H QuantileTransformer.n_quantiles=1233 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=134456 | QuantileTransformer.copy=False | DT.min_samples_split=4 | DT.criterion=entropy | DT.splitter=random | 
+V 0.571 0.897 0.698
+H QuantileTransformer.n_quantiles=1244 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=25676 | QuantileTransformer.copy=True | DT.min_samples_split=19 | DT.criterion=gini | DT.splitter=best | 
+V 0.571 0.888 0.696
+H QuantileTransformer.n_quantiles=1032 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=82693 | QuantileTransformer.copy=False | DT.min_samples_split=17 | DT.criterion=gini | DT.splitter=random | 
+V 0.571 0.905 0.7  
+H QuantileTransformer.n_quantiles=1247 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=47014 | QuantileTransformer.copy=False | DT.min_samples_split=12 | DT.criterion=gini | DT.splitter=best | 
+V 0.571 0.888 0.696
+H QuantileTransformer.n_quantiles=1717 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=140088 | QuantileTransformer.copy=False | DT.min_samples_split=7 | DT.criterion=entropy | DT.splitter=random | 
+V 0.571 0.888 0.696
+H QuantileTransformer.n_quantiles=542 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=109624 | QuantileTransformer.copy=True | DT.min_samples_split=5 | DT.criterion=entropy | DT.splitter=best | 
+V 0.571 0.888 0.696
+H QuantileTransformer.n_quantiles=1804 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=41549 | QuantileTransformer.copy=True | DT.min_samples_split=7 | DT.criterion=gini | DT.splitter=random | 
+V 0.571 0.89  0.696
+H QuantileTransformer.n_quantiles=822 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=49663 | QuantileTransformer.copy=True | DT.min_samples_split=7 | DT.criterion=gini | DT.splitter=random | 
+V 0.571 0.895 0.697
+## END
+** Jul-14-2019 11:55:29
+H Normalization.norm=l2 | Normalization.copy=False | RF.n_estimators=83 | RF.criterion=gini | RF.min_samples_leaf=9 | RF.min_samples_split=15 | RF.max_leaf_nodes=45 | RF.max_features=0.76 | RF.max_depth=1 | 
+V 0.571 0.972 0.72 
+H Normalization.norm=max | Normalization.copy=True | RF.n_estimators=71 | RF.criterion=gini | RF.min_samples_leaf=17 | RF.min_samples_split=5 | RF.max_leaf_nodes=9 | RF.max_features=0.3 | RF.max_depth=1 | 
+V 0.571 0.974 0.72 
+H Normalization.norm=max | Normalization.copy=True | RF.n_estimators=110 | RF.criterion=entropy | RF.min_samples_leaf=14 | RF.min_samples_split=2 | RF.max_leaf_nodes=4 | RF.max_features=0.25 | RF.max_depth=9 | 
+V 0.571 0.972 0.72 
+H Normalization.norm=max | Normalization.copy=False | RF.n_estimators=57 | RF.criterion=gini | RF.min_samples_leaf=12 | RF.min_samples_split=14 | RF.max_leaf_nodes=29 | RF.max_features=0.52 | RF.max_depth=1 | 
+V 0.571 0.972 0.72 
+H Normalization.norm=l1 | Normalization.copy=False | RF.n_estimators=119 | RF.criterion=entropy | RF.min_samples_leaf=1 | RF.min_samples_split=8 | RF.max_leaf_nodes=3 | RF.max_features=0.45 | RF.max_depth=9 | 
+V 0.571 0.972 0.72 
+H Normalization.norm=max | Normalization.copy=False | RF.n_estimators=95 | RF.criterion=gini | RF.min_samples_leaf=15 | RF.min_samples_split=6 | RF.max_leaf_nodes=22 | RF.max_features=0.2 | RF.max_depth=2 | 
+V 0.571 0.974 0.72 
+H Normalization.norm=max | Normalization.copy=True | RF.n_estimators=147 | RF.criterion=entropy | RF.min_samples_leaf=7 | RF.min_samples_split=8 | RF.max_leaf_nodes=14 | RF.max_features=0.3 | RF.max_depth=1 | 
+V 0.571 0.974 0.72 
+H Normalization.norm=max | Normalization.copy=True | RF.n_estimators=62 | RF.criterion=gini | RF.min_samples_leaf=17 | RF.min_samples_split=15 | RF.max_leaf_nodes=40 | RF.max_features=0.41000000000000003 | RF.max_depth=1 | 
+V 0.571 0.974 0.72 
+H Normalization.norm=max | Normalization.copy=False | RF.n_estimators=22 | RF.criterion=entropy | RF.min_samples_leaf=12 | RF.min_samples_split=12 | RF.max_leaf_nodes=2 | RF.max_features=0.49 | RF.max_depth=7 | 
+V 0.571 0.974 0.72 
+H Normalization.norm=l2 | Normalization.copy=True | RF.n_estimators=91 | RF.criterion=gini | RF.min_samples_leaf=13 | RF.min_samples_split=16 | RF.max_leaf_nodes=49 | RF.max_features=0.48000000000000004 | RF.max_depth=2 | 
+V 0.571 0.972 0.72 
+## END

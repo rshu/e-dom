@@ -20,3 +20,47 @@ V 0.429 0.745 0.544
 H SMOTE.k=5 | SMOTE.m=140 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
 V 0.476 0.723 0.574
 ## END
+** Jul-12-2019 12:09:51
+H StandardScaler.copy=False | StandardScaler.with_mean=False | StandardScaler.with_std=True | NB.var_smoothing=1e-09 | 
+V 0.81  0.541 0.649
+H StandardScaler.copy=False | StandardScaler.with_mean=False | StandardScaler.with_std=False | NB.var_smoothing=1e-09 | 
+V 0.81  0.541 0.649
+H StandardScaler.copy=True | StandardScaler.with_mean=False | StandardScaler.with_std=False | NB.var_smoothing=1e-09 | 
+V 0.81  0.541 0.649
+H StandardScaler.copy=True | StandardScaler.with_mean=False | StandardScaler.with_std=False | NB.var_smoothing=1e-09 | 
+V 0.81  0.541 0.649
+H StandardScaler.copy=True | StandardScaler.with_mean=True | StandardScaler.with_std=True | NB.var_smoothing=1e-09 | 
+V 0.81  0.541 0.649
+H StandardScaler.copy=True | StandardScaler.with_mean=False | StandardScaler.with_std=False | NB.var_smoothing=1e-09 | 
+V 0.81  0.541 0.649
+H StandardScaler.copy=False | StandardScaler.with_mean=False | StandardScaler.with_std=False | NB.var_smoothing=1e-09 | 
+V 0.81  0.541 0.649
+H StandardScaler.copy=True | StandardScaler.with_mean=True | StandardScaler.with_std=True | NB.var_smoothing=1e-09 | 
+V 0.81  0.541 0.649
+H StandardScaler.copy=False | StandardScaler.with_mean=True | StandardScaler.with_std=True | NB.var_smoothing=1e-09 | 
+V 0.81  0.541 0.649
+H StandardScaler.copy=False | StandardScaler.with_mean=False | StandardScaler.with_std=True | NB.var_smoothing=1e-09 | 
+V 0.81  0.541 0.649
+## END
+** Jul-14-2019 12:35:04
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | NB.var_smoothing=1e-05 | 
+V 0.786 0.6   0.681
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | NB.var_smoothing=1e-05 | 
+V 0.786 0.6   0.681
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | NB.var_smoothing=1e-05 | 
+V 0.786 0.6   0.681
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | NB.var_smoothing=1e-05 | 
+V 0.786 0.6   0.681
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | NB.var_smoothing=1e-05 | 
+V 0.786 0.6   0.681
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | NB.var_smoothing=1e-05 | 
+V 0.786 0.6   0.681
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | NB.var_smoothing=1e-05 | 
+V 0.786 0.6   0.681
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | NB.var_smoothing=1e-05 | 
+V 0.786 0.6   0.681
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | NB.var_smoothing=1e-05 | 
+V 0.786 0.6   0.681
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | NB.var_smoothing=1e-05 | 
+V 0.786 0.6   0.681
+## END

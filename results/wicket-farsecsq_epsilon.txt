@@ -20,3 +20,47 @@ V 0.833 0.366 0.509
 H SMOTE.k=10 | SMOTE.m=323 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
 V 0.833 0.397 0.538
 ## END
+** Jul-12-2019 12:00:46
+H Normalization.norm=l1 | Normalization.copy=False | NB.var_smoothing=0.001 | 
+V 0.667 0.528 0.589
+H Normalization.norm=l1 | Normalization.copy=False | NB.var_smoothing=0.001 | 
+V 0.667 0.528 0.589
+H Normalization.norm=l1 | Normalization.copy=True | NB.var_smoothing=0.001 | 
+V 0.667 0.528 0.589
+H Normalization.norm=l1 | Normalization.copy=True | NB.var_smoothing=0.001 | 
+V 0.667 0.528 0.589
+H Normalization.norm=l1 | Normalization.copy=True | NB.var_smoothing=0.001 | 
+V 0.667 0.528 0.589
+H Normalization.norm=l1 | Normalization.copy=False | NB.var_smoothing=0.001 | 
+V 0.667 0.528 0.589
+H Normalization.norm=max | Normalization.copy=True | NB.var_smoothing=0.001 | 
+V 0.833 0.356 0.499
+H Normalization.norm=l1 | Normalization.copy=True | NB.var_smoothing=0.001 | 
+V 0.667 0.528 0.589
+H Normalization.norm=max | Normalization.copy=False | NB.var_smoothing=0.001 | 
+V 0.833 0.356 0.499
+H Normalization.norm=max | Normalization.copy=False | NB.var_smoothing=0.001 | 
+V 0.833 0.356 0.499
+## END
+** Jul-14-2019 11:23:02
+H SMOTE.k=8 | SMOTE.m=152 | SMOTE.r=1 | DT.min_samples_split=4 | DT.criterion=entropy | DT.splitter=random | 
+V 0.5   0.83  0.624
+H SMOTE.k=3 | SMOTE.m=341 | SMOTE.r=1 | DT.min_samples_split=6 | DT.criterion=gini | DT.splitter=random | 
+V 0.5   0.812 0.619
+H SMOTE.k=4 | SMOTE.m=131 | SMOTE.r=3 | DT.min_samples_split=5 | DT.criterion=gini | DT.splitter=random | 
+V 0.5   0.868 0.635
+H SMOTE.k=14 | SMOTE.m=217 | SMOTE.r=2 | DT.min_samples_split=12 | DT.criterion=gini | DT.splitter=random | 
+V 0.667 0.682 0.674
+H SMOTE.k=13 | SMOTE.m=337 | SMOTE.r=2 | DT.min_samples_split=18 | DT.criterion=entropy | DT.splitter=best | 
+V 0.5   0.794 0.613
+H SMOTE.k=9 | SMOTE.m=179 | SMOTE.r=1 | DT.min_samples_split=8 | DT.criterion=entropy | DT.splitter=best | 
+V 0.5   0.84  0.627
+H SMOTE.k=10 | SMOTE.m=160 | SMOTE.r=1 | DT.min_samples_split=14 | DT.criterion=gini | DT.splitter=random | 
+V 0.5   0.86  0.632
+H SMOTE.k=15 | SMOTE.m=378 | SMOTE.r=2 | DT.min_samples_split=11 | DT.criterion=entropy | DT.splitter=random | 
+V 0.5   0.854 0.631
+H SMOTE.k=9 | SMOTE.m=267 | SMOTE.r=1 | DT.min_samples_split=11 | DT.criterion=gini | DT.splitter=random | 
+V 0.667 0.638 0.652
+H SMOTE.k=16 | SMOTE.m=90 | SMOTE.r=2 | DT.min_samples_split=18 | DT.criterion=gini | DT.splitter=random | 
+V 0.5   0.814 0.619
+## END

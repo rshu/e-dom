@@ -20,3 +20,47 @@ V 0.333 0.668 0.445
 H SMOTE.k=8 | SMOTE.m=271 | SMOTE.r=5 | NB.var_smoothing=1e-09 | 
 V 0.611 0.498 0.549
 ## END
+** Jul-12-2019 12:46:25
+H SMOTE.k=11 | SMOTE.m=301 | SMOTE.r=3 | NB.var_smoothing=0.001 | 
+V 0.278 0.703 0.398
+H SMOTE.k=6 | SMOTE.m=293 | SMOTE.r=1 | NB.var_smoothing=1e-09 | 
+V 0.611 0.5   0.55 
+H SMOTE.k=16 | SMOTE.m=61 | SMOTE.r=3 | NB.var_smoothing=1e-07 | 
+V 0.722 0.299 0.423
+H SMOTE.k=5 | SMOTE.m=94 | SMOTE.r=4 | NB.var_smoothing=0.001 | 
+V 0.5   0.568 0.532
+H SMOTE.k=3 | SMOTE.m=150 | SMOTE.r=1 | NB.var_smoothing=1e-09 | 
+V 0.667 0.483 0.56 
+H SMOTE.k=5 | SMOTE.m=164 | SMOTE.r=5 | NB.var_smoothing=1e-07 | 
+V 0.667 0.469 0.551
+H SMOTE.k=10 | SMOTE.m=73 | SMOTE.r=5 | NB.var_smoothing=1e-09 | 
+V 0.778 0.411 0.538
+H SMOTE.k=2 | SMOTE.m=391 | SMOTE.r=4 | NB.var_smoothing=0.001 | 
+V 0.278 0.714 0.4  
+H SMOTE.k=8 | SMOTE.m=118 | SMOTE.r=4 | NB.var_smoothing=0.001 | 
+V 0.333 0.691 0.45 
+H SMOTE.k=2 | SMOTE.m=81 | SMOTE.r=3 | NB.var_smoothing=1e-08 | 
+V 0.778 0.417 0.543
+## END
+** Jul-14-2019 11:10:49
+H Normalization.norm=l2 | Normalization.copy=False | NB.var_smoothing=0.001 | 
+V 0.611 0.604 0.607
+H Normalization.norm=l2 | Normalization.copy=False | NB.var_smoothing=0.001 | 
+V 0.611 0.604 0.607
+H Normalization.norm=l2 | Normalization.copy=True | NB.var_smoothing=0.001 | 
+V 0.611 0.604 0.607
+H Normalization.norm=l2 | Normalization.copy=True | NB.var_smoothing=0.001 | 
+V 0.611 0.604 0.607
+H Normalization.norm=l2 | Normalization.copy=True | NB.var_smoothing=0.001 | 
+V 0.611 0.604 0.607
+H Normalization.norm=l2 | Normalization.copy=False | NB.var_smoothing=0.001 | 
+V 0.611 0.604 0.607
+H Normalization.norm=l2 | Normalization.copy=False | NB.var_smoothing=0.001 | 
+V 0.611 0.604 0.607
+H Normalization.norm=l2 | Normalization.copy=True | NB.var_smoothing=0.001 | 
+V 0.611 0.604 0.607
+H Normalization.norm=l1 | Normalization.copy=True | NB.var_smoothing=0.001 | 
+V 0.389 0.705 0.501
+H Normalization.norm=l2 | Normalization.copy=True | NB.var_smoothing=0.001 | 
+V 0.611 0.604 0.607
+## END
