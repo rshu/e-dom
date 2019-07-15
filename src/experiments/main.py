@@ -29,6 +29,7 @@ import json
 import random
 import pdb
 import numpy as np
+import time
 
 cwd = os.getcwd()
 root = cwd[:os.getcwd().rfind('e-dom/') + len('e-dom/') - 1]
@@ -57,12 +58,18 @@ def run_random100(model):
 
 def run_epsilon(model):
     FARSEC_HP = ML.get_HP_obj()
-    res = epsilon.exec_(model, FARSEC_HP, ML.evaluation, 10, [0.2, 0.2, 0.2])
+    epsilon_list = [0.2, 0.2, 0.2]
+    epsilon_start_time = time.time()
+    res = epsilon.exec_(model, FARSEC_HP, ML.evaluation, 10, epsilon_list)
+    epsilon_execution_time = time.time() - epsilon_start_time
 
     # writing results to file
     outfile = open(f'{root}/results/{model}_epsilon.txt', 'a+')
     outfile.write(
         f'** {datetime.datetime.today().strftime("%b-%d-%Y %H:%M:%S")}\n')
+
+    outfile.write(f'Epsilon {epsilon_list}\n')
+    outfile.write(f'Execution time: {epsilon_execution_time}\n')
 
     for resi in res:
         hp, values = resi[0], resi[1]
