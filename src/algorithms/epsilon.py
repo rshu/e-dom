@@ -75,7 +75,7 @@ def exec_(dataset, HP_obj, eval_func, N1, epsilon_lst):
     # Step1: find the best preprocessor and best learner
     best_values = np.array([np.NINF for _ in range(len(epsilon_lst))])
 
-    lambda_list = [0.33, 0.33, 0.33]  # TODO change here
+    lambda_list = [0.25, 0.25, 0.50]  # TODO change here
 
     for _ in range(N1):
         rnd_hp, pre, learner = HP_obj.get_rnd_hp_without_range()

@@ -114,7 +114,7 @@ def MinMaxScaler(train_df, test_df, HP):
     train_x_copy = train_x.copy()
     train_x_transformed = transformer.fit_transform(train_x_copy)
     test_x_copy = test_x.copy()
-    test_x_transformed = transformer.transform(test_x_copy)  # TODO check here
+    test_x_transformed = transformer.fit_transform(test_x_copy)  # TODO check here
 
     train_column_name = list(train_x_copy.columns)
     test_column_name = list(test_x_copy.columns)
