@@ -64,3 +64,27 @@ V 0.714 0.786 0.748
 H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | LR.penalty=l1 | LR.tol=0.03258183197771958 | LR.C=414 | 
 V 0.619 0.758 0.681
 ## END
+** Jul-28-2019 21:57:54
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 450.63817977905273
+H StandardScaler.copy=True | StandardScaler.with_mean=False | StandardScaler.with_std=True | LR.penalty=l1 | LR.tol=0.054101032005816785 | LR.C=20 | 
+V 0.571 0.712 0.634
+H StandardScaler.copy=True | StandardScaler.with_mean=False | StandardScaler.with_std=False | LR.penalty=l1 | LR.tol=0.08385739711909414 | LR.C=193 | 
+V 0.5   0.782 0.61 
+H StandardScaler.copy=True | StandardScaler.with_mean=False | StandardScaler.with_std=False | LR.penalty=l1 | LR.tol=0.07062402024801304 | LR.C=447 | 
+V 0.5   0.819 0.621
+H StandardScaler.copy=False | StandardScaler.with_mean=False | StandardScaler.with_std=False | LR.penalty=l1 | LR.tol=0.08772893037660348 | LR.C=133 | 
+V 0.571 0.779 0.659
+H StandardScaler.copy=True | StandardScaler.with_mean=False | StandardScaler.with_std=False | LR.penalty=l1 | LR.tol=0.054101032005816785 | LR.C=494 | 
+V 0.619 0.707 0.66 
+H StandardScaler.copy=True | StandardScaler.with_mean=True | StandardScaler.with_std=False | LR.penalty=l1 | LR.tol=0.08385739711909414 | LR.C=432 | 
+V 0.524 0.755 0.619
+H StandardScaler.copy=True | StandardScaler.with_mean=True | StandardScaler.with_std=True | LR.penalty=l2 | LR.tol=0.012999087329581938 | LR.C=7 | 
+V 0.571 0.71  0.633
+H StandardScaler.copy=False | StandardScaler.with_mean=False | StandardScaler.with_std=True | LR.penalty=l1 | LR.tol=0.07885586041743686 | LR.C=302 | 
+V 0.571 0.784 0.661
+H StandardScaler.copy=True | StandardScaler.with_mean=False | StandardScaler.with_std=True | LR.penalty=l1 | LR.tol=0.035356734190886994 | LR.C=130 | 
+V 0.571 0.762 0.653
+H StandardScaler.copy=True | StandardScaler.with_mean=False | StandardScaler.with_std=True | LR.penalty=l1 | LR.tol=0.08208859230398928 | LR.C=193 | 
+V 0.571 0.806 0.669
+## END

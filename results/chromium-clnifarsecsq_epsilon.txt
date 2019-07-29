@@ -42,3 +42,25 @@ V 0.678 0.894 0.771
 H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=F | NB.var_smoothing=1e-05 | 
 V 0.722 0.868 0.788
 ## END
+** Jul-15-2019 22:26:12
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=False | RobustScaler.q_min=29 | RobustScaler.q_max=81 | RobustScaler.copy=False | NB.var_smoothing=1e-05 | 
+V 0.722 0.868 0.788
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=True | RobustScaler.q_min=38 | RobustScaler.q_max=77 | RobustScaler.copy=True | NB.var_smoothing=1e-09 | 
+V 0.678 0.894 0.771
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=False | RobustScaler.q_min=28 | RobustScaler.q_max=67 | RobustScaler.copy=False | NB.var_smoothing=1e-05 | 
+V 0.722 0.868 0.788
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=True | RobustScaler.q_min=38 | RobustScaler.q_max=72 | RobustScaler.copy=True | NB.var_smoothing=1e-05 | 
+V 0.722 0.868 0.788
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=True | RobustScaler.q_min=39 | RobustScaler.q_max=89 | RobustScaler.copy=False | NB.var_smoothing=1e-09 | 
+V 0.678 0.894 0.771
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=False | RobustScaler.q_min=24 | RobustScaler.q_max=79 | RobustScaler.copy=False | NB.var_smoothing=1e-05 | 
+V 0.722 0.868 0.788
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=True | RobustScaler.q_min=39 | RobustScaler.q_max=65 | RobustScaler.copy=True | NB.var_smoothing=1e-05 | 
+V 0.722 0.868 0.788
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=True | RobustScaler.q_min=17 | RobustScaler.q_max=73 | RobustScaler.copy=True | NB.var_smoothing=1e-05 | 
+V 0.722 0.868 0.788
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=False | RobustScaler.q_min=26 | RobustScaler.q_max=77 | RobustScaler.copy=False | NB.var_smoothing=1e-09 | 
+V 0.678 0.894 0.771
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=True | RobustScaler.q_min=32 | RobustScaler.q_max=61 | RobustScaler.copy=False | NB.var_smoothing=1e-05 | 
+V 0.722 0.868 0.788
+## END

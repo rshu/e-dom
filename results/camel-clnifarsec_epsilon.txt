@@ -64,3 +64,27 @@ V 0.111 0.983 0.2
 H QuantileTransformer.n_quantiles=334 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=False | QuantileTransformer.subsample=20379 | QuantileTransformer.copy=False | DT.min_samples_split=10 | DT.criterion=entropy | DT.splitter=best | 
 V 0.111 0.983 0.2  
 ## END
+** Jul-28-2019 21:56:37
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 374.1360538005829
+H SMOTE.k=3 | SMOTE.m=62 | SMOTE.r=3 | NB.var_smoothing=1e-09 | 
+V 0.556 0.687 0.614
+H SMOTE.k=14 | SMOTE.m=81 | SMOTE.r=4 | NB.var_smoothing=0.0001 | 
+V 0.444 0.695 0.542
+H SMOTE.k=5 | SMOTE.m=375 | SMOTE.r=1 | NB.var_smoothing=1e-07 | 
+V 0.222 0.936 0.359
+H SMOTE.k=10 | SMOTE.m=102 | SMOTE.r=5 | NB.var_smoothing=1e-06 | 
+V 0.389 0.737 0.509
+H SMOTE.k=2 | SMOTE.m=50 | SMOTE.r=5 | NB.var_smoothing=0.0001 | 
+V 0.556 0.633 0.592
+H SMOTE.k=15 | SMOTE.m=123 | SMOTE.r=3 | NB.var_smoothing=1e-06 | 
+V 0.333 0.828 0.475
+H SMOTE.k=17 | SMOTE.m=55 | SMOTE.r=4 | NB.var_smoothing=0.0001 | 
+V 0.556 0.701 0.62 
+H SMOTE.k=3 | SMOTE.m=166 | SMOTE.r=3 | NB.var_smoothing=0.001 | 
+V 0.444 0.591 0.507
+H SMOTE.k=12 | SMOTE.m=272 | SMOTE.r=3 | NB.var_smoothing=1e-05 | 
+V 0.278 0.886 0.423
+H SMOTE.k=14 | SMOTE.m=85 | SMOTE.r=4 | NB.var_smoothing=1e-08 | 
+V 0.5   0.782 0.61 
+## END

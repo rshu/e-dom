@@ -64,3 +64,27 @@ V 0.571 0.974 0.72
 H Normalization.norm=l2 | Normalization.copy=True | RF.n_estimators=91 | RF.criterion=gini | RF.min_samples_leaf=13 | RF.min_samples_split=16 | RF.max_leaf_nodes=49 | RF.max_features=0.48000000000000004 | RF.max_depth=2 | 
 V 0.571 0.972 0.72 
 ## END
+** Jul-28-2019 21:58:20
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 477.3165500164032
+H SMOTE.k=6 | SMOTE.m=105 | SMOTE.r=3 | DT.min_samples_split=16 | DT.criterion=gini | DT.splitter=best | 
+V 0.857 0.71  0.777
+H SMOTE.k=3 | SMOTE.m=251 | SMOTE.r=1 | DT.min_samples_split=9 | DT.criterion=entropy | DT.splitter=best | 
+V 0.857 0.7   0.771
+H SMOTE.k=18 | SMOTE.m=174 | SMOTE.r=3 | DT.min_samples_split=4 | DT.criterion=entropy | DT.splitter=best | 
+V 0.857 0.7   0.771
+H SMOTE.k=2 | SMOTE.m=302 | SMOTE.r=3 | DT.min_samples_split=2 | DT.criterion=entropy | DT.splitter=random | 
+V 0.714 0.72  0.717
+H SMOTE.k=4 | SMOTE.m=290 | SMOTE.r=4 | DT.min_samples_split=5 | DT.criterion=gini | DT.splitter=best | 
+V 0.857 0.702 0.772
+H SMOTE.k=10 | SMOTE.m=293 | SMOTE.r=3 | DT.min_samples_split=6 | DT.criterion=gini | DT.splitter=random | 
+V 0.857 0.655 0.743
+H SMOTE.k=4 | SMOTE.m=270 | SMOTE.r=3 | DT.min_samples_split=18 | DT.criterion=entropy | DT.splitter=best | 
+V 1.    0.572 0.728
+H SMOTE.k=12 | SMOTE.m=225 | SMOTE.r=5 | DT.min_samples_split=5 | DT.criterion=entropy | DT.splitter=random | 
+V 0.857 0.702 0.772
+H SMOTE.k=6 | SMOTE.m=276 | SMOTE.r=3 | DT.min_samples_split=3 | DT.criterion=entropy | DT.splitter=random | 
+V 0.857 0.706 0.774
+H SMOTE.k=15 | SMOTE.m=283 | SMOTE.r=1 | DT.min_samples_split=4 | DT.criterion=entropy | DT.splitter=random | 
+V 0.857 0.673 0.754
+## END

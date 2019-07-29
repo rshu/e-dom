@@ -64,3 +64,27 @@ V 0.571 0.874 0.691
 H Binarization.threshold=1 | Binarization.copy=True | LR.penalty=l2 | LR.tol=0.013959298912656327 | LR.C=26 | 
 V 0.429 0.949 0.591
 ## END
+** Jul-28-2019 21:54:05
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 223.81574892997742
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=False | RobustScaler.q_min=10 | RobustScaler.q_max=67 | RobustScaler.copy=False | DT.min_samples_split=15 | DT.criterion=gini | DT.splitter=random | 
+V 0.714 0.718 0.716
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=False | RobustScaler.q_min=21 | RobustScaler.q_max=88 | RobustScaler.copy=False | DT.min_samples_split=11 | DT.criterion=entropy | DT.splitter=random | 
+V 0.571 0.899 0.699
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=False | RobustScaler.q_min=17 | RobustScaler.q_max=71 | RobustScaler.copy=False | DT.min_samples_split=4 | DT.criterion=gini | DT.splitter=random | 
+V 0.714 0.746 0.73 
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=True | RobustScaler.q_min=38 | RobustScaler.q_max=70 | RobustScaler.copy=False | DT.min_samples_split=8 | DT.criterion=entropy | DT.splitter=random | 
+V 0.714 0.726 0.72 
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=True | RobustScaler.q_min=14 | RobustScaler.q_max=64 | RobustScaler.copy=False | DT.min_samples_split=14 | DT.criterion=entropy | DT.splitter=random | 
+V 0.714 0.708 0.711
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=True | RobustScaler.q_min=29 | RobustScaler.q_max=81 | RobustScaler.copy=False | DT.min_samples_split=19 | DT.criterion=gini | DT.splitter=random | 
+V 0.571 0.895 0.697
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=True | RobustScaler.q_min=10 | RobustScaler.q_max=79 | RobustScaler.copy=True | DT.min_samples_split=8 | DT.criterion=gini | DT.splitter=random | 
+V 0.714 0.734 0.724
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=True | RobustScaler.q_min=25 | RobustScaler.q_max=81 | RobustScaler.copy=True | DT.min_samples_split=12 | DT.criterion=entropy | DT.splitter=random | 
+V 0.571 0.895 0.697
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=False | RobustScaler.q_min=29 | RobustScaler.q_max=70 | RobustScaler.copy=True | DT.min_samples_split=18 | DT.criterion=gini | DT.splitter=best | 
+V 0.571 0.895 0.697
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=True | RobustScaler.q_min=34 | RobustScaler.q_max=81 | RobustScaler.copy=False | DT.min_samples_split=3 | DT.criterion=entropy | DT.splitter=best | 
+V 0.571 0.895 0.697
+## END

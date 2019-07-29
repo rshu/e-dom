@@ -64,3 +64,27 @@ V 0.389 0.705 0.501
 H Normalization.norm=l2 | Normalization.copy=True | NB.var_smoothing=0.001 | 
 V 0.611 0.604 0.607
 ## END
+** Jul-28-2019 21:56:12
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 349.86221265792847
+H SMOTE.k=9 | SMOTE.m=395 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
+V 0.278 0.699 0.398
+H SMOTE.k=11 | SMOTE.m=260 | SMOTE.r=1 | NB.var_smoothing=1e-09 | 
+V 0.611 0.5   0.55 
+H SMOTE.k=5 | SMOTE.m=175 | SMOTE.r=3 | NB.var_smoothing=1e-05 | 
+V 0.667 0.429 0.522
+H SMOTE.k=6 | SMOTE.m=143 | SMOTE.r=1 | NB.var_smoothing=1e-09 | 
+V 0.667 0.436 0.527
+H SMOTE.k=8 | SMOTE.m=375 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
+V 0.278 0.712 0.4  
+H SMOTE.k=13 | SMOTE.m=151 | SMOTE.r=5 | NB.var_smoothing=1e-09 | 
+V 0.611 0.498 0.549
+H SMOTE.k=14 | SMOTE.m=102 | SMOTE.r=3 | NB.var_smoothing=1e-08 | 
+V 0.722 0.386 0.503
+H SMOTE.k=10 | SMOTE.m=320 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
+V 0.333 0.68  0.447
+H SMOTE.k=18 | SMOTE.m=168 | SMOTE.r=4 | NB.var_smoothing=1e-06 | 
+V 0.667 0.448 0.536
+H SMOTE.k=6 | SMOTE.m=69 | SMOTE.r=2 | NB.var_smoothing=1e-06 | 
+V 0.722 0.313 0.437
+## END

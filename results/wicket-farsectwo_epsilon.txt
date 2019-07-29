@@ -64,3 +64,27 @@ V 0. 1. 0.
 H MaxAbsScaler.copy=True | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.1 | MLP.max_iter=173 | MLP.momentum=0.6 | MLP.n_iter_no_change=25 | 
 V 0. 1. 0.
 ## END
+** Jul-28-2019 21:54:16
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 232.57414507865906
+H KernelCenterer.null=True | NB.var_smoothing=0.001 | 
+V 0.667 0.372 0.478
+H KernelCenterer.null=False | NB.var_smoothing=0.001 | 
+V 0.667 0.372 0.478
+H KernelCenterer.null=False | NB.var_smoothing=0.001 | 
+V 0.667 0.372 0.478
+H KernelCenterer.null=False | NB.var_smoothing=0.001 | 
+V 0.667 0.372 0.478
+H KernelCenterer.null=False | NB.var_smoothing=0.001 | 
+V 0.667 0.372 0.478
+H KernelCenterer.null=False | NB.var_smoothing=0.001 | 
+V 0.667 0.372 0.478
+H KernelCenterer.null=False | NB.var_smoothing=0.001 | 
+V 0.667 0.372 0.478
+H KernelCenterer.null=False | NB.var_smoothing=0.001 | 
+V 0.667 0.372 0.478
+H KernelCenterer.null=False | NB.var_smoothing=0.001 | 
+V 0.667 0.372 0.478
+H KernelCenterer.null=True | NB.var_smoothing=0.001 | 
+V 0.667 0.372 0.478
+## END

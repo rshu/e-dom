@@ -64,3 +64,27 @@ V 0.611 0.548 0.578
 H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | NB.var_smoothing=1e-05 | 
 V 0.611 0.548 0.578
 ## END
+** Jul-28-2019 21:56:24
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 360.590247631073
+H SMOTE.k=3 | SMOTE.m=238 | SMOTE.r=3 | NB.var_smoothing=1e-09 | 
+V 0.611 0.504 0.553
+H SMOTE.k=8 | SMOTE.m=380 | SMOTE.r=5 | NB.var_smoothing=1e-09 | 
+V 0.611 0.506 0.554
+H SMOTE.k=4 | SMOTE.m=66 | SMOTE.r=3 | NB.var_smoothing=1e-07 | 
+V 0.667 0.367 0.474
+H SMOTE.k=14 | SMOTE.m=313 | SMOTE.r=4 | NB.var_smoothing=0.001 | 
+V 0.222 0.755 0.343
+H SMOTE.k=7 | SMOTE.m=351 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
+V 0.333 0.716 0.455
+H SMOTE.k=10 | SMOTE.m=382 | SMOTE.r=2 | NB.var_smoothing=0.0001 | 
+V 0.556 0.55  0.553
+H SMOTE.k=9 | SMOTE.m=338 | SMOTE.r=1 | NB.var_smoothing=1e-09 | 
+V 0.611 0.506 0.554
+H SMOTE.k=4 | SMOTE.m=317 | SMOTE.r=2 | NB.var_smoothing=1e-09 | 
+V 0.611 0.504 0.553
+H SMOTE.k=5 | SMOTE.m=365 | SMOTE.r=1 | NB.var_smoothing=1e-09 | 
+V 0.611 0.506 0.554
+H SMOTE.k=5 | SMOTE.m=287 | SMOTE.r=1 | NB.var_smoothing=1e-09 | 
+V 0.611 0.506 0.554
+## END

@@ -108,3 +108,27 @@ V 0.452 0.976 0.618
 H QuantileTransformer.n_quantiles=714 | QuantileTransformer.output_distribution=uniform | QuantileTransformer.ignore_implicit_zeros=False | QuantileTransformer.subsample=5755 | QuantileTransformer.copy=True | NB.var_smoothing=1e-09 | 
 V 0.452 0.976 0.618
 ## END
+** Jul-28-2019 22:01:02
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 639.0295922756195
+H SMOTE.k=9 | SMOTE.m=160 | SMOTE.r=5 | LR.penalty=l1 | LR.tol=0.0972703521589879 | LR.C=333 | 
+V 0.476 0.928 0.629
+H SMOTE.k=13 | SMOTE.m=374 | SMOTE.r=3 | LR.penalty=l2 | LR.tol=0.05385191940808224 | LR.C=368 | 
+V 0.595 0.841 0.697
+H SMOTE.k=19 | SMOTE.m=82 | SMOTE.r=2 | LR.penalty=l2 | LR.tol=0.095505649322752 | LR.C=455 | 
+V 0.643 0.745 0.69 
+H SMOTE.k=10 | SMOTE.m=373 | SMOTE.r=5 | LR.penalty=l2 | LR.tol=0.06282499320400127 | LR.C=309 | 
+V 0.476 0.904 0.624
+H SMOTE.k=5 | SMOTE.m=219 | SMOTE.r=5 | LR.penalty=l2 | LR.tol=0.00939162317996748 | LR.C=342 | 
+V 0.69  0.819 0.749
+H SMOTE.k=4 | SMOTE.m=300 | SMOTE.r=5 | LR.penalty=l2 | LR.tol=0.06626442845559549 | LR.C=94 | 
+V 0.619 0.834 0.711
+H SMOTE.k=12 | SMOTE.m=181 | SMOTE.r=3 | LR.penalty=l1 | LR.tol=0.06626442845559549 | LR.C=9 | 
+V 0.619 0.865 0.722
+H SMOTE.k=3 | SMOTE.m=172 | SMOTE.r=3 | LR.penalty=l2 | LR.tol=0.0972703521589879 | LR.C=189 | 
+V 0.643 0.803 0.714
+H SMOTE.k=11 | SMOTE.m=98 | SMOTE.r=1 | LR.penalty=l1 | LR.tol=0.09173264732908373 | LR.C=13 | 
+V 0.667 0.803 0.729
+H SMOTE.k=8 | SMOTE.m=110 | SMOTE.r=3 | LR.penalty=l1 | LR.tol=0.06669847675379807 | LR.C=477 | 
+V 0.667 0.705 0.685
+## END

@@ -86,3 +86,27 @@ V 1.    0.239 0.386
 H Binarization.threshold=0 | Binarization.copy=True | NB.var_smoothing=0.001 | 
 V 0.167 0.949 0.284
 ## END
+** Jul-28-2019 21:58:59
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 515.5100691318512
+H SMOTE.k=3 | SMOTE.m=194 | SMOTE.r=5 | NB.var_smoothing=0.0001 | 
+V 0.5   0.909 0.645
+H SMOTE.k=14 | SMOTE.m=104 | SMOTE.r=3 | NB.var_smoothing=1e-08 | 
+V 0.667 0.879 0.758
+H SMOTE.k=17 | SMOTE.m=95 | SMOTE.r=4 | NB.var_smoothing=1e-09 | 
+V 0.667 0.893 0.763
+H SMOTE.k=2 | SMOTE.m=108 | SMOTE.r=2 | NB.var_smoothing=1e-06 | 
+V 0.667 0.891 0.763
+H SMOTE.k=7 | SMOTE.m=260 | SMOTE.r=2 | NB.var_smoothing=1e-09 | 
+V 0.5   0.964 0.658
+H SMOTE.k=10 | SMOTE.m=51 | SMOTE.r=5 | NB.var_smoothing=1e-08 | 
+V 0.667 0.82  0.735
+H SMOTE.k=14 | SMOTE.m=146 | SMOTE.r=1 | NB.var_smoothing=1e-05 | 
+V 0.5   0.921 0.648
+H SMOTE.k=6 | SMOTE.m=184 | SMOTE.r=3 | NB.var_smoothing=1e-05 | 
+V 0.667 0.925 0.775
+H SMOTE.k=5 | SMOTE.m=113 | SMOTE.r=2 | NB.var_smoothing=1e-05 | 
+V 0.667 0.868 0.754
+H SMOTE.k=17 | SMOTE.m=241 | SMOTE.r=1 | NB.var_smoothing=1e-07 | 
+V 0.5   0.951 0.656
+## END

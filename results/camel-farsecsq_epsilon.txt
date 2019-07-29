@@ -64,3 +64,27 @@ V 0.444 0.664 0.532
 H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | DT.min_samples_split=10 | DT.criterion=gini | DT.splitter=random | 
 V 0.444 0.664 0.532
 ## END
+** Jul-28-2019 22:01:12
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 649.1815555095673
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | DT.min_samples_split=11 | DT.criterion=entropy | DT.splitter=random | 
+V 0.444 0.664 0.532
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | DT.min_samples_split=10 | DT.criterion=entropy | DT.splitter=best | 
+V 0.444 0.664 0.532
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | DT.min_samples_split=12 | DT.criterion=entropy | DT.splitter=random | 
+V 0.444 0.664 0.532
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | DT.min_samples_split=9 | DT.criterion=gini | DT.splitter=random | 
+V 0.444 0.664 0.532
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | DT.min_samples_split=18 | DT.criterion=entropy | DT.splitter=best | 
+V 0.444 0.664 0.532
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | DT.min_samples_split=3 | DT.criterion=gini | DT.splitter=best | 
+V 0.444 0.664 0.532
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | DT.min_samples_split=7 | DT.criterion=gini | DT.splitter=random | 
+V 0.444 0.664 0.532
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | DT.min_samples_split=9 | DT.criterion=gini | DT.splitter=random | 
+V 0.444 0.664 0.532
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | DT.min_samples_split=14 | DT.criterion=gini | DT.splitter=best | 
+V 0.444 0.664 0.532
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | DT.min_samples_split=5 | DT.criterion=gini | DT.splitter=best | 
+V 0.444 0.664 0.532
+## END

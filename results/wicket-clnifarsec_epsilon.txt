@@ -86,3 +86,27 @@ V 0.667 0.777 0.718
 H MinMaxScaler.copy=True | MinMaxScaler.min=-1 | MinMaxScaler.max=4 | NB.var_smoothing=0.001 | 
 V 0.667 0.777 0.718
 ## END
+** Jul-28-2019 21:53:58
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 215.92971062660217
+H KernelCenterer.null=False | NB.var_smoothing=0.0001 | 
+V 0.333 0.848 0.479
+H KernelCenterer.null=False | NB.var_smoothing=0.0001 | 
+V 0.333 0.848 0.479
+H KernelCenterer.null=False | NB.var_smoothing=0.001 | 
+V 0.    0.915 0.   
+H KernelCenterer.null=True | NB.var_smoothing=0.0001 | 
+V 0.333 0.848 0.479
+H KernelCenterer.null=False | NB.var_smoothing=0.0001 | 
+V 0.333 0.848 0.479
+H KernelCenterer.null=True | NB.var_smoothing=0.001 | 
+V 0.    0.915 0.   
+H KernelCenterer.null=True | NB.var_smoothing=0.0001 | 
+V 0.333 0.848 0.479
+H KernelCenterer.null=False | NB.var_smoothing=0.0001 | 
+V 0.333 0.848 0.479
+H KernelCenterer.null=False | NB.var_smoothing=0.0001 | 
+V 0.333 0.848 0.479
+H KernelCenterer.null=True | NB.var_smoothing=0.0001 | 
+V 0.333 0.848 0.479
+## END

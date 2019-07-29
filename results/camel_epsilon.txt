@@ -42,3 +42,27 @@ V 0.556 0.734 0.633
 H SMOTE.k=9 | SMOTE.m=230 | SMOTE.r=5 | KNN.n_neighbors=20 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=1 | 
 V 0.278 0.911 0.426
 ## END
+** Jul-28-2019 21:57:53
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 451.2810502052307
+H SMOTE.k=13 | SMOTE.m=149 | SMOTE.r=4 | NB.var_smoothing=1e-07 | 
+V 0.333 0.82  0.474
+H SMOTE.k=17 | SMOTE.m=373 | SMOTE.r=5 | NB.var_smoothing=1e-09 | 
+V 0.222 0.948 0.36 
+H SMOTE.k=4 | SMOTE.m=198 | SMOTE.r=2 | NB.var_smoothing=1e-06 | 
+V 0.278 0.89  0.423
+H SMOTE.k=15 | SMOTE.m=59 | SMOTE.r=2 | NB.var_smoothing=1e-08 | 
+V 0.5   0.795 0.614
+H SMOTE.k=12 | SMOTE.m=82 | SMOTE.r=4 | NB.var_smoothing=0.0001 | 
+V 0.333 0.68  0.447
+H SMOTE.k=18 | SMOTE.m=296 | SMOTE.r=3 | NB.var_smoothing=1e-09 | 
+V 0.222 0.944 0.36 
+H SMOTE.k=7 | SMOTE.m=191 | SMOTE.r=2 | NB.var_smoothing=1e-09 | 
+V 0.222 0.936 0.359
+H SMOTE.k=7 | SMOTE.m=388 | SMOTE.r=5 | NB.var_smoothing=1e-09 | 
+V 0.222 0.938 0.359
+H SMOTE.k=19 | SMOTE.m=50 | SMOTE.r=4 | NB.var_smoothing=1e-05 | 
+V 0.556 0.635 0.593
+H SMOTE.k=11 | SMOTE.m=395 | SMOTE.r=3 | NB.var_smoothing=1e-09 | 
+V 0.222 0.946 0.36 
+## END

@@ -64,3 +64,27 @@ V 0.667 0.638 0.652
 H SMOTE.k=16 | SMOTE.m=90 | SMOTE.r=2 | DT.min_samples_split=18 | DT.criterion=gini | DT.splitter=random | 
 V 0.5   0.814 0.619
 ## END
+** Jul-28-2019 21:56:26
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 363.6374762058258
+H SMOTE.k=15 | SMOTE.m=289 | SMOTE.r=2 | NB.var_smoothing=0.001 | 
+V 0.667 0.561 0.609
+H SMOTE.k=11 | SMOTE.m=320 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.5   0.607 0.548
+H SMOTE.k=15 | SMOTE.m=366 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.399 0.539
+H SMOTE.k=10 | SMOTE.m=113 | SMOTE.r=2 | NB.var_smoothing=0.001 | 
+V 0.667 0.577 0.619
+H SMOTE.k=17 | SMOTE.m=321 | SMOTE.r=3 | NB.var_smoothing=0.0001 | 
+V 0.833 0.346 0.489
+H SMOTE.k=4 | SMOTE.m=266 | SMOTE.r=3 | NB.var_smoothing=0.001 | 
+V 0.333 0.739 0.459
+H SMOTE.k=5 | SMOTE.m=154 | SMOTE.r=4 | NB.var_smoothing=0.001 | 
+V 0.667 0.536 0.595
+H SMOTE.k=6 | SMOTE.m=390 | SMOTE.r=2 | NB.var_smoothing=0.0001 | 
+V 0.833 0.362 0.505
+H SMOTE.k=3 | SMOTE.m=395 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.5   0.617 0.553
+H SMOTE.k=12 | SMOTE.m=329 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.391 0.532
+## END
