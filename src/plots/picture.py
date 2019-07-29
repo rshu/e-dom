@@ -31,7 +31,7 @@ for resolution in resolutions:
     ax = fig.add_subplot(3,3,counter)
     ax.scatter(data[0], data[1], lw=0, facecolor=(0.7, 0.7, 0.7), zorder=-1)
     for idx, row in sets[resolution].iterrows():
-        ax.scatter(row[0], row[1], facecolor=(1.0, 1.0, 0.4), zorder=1, s=50)
+        ax.scatter(row[0], row[1], facecolor=(1.0, 1.0, 0.4), zorder=1, s=50, edgecolors='r')
     # ax.scatter(sets[resolution][0], sets[resolution][1], facecolor=(1.0, 1.0, 0.4), zorder=1, s=50)
 
     for box in archives[resolution].boxes:
@@ -75,7 +75,7 @@ sets[resolution] = pandas.DataFrame(data=pareto.eps_sort([data.itertuples(False)
 ax = fig.add_subplot(1,1,1)
 ax.scatter(data[0], data[1], lw=0, facecolor=(0.7, 0.7, 0.7), zorder=-1)
 for idx, row in sets[resolution].iterrows():
-    ax.scatter(row[0], row[1], facecolor=(1.0, 1.0, 0.4), zorder=1, s=50)
+    ax.scatter(row[0], row[1], facecolor=(1.0, 1.0, 0.4), zorder=1, s=50, edgecolors='r')
 # ax.scatter(sets[resolution][0], sets[resolution][1], facecolor=(1.0, 1.0, 0.4), zorder=1, s=50)
 for box in archives[resolution].boxes:
     ll = [box[0] * resolution, box[1] * resolution]
