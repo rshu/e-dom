@@ -75,7 +75,8 @@ def _apply_model(train_df, test_df, model):
 
 
 def StandardScaler(train_df, test_df, HP):
-    copy, with_mean, with_std = HP['StandardScaler']['copy'], HP['StandardScaler']['with_mean'], HP['StandardScaler']['with_std']
+    copy, with_mean, with_std = HP['StandardScaler']['copy'], HP['StandardScaler']['with_mean'], HP['StandardScaler'][
+        'with_std']
 
     train_x = train_df.iloc[:, :-1]
     train_y = train_df.iloc[:, -1:]
@@ -398,15 +399,15 @@ def RF(train_df, test_df, HP):
     # a = _randint(50, 150)
     # b = _randchoice(['gini', 'entropy'])
     # c = _randuniform(0.0, 1.0)
-    a, b, c = HP['RF']['n_estimators'], HP['RF']['criterion'], HP['RF'][
-        'min_samples_split']
+    a, b, c, d, e, f = HP['RF']['n_estimators'], HP['RF']['criterion'], HP['RF'][
+        'min_samples_split'], HP['RF']['max_features'], HP['RF']['max_leaf_nodes'], HP['RF']['max_depth']
     model = RandomForestClassifier(
         n_estimators=a,
         criterion=b,
         min_samples_split=c,
-        max_features=HP['RF']['max_features'],
-        max_leaf_nodes=HP['RF']['max_leaf_nodes'],
-        max_depth=HP['RF']['max_depth'],
+        max_features=d,
+        max_leaf_nodes=e,
+        max_depth=f,
         min_impurity_decrease=0.0,
         n_jobs=-1)
     return _apply_model(train_df, test_df, model)
