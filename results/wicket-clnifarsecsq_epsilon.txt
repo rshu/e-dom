@@ -88,3 +88,243 @@ V 0.833 0.393 0.534
 H SMOTE.k=5 | SMOTE.m=155 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
 V 0.667 0.611 0.638
 ## END
+** Jul-29-2019 12:53:10
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 340.4265263080597
+H SMOTE.k=4 | SMOTE.m=389 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
+V 0.333 0.771 0.465
+H SMOTE.k=6 | SMOTE.m=385 | SMOTE.r=5 | NB.var_smoothing=0.0001 | 
+V 0.833 0.393 0.534
+H SMOTE.k=18 | SMOTE.m=394 | SMOTE.r=2 | NB.var_smoothing=0.001 | 
+V 0.5   0.688 0.579
+H SMOTE.k=10 | SMOTE.m=348 | SMOTE.r=2 | NB.var_smoothing=0.0001 | 
+V 0.833 0.37  0.513
+H SMOTE.k=4 | SMOTE.m=210 | SMOTE.r=2 | NB.var_smoothing=0.0001 | 
+V 0.833 0.385 0.526
+H SMOTE.k=7 | SMOTE.m=50 | SMOTE.r=3 | NB.var_smoothing=0.001 | 
+V 0.667 0.567 0.613
+H SMOTE.k=14 | SMOTE.m=299 | SMOTE.r=3 | NB.var_smoothing=0.001 | 
+V 0.5   0.698 0.583
+H SMOTE.k=16 | SMOTE.m=340 | SMOTE.r=4 | NB.var_smoothing=0.0001 | 
+V 0.833 0.368 0.511
+H SMOTE.k=4 | SMOTE.m=330 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.419 0.558
+H SMOTE.k=2 | SMOTE.m=232 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
+V 0.5   0.68  0.576
+## END
+** Jul-29-2019 12:56:19
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 188.7935221195221
+H KernelCenterer.null=True | NB.var_smoothing=0.001 | 
+V 0.5   0.569 0.532
+H KernelCenterer.null=True | NB.var_smoothing=0.0001 | 
+V 0.833 0.33  0.473
+H KernelCenterer.null=False | NB.var_smoothing=0.0001 | 
+V 0.833 0.33  0.473
+H KernelCenterer.null=True | NB.var_smoothing=0.001 | 
+V 0.5   0.569 0.532
+H KernelCenterer.null=True | NB.var_smoothing=0.0001 | 
+V 0.833 0.33  0.473
+H KernelCenterer.null=True | NB.var_smoothing=0.0001 | 
+V 0.833 0.33  0.473
+H KernelCenterer.null=False | NB.var_smoothing=0.0001 | 
+V 0.833 0.33  0.473
+H KernelCenterer.null=True | NB.var_smoothing=0.001 | 
+V 0.5   0.569 0.532
+H KernelCenterer.null=True | NB.var_smoothing=0.0001 | 
+V 0.833 0.33  0.473
+H KernelCenterer.null=False | NB.var_smoothing=0.0001 | 
+V 0.833 0.33  0.473
+## END
+** Jul-29-2019 13:01:38
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 318.7633967399597
+H SMOTE.k=6 | SMOTE.m=237 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.5   0.634 0.559
+H SMOTE.k=10 | SMOTE.m=136 | SMOTE.r=3 | NB.var_smoothing=0.001 | 
+V 0.667 0.577 0.619
+H SMOTE.k=11 | SMOTE.m=278 | SMOTE.r=4 | NB.var_smoothing=0.001 | 
+V 0.5   0.66  0.569
+H SMOTE.k=14 | SMOTE.m=264 | SMOTE.r=2 | NB.var_smoothing=0.001 | 
+V 0.5   0.66  0.569
+H SMOTE.k=9 | SMOTE.m=341 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
+V 0.333 0.771 0.465
+H SMOTE.k=15 | SMOTE.m=318 | SMOTE.r=4 | NB.var_smoothing=0.001 | 
+V 0.5   0.656 0.567
+H SMOTE.k=13 | SMOTE.m=183 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.372 0.515
+H SMOTE.k=17 | SMOTE.m=245 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.387 0.528
+H SMOTE.k=13 | SMOTE.m=131 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.667 0.617 0.641
+H SMOTE.k=9 | SMOTE.m=261 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.387 0.528
+## END
+** Jul-29-2019 13:06:43
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 305.1919958591461
+H SMOTE.k=16 | SMOTE.m=170 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.667 0.611 0.638
+H SMOTE.k=13 | SMOTE.m=129 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.667 0.579 0.62 
+H SMOTE.k=6 | SMOTE.m=358 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.413 0.552
+H SMOTE.k=9 | SMOTE.m=358 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.419 0.558
+H SMOTE.k=13 | SMOTE.m=281 | SMOTE.r=4 | NB.var_smoothing=0.001 | 
+V 0.5   0.674 0.574
+H SMOTE.k=14 | SMOTE.m=272 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.5   0.668 0.572
+H SMOTE.k=4 | SMOTE.m=219 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
+V 0.333 0.761 0.464
+H SMOTE.k=17 | SMOTE.m=338 | SMOTE.r=2 | NB.var_smoothing=0.0001 | 
+V 0.833 0.391 0.532
+H SMOTE.k=11 | SMOTE.m=322 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.411 0.55 
+H SMOTE.k=4 | SMOTE.m=318 | SMOTE.r=2 | NB.var_smoothing=0.0001 | 
+V 0.833 0.429 0.567
+## END
+** Jul-29-2019 13:11:58
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 314.88592529296875
+H SMOTE.k=12 | SMOTE.m=354 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.415 0.554
+H SMOTE.k=7 | SMOTE.m=168 | SMOTE.r=2 | NB.var_smoothing=0.001 | 
+V 0.667 0.587 0.624
+H SMOTE.k=6 | SMOTE.m=365 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.437 0.574
+H SMOTE.k=11 | SMOTE.m=290 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.415 0.554
+H SMOTE.k=18 | SMOTE.m=320 | SMOTE.r=3 | NB.var_smoothing=0.001 | 
+V 0.5   0.648 0.564
+H SMOTE.k=6 | SMOTE.m=388 | SMOTE.r=4 | NB.var_smoothing=0.001 | 
+V 0.333 0.743 0.46 
+H SMOTE.k=18 | SMOTE.m=280 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.5   0.666 0.571
+H SMOTE.k=6 | SMOTE.m=154 | SMOTE.r=3 | NB.var_smoothing=0.001 | 
+V 0.667 0.607 0.636
+H SMOTE.k=16 | SMOTE.m=344 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
+V 0.333 0.771 0.465
+H SMOTE.k=15 | SMOTE.m=222 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.667 0.609 0.637
+## END
+** Jul-29-2019 13:18:32
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 394.26055335998535
+H SMOTE.k=14 | SMOTE.m=224 | SMOTE.r=2 | NB.var_smoothing=0.001 | 
+V 0.5   0.656 0.567
+H SMOTE.k=3 | SMOTE.m=335 | SMOTE.r=5 | NB.var_smoothing=0.0001 | 
+V 0.833 0.385 0.526
+H SMOTE.k=18 | SMOTE.m=370 | SMOTE.r=4 | NB.var_smoothing=0.0001 | 
+V 0.833 0.37  0.513
+H SMOTE.k=19 | SMOTE.m=307 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.5   0.678 0.576
+H SMOTE.k=4 | SMOTE.m=382 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.333 0.773 0.466
+H SMOTE.k=14 | SMOTE.m=162 | SMOTE.r=2 | NB.var_smoothing=0.001 | 
+V 0.667 0.605 0.634
+H SMOTE.k=11 | SMOTE.m=290 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
+V 0.333 0.775 0.466
+H SMOTE.k=17 | SMOTE.m=246 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.667 0.613 0.639
+H SMOTE.k=14 | SMOTE.m=230 | SMOTE.r=4 | NB.var_smoothing=0.001 | 
+V 0.333 0.729 0.457
+H SMOTE.k=11 | SMOTE.m=287 | SMOTE.r=2 | NB.var_smoothing=0.001 | 
+V 0.667 0.617 0.641
+## END
+** Jul-29-2019 13:24:17
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 344.6328535079956
+H SMOTE.k=16 | SMOTE.m=248 | SMOTE.r=2 | NB.var_smoothing=0.001 | 
+V 0.5   0.644 0.563
+H SMOTE.k=4 | SMOTE.m=292 | SMOTE.r=3 | NB.var_smoothing=0.001 | 
+V 0.333 0.783 0.468
+H SMOTE.k=4 | SMOTE.m=244 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.333 0.735 0.459
+H SMOTE.k=17 | SMOTE.m=384 | SMOTE.r=3 | NB.var_smoothing=0.0001 | 
+V 0.833 0.393 0.534
+H SMOTE.k=13 | SMOTE.m=383 | SMOTE.r=4 | NB.var_smoothing=0.001 | 
+V 0.5   0.658 0.568
+H SMOTE.k=7 | SMOTE.m=193 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.366 0.509
+H SMOTE.k=13 | SMOTE.m=354 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.415 0.554
+H SMOTE.k=11 | SMOTE.m=281 | SMOTE.r=3 | NB.var_smoothing=0.0001 | 
+V 0.833 0.366 0.509
+H SMOTE.k=15 | SMOTE.m=289 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
+V 0.333 0.763 0.464
+H SMOTE.k=14 | SMOTE.m=371 | SMOTE.r=2 | NB.var_smoothing=0.0001 | 
+V 0.833 0.377 0.519
+## END
+** Jul-29-2019 13:30:31
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 374.06909704208374
+H SMOTE.k=13 | SMOTE.m=341 | SMOTE.r=3 | NB.var_smoothing=0.0001 | 
+V 0.833 0.372 0.515
+H SMOTE.k=19 | SMOTE.m=348 | SMOTE.r=4 | NB.var_smoothing=0.001 | 
+V 0.5   0.658 0.568
+H SMOTE.k=3 | SMOTE.m=341 | SMOTE.r=5 | NB.var_smoothing=0.0001 | 
+V 0.833 0.385 0.526
+H SMOTE.k=6 | SMOTE.m=316 | SMOTE.r=4 | NB.var_smoothing=0.001 | 
+V 0.5   0.672 0.573
+H SMOTE.k=13 | SMOTE.m=304 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.5   0.664 0.57 
+H SMOTE.k=6 | SMOTE.m=394 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.5   0.696 0.582
+H SMOTE.k=5 | SMOTE.m=301 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.411 0.55 
+H SMOTE.k=5 | SMOTE.m=327 | SMOTE.r=4 | NB.var_smoothing=0.001 | 
+V 0.5   0.654 0.567
+H SMOTE.k=8 | SMOTE.m=253 | SMOTE.r=3 | NB.var_smoothing=0.001 | 
+V 0.5   0.68  0.576
+H SMOTE.k=9 | SMOTE.m=257 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.5   0.68  0.576
+## END
+** Jul-29-2019 13:35:55
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 323.8996434211731
+H SMOTE.k=2 | SMOTE.m=285 | SMOTE.r=3 | NB.var_smoothing=0.0001 | 
+V 0.833 0.366 0.509
+H SMOTE.k=18 | SMOTE.m=375 | SMOTE.r=4 | NB.var_smoothing=0.001 | 
+V 0.5   0.686 0.578
+H SMOTE.k=3 | SMOTE.m=358 | SMOTE.r=2 | NB.var_smoothing=0.001 | 
+V 0.5   0.664 0.57 
+H SMOTE.k=9 | SMOTE.m=353 | SMOTE.r=3 | NB.var_smoothing=0.001 | 
+V 0.5   0.676 0.575
+H SMOTE.k=11 | SMOTE.m=387 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.419 0.558
+H SMOTE.k=18 | SMOTE.m=255 | SMOTE.r=3 | NB.var_smoothing=0.001 | 
+V 0.5   0.636 0.56 
+H SMOTE.k=17 | SMOTE.m=370 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.415 0.554
+H SMOTE.k=16 | SMOTE.m=394 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.833 0.435 0.572
+H SMOTE.k=5 | SMOTE.m=186 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.667 0.613 0.639
+H SMOTE.k=6 | SMOTE.m=78 | SMOTE.r=3 | NB.var_smoothing=0.001 | 
+V 0.667 0.561 0.609
+## END
+** Jul-29-2019 13:42:31
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 396.30838322639465
+H SMOTE.k=7 | SMOTE.m=226 | SMOTE.r=4 | NB.var_smoothing=0.001 | 
+V 0.5   0.64  0.561
+H SMOTE.k=12 | SMOTE.m=230 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
+V 0.333 0.745 0.461
+H SMOTE.k=6 | SMOTE.m=275 | SMOTE.r=3 | NB.var_smoothing=0.0001 | 
+V 0.833 0.362 0.505
+H SMOTE.k=5 | SMOTE.m=389 | SMOTE.r=3 | NB.var_smoothing=0.001 | 
+V 0.5   0.658 0.568
+H SMOTE.k=12 | SMOTE.m=369 | SMOTE.r=3 | NB.var_smoothing=0.0001 | 
+V 0.833 0.411 0.55 
+H SMOTE.k=6 | SMOTE.m=365 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
+V 0.333 0.757 0.463
+H SMOTE.k=8 | SMOTE.m=115 | SMOTE.r=3 | NB.var_smoothing=0.001 | 
+V 0.667 0.599 0.631
+H SMOTE.k=9 | SMOTE.m=164 | SMOTE.r=2 | NB.var_smoothing=0.001 | 
+V 0.667 0.611 0.638
+H SMOTE.k=7 | SMOTE.m=176 | SMOTE.r=4 | NB.var_smoothing=0.001 | 
+V 0.667 0.613 0.639
+H SMOTE.k=15 | SMOTE.m=399 | SMOTE.r=5 | NB.var_smoothing=0.0001 | 
+V 0.833 0.413 0.552
+## END
