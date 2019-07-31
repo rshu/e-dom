@@ -328,3 +328,75 @@ V 0.786 0.6   0.681
 H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | NB.var_smoothing=1e-05 | 
 V 0.786 0.6   0.681
 ## END
+** Jul-30-2019 15:38:14
+Epsilon [0.05, 0.05, 0.05]
+Execution time: 1367.2853560447693
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | DT.min_samples_split=15 | DT.criterion=entropy | DT.splitter=random | 
+V 0.643 0.764 0.698
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | DT.min_samples_split=17 | DT.criterion=gini | DT.splitter=random | 
+V 0.548 0.867 0.671
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | DT.min_samples_split=16 | DT.criterion=entropy | DT.splitter=random | 
+V 0.595 0.86  0.704
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | DT.min_samples_split=16 | DT.criterion=entropy | DT.splitter=random | 
+V 0.595 0.86  0.704
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | DT.min_samples_split=17 | DT.criterion=entropy | DT.splitter=random | 
+V 0.595 0.86  0.704
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | DT.min_samples_split=19 | DT.criterion=entropy | DT.splitter=random | 
+V 0.619 0.856 0.718
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | DT.min_samples_split=18 | DT.criterion=entropy | DT.splitter=random | 
+V 0.595 0.884 0.712
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | DT.min_samples_split=7 | DT.criterion=entropy | DT.splitter=best | 
+V 0.714 0.642 0.676
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | DT.min_samples_split=18 | DT.criterion=entropy | DT.splitter=random | 
+V 0.595 0.884 0.712
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | DT.min_samples_split=9 | DT.criterion=entropy | DT.splitter=random | 
+V 0.619 0.858 0.719
+## END
+** Jul-30-2019 16:00:48
+Epsilon [0.05, 0.05, 0.05]
+Execution time: 1354.45179104805
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | DT.min_samples_split=17 | DT.criterion=entropy | DT.splitter=random | 
+V 0.595 0.884 0.712
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | DT.min_samples_split=19 | DT.criterion=entropy | DT.splitter=random | 
+V 0.595 0.884 0.712
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | DT.min_samples_split=19 | DT.criterion=entropy | DT.splitter=random | 
+V 0.595 0.884 0.712
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | DT.min_samples_split=12 | DT.criterion=gini | DT.splitter=random | 
+V 0.548 0.867 0.671
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | DT.min_samples_split=19 | DT.criterion=entropy | DT.splitter=random | 
+V 0.571 0.865 0.688
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | DT.min_samples_split=16 | DT.criterion=entropy | DT.splitter=random | 
+V 0.595 0.862 0.704
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | DT.min_samples_split=17 | DT.criterion=entropy | DT.splitter=best | 
+V 0.714 0.642 0.676
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | DT.min_samples_split=11 | DT.criterion=entropy | DT.splitter=random | 
+V 0.69  0.705 0.698
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | DT.min_samples_split=17 | DT.criterion=entropy | DT.splitter=random | 
+V 0.643 0.871 0.74 
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | DT.min_samples_split=14 | DT.criterion=entropy | DT.splitter=best | 
+V 0.714 0.642 0.676
+## END
+** Jul-30-2019 16:23:23
+Epsilon [0.05, 0.05, 0.05]
+Execution time: 1355.3856706619263
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | LR.penalty=l1 | LR.tol=0.042435963887503786 | LR.C=302 | 
+V 0.69  0.786 0.735
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | LR.penalty=l1 | LR.tol=0.011082540446402457 | LR.C=40 | 
+V 0.667 0.784 0.721
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | LR.penalty=l1 | LR.tol=0.06294697304957529 | LR.C=147 | 
+V 0.667 0.779 0.719
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | LR.penalty=l1 | LR.tol=0.03680298494779616 | LR.C=348 | 
+V 0.69  0.758 0.723
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | LR.penalty=l1 | LR.tol=0.01093480446849956 | LR.C=106 | 
+V 0.667 0.777 0.718
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | LR.penalty=l1 | LR.tol=0.08564674193705664 | LR.C=387 | 
+V 0.714 0.723 0.718
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | LR.penalty=l1 | LR.tol=0.04390826944242813 | LR.C=278 | 
+V 0.69  0.714 0.702
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | LR.penalty=l1 | LR.tol=0.06022983164074258 | LR.C=327 | 
+V 0.714 0.727 0.721
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | LR.penalty=l1 | LR.tol=0.0944205729076334 | LR.C=166 | 
+V 0.69  0.769 0.727
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | LR.penalty=l1 | LR.tol=0.04390826944242813 | LR.C=130 | 
+V 0.69  0.793 0.738
+## END

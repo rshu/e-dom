@@ -88,3 +88,27 @@ V 0.278 0.886 0.423
 H SMOTE.k=14 | SMOTE.m=85 | SMOTE.r=4 | NB.var_smoothing=1e-08 | 
 V 0.5   0.782 0.61 
 ## END
+** Jul-30-2019 15:20:06
+Epsilon [0.05, 0.05, 0.05]
+Execution time: 280.71583008766174
+H Normalization.norm=l2 | Normalization.copy=False | SVM.C=168 | SVM.kernel=linear | SVM.degree=3 | SVM.gamma=0.9234516225536246 | SVM.coef0=0.025343100955503153 | SVM.tol=0.08041804795507705 | 
+V 0.056 0.983 0.105
+H Normalization.norm=l2 | Normalization.copy=False | SVM.C=262 | SVM.kernel=sigmoid | SVM.degree=8 | SVM.gamma=0.3885377034069831 | SVM.coef0=0.07852991375081005 | SVM.tol=0.009238605804502266 | 
+V 0.111 0.965 0.199
+H Normalization.norm=l2 | Normalization.copy=True | SVM.C=316 | SVM.kernel=sigmoid | SVM.degree=7 | SVM.gamma=0.7033715143804653 | SVM.coef0=0.06705749109603135 | SVM.tol=0.013418751333837587 | 
+V 0.167 0.963 0.284
+H Normalization.norm=l2 | Normalization.copy=False | SVM.C=398 | SVM.kernel=sigmoid | SVM.degree=2 | SVM.gamma=0.41643490771993574 | SVM.coef0=0.08398370922191782 | SVM.tol=0.036263830521151896 | 
+V 0.111 0.963 0.199
+H Normalization.norm=l2 | Normalization.copy=True | SVM.C=259 | SVM.kernel=sigmoid | SVM.degree=4 | SVM.gamma=0.3885377034069831 | SVM.coef0=0.09217732070204399 | SVM.tol=0.05021913623821757 | 
+V 0.111 0.967 0.199
+H Normalization.norm=max | Normalization.copy=False | SVM.C=61 | SVM.kernel=sigmoid | SVM.degree=3 | SVM.gamma=0.21555465635750237 | SVM.coef0=0.010771324216693124 | SVM.tol=0.03139236038818466 | 
+V 0.111 0.956 0.199
+H Normalization.norm=max | Normalization.copy=True | SVM.C=463 | SVM.kernel=sigmoid | SVM.degree=2 | SVM.gamma=0.8307041279571014 | SVM.coef0=0.013370139532390947 | SVM.tol=0.03298088615803096 | 
+V 0.111 0.975 0.199
+H Normalization.norm=max | Normalization.copy=True | SVM.C=265 | SVM.kernel=poly | SVM.degree=7 | SVM.gamma=0.12227985304206446 | SVM.coef0=0.010771324216693124 | SVM.tol=0.08041804795507705 | 
+V 0. 1. 0.
+H Normalization.norm=l2 | Normalization.copy=True | SVM.C=84 | SVM.kernel=sigmoid | SVM.degree=4 | SVM.gamma=0.8307041279571014 | SVM.coef0=0.04730897242687787 | SVM.tol=0.013418751333837587 | 
+V 0.167 0.963 0.284
+H Normalization.norm=l2 | Normalization.copy=True | SVM.C=296 | SVM.kernel=sigmoid | SVM.degree=5 | SVM.gamma=0.4498941720270069 | SVM.coef0=0.07982580565838256 | SVM.tol=0.09870322549804252 | 
+V 0.111 0.963 0.199
+## END
