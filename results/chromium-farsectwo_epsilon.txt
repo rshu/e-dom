@@ -20,3 +20,27 @@ V 0.643 0.942 0.765
 H SMOTE.k=2 | SMOTE.m=397 | SMOTE.r=5 | NB.var_smoothing=1e-08 | 
 V 0.661 0.944 0.778
 ## END
+** Aug-05-2019 19:26:08
+Epsilon [0.05, 0.05, 0.05]
+Execution time: 23949.47786283493
+H SMOTE.k=12 | SMOTE.m=111 | SMOTE.r=3 | RF.n_estimators=19 | RF.criterion=entropy | RF.min_samples_leaf=17 | RF.min_samples_split=10 | RF.max_leaf_nodes=33 | RF.max_features=0.09 | RF.max_depth=4 | 
+V 0.957 0.496 0.653
+H SMOTE.k=15 | SMOTE.m=253 | SMOTE.r=5 | RF.n_estimators=125 | RF.criterion=gini | RF.min_samples_leaf=6 | RF.min_samples_split=5 | RF.max_leaf_nodes=47 | RF.max_features=0.54 | RF.max_depth=5 | 
+V 0.678 0.772 0.722
+H SMOTE.k=7 | SMOTE.m=288 | SMOTE.r=4 | RF.n_estimators=46 | RF.criterion=gini | RF.min_samples_leaf=5 | RF.min_samples_split=8 | RF.max_leaf_nodes=40 | RF.max_features=0.13 | RF.max_depth=7 | 
+V 0.687 0.796 0.738
+H SMOTE.k=13 | SMOTE.m=148 | SMOTE.r=2 | RF.n_estimators=98 | RF.criterion=entropy | RF.min_samples_leaf=3 | RF.min_samples_split=16 | RF.max_leaf_nodes=47 | RF.max_features=0.11 | RF.max_depth=4 | 
+V 0.922 0.521 0.666
+H SMOTE.k=9 | SMOTE.m=243 | SMOTE.r=3 | RF.n_estimators=84 | RF.criterion=entropy | RF.min_samples_leaf=4 | RF.min_samples_split=13 | RF.max_leaf_nodes=41 | RF.max_features=0.47000000000000003 | RF.max_depth=5 | 
+V 0.626 0.8   0.703
+H SMOTE.k=9 | SMOTE.m=357 | SMOTE.r=5 | RF.n_estimators=21 | RF.criterion=gini | RF.min_samples_leaf=3 | RF.min_samples_split=12 | RF.max_leaf_nodes=49 | RF.max_features=0.86 | RF.max_depth=5 | 
+V 0.609 0.775 0.682
+H SMOTE.k=14 | SMOTE.m=137 | SMOTE.r=1 | RF.n_estimators=120 | RF.criterion=gini | RF.min_samples_leaf=10 | RF.min_samples_split=11 | RF.max_leaf_nodes=37 | RF.max_features=0.43 | RF.max_depth=8 | 
+V 0.835 0.664 0.74 
+H SMOTE.k=5 | SMOTE.m=147 | SMOTE.r=1 | RF.n_estimators=83 | RF.criterion=entropy | RF.min_samples_leaf=15 | RF.min_samples_split=5 | RF.max_leaf_nodes=35 | RF.max_features=0.67 | RF.max_depth=9 | 
+V 0.687 0.773 0.728
+H SMOTE.k=3 | SMOTE.m=312 | SMOTE.r=4 | RF.n_estimators=83 | RF.criterion=entropy | RF.min_samples_leaf=10 | RF.min_samples_split=10 | RF.max_leaf_nodes=10 | RF.max_features=0.89 | RF.max_depth=3 | 
+V 0.67  0.782 0.721
+H SMOTE.k=9 | SMOTE.m=270 | SMOTE.r=5 | RF.n_estimators=64 | RF.criterion=gini | RF.min_samples_leaf=12 | RF.min_samples_split=10 | RF.max_leaf_nodes=36 | RF.max_features=0.47000000000000003 | RF.max_depth=3 | 
+V 0.626 0.791 0.699
+## END
