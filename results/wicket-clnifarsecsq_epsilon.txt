@@ -568,3 +568,243 @@ V 0. 1. 0.
 H MinMaxScaler.copy=False | MinMaxScaler.min=-4 | MinMaxScaler.max=3 | MLP.alpha=0.001 | MLP.learning_rate_init=0.01 | MLP.power_t=0.2 | MLP.max_iter=237 | MLP.momentum=0.30000000000000004 | MLP.n_iter_no_change=4 | 
 V 0. 1. 0.
 ## END
+** Aug-15-2019 00:00:14
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 8.063859224319458
+H MaxAbsScaler.copy=False | DT.min_samples_split=6 | DT.criterion=entropy | DT.splitter=best | 
+V 0.333 0.806 0.472
+H MaxAbsScaler.copy=False | DT.min_samples_split=7 | DT.criterion=entropy | DT.splitter=random | 
+V 0.167 0.949 0.284
+H MaxAbsScaler.copy=True | DT.min_samples_split=3 | DT.criterion=gini | DT.splitter=best | 
+V 0.333 0.929 0.491
+H MaxAbsScaler.copy=False | DT.min_samples_split=17 | DT.criterion=entropy | DT.splitter=random | 
+V 0.167 0.947 0.283
+H MaxAbsScaler.copy=True | DT.min_samples_split=7 | DT.criterion=entropy | DT.splitter=best | 
+V 0.167 0.945 0.283
+H MaxAbsScaler.copy=False | DT.min_samples_split=4 | DT.criterion=gini | DT.splitter=random | 
+V 0.167 0.972 0.285
+H MaxAbsScaler.copy=False | DT.min_samples_split=5 | DT.criterion=gini | DT.splitter=best | 
+V 0.333 0.941 0.492
+H MaxAbsScaler.copy=True | DT.min_samples_split=5 | DT.criterion=gini | DT.splitter=random | 
+V 0.167 0.941 0.283
+H MaxAbsScaler.copy=False | DT.min_samples_split=2 | DT.criterion=entropy | DT.splitter=best | 
+V 0.333 0.741 0.46 
+H MaxAbsScaler.copy=True | DT.min_samples_split=19 | DT.criterion=entropy | DT.splitter=best | 
+V 0.333 0.771 0.465
+## END
+** Aug-15-2019 00:00:42
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 28.112083673477173
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=F | KNN.n_neighbors=12 | KNN.weights=uniform | KNN.metric=minkowski | KNN.p=3 | 
+V 0. 1. 0.
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=F | KNN.n_neighbors=13 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=4 | 
+V 0. 1. 0.
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=C | KNN.n_neighbors=16 | KNN.weights=uniform | KNN.metric=minkowski | KNN.p=1 | 
+V 0. 1. 0.
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=C | KNN.n_neighbors=9 | KNN.weights=uniform | KNN.metric=chebyshev | KNN.p=1 | 
+V 0. 1. 0.
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=C | KNN.n_neighbors=20 | KNN.weights=distance | KNN.metric=chebyshev | KNN.p=4 | 
+V 0. 1. 0.
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=F | KNN.n_neighbors=6 | KNN.weights=uniform | KNN.metric=chebyshev | KNN.p=1 | 
+V 0. 1. 0.
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=F | KNN.n_neighbors=10 | KNN.weights=uniform | KNN.metric=minkowski | KNN.p=4 | 
+V 0. 1. 0.
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=C | KNN.n_neighbors=16 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=2 | 
+V 0. 1. 0.
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=C | KNN.n_neighbors=21 | KNN.weights=uniform | KNN.metric=chebyshev | KNN.p=3 | 
+V 0. 1. 0.
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=C | KNN.n_neighbors=18 | KNN.weights=uniform | KNN.metric=minkowski | KNN.p=4 | 
+V 0. 1. 0.
+## END
+** Aug-15-2019 00:01:05
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 22.842111587524414
+H QuantileTransformer.n_quantiles=863 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=False | QuantileTransformer.subsample=48586 | QuantileTransformer.copy=False | DT.min_samples_split=11 | DT.criterion=entropy | DT.splitter=best | 
+V 0.333 0.798 0.47 
+H QuantileTransformer.n_quantiles=1804 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=49441 | QuantileTransformer.copy=False | DT.min_samples_split=15 | DT.criterion=gini | DT.splitter=best | 
+V 0.333 0.804 0.471
+H QuantileTransformer.n_quantiles=272 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=False | QuantileTransformer.subsample=112838 | QuantileTransformer.copy=False | DT.min_samples_split=7 | DT.criterion=entropy | DT.splitter=random | 
+V 0.333 0.806 0.472
+H QuantileTransformer.n_quantiles=31 | QuantileTransformer.output_distribution=uniform | QuantileTransformer.ignore_implicit_zeros=False | QuantileTransformer.subsample=137015 | QuantileTransformer.copy=True | DT.min_samples_split=2 | DT.criterion=gini | DT.splitter=random | 
+V 0.333 0.802 0.471
+H QuantileTransformer.n_quantiles=946 | QuantileTransformer.output_distribution=uniform | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=116327 | QuantileTransformer.copy=True | DT.min_samples_split=16 | DT.criterion=entropy | DT.splitter=best | 
+V 0.5   0.721 0.59 
+H QuantileTransformer.n_quantiles=1758 | QuantileTransformer.output_distribution=uniform | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=140766 | QuantileTransformer.copy=False | DT.min_samples_split=4 | DT.criterion=entropy | DT.splitter=best | 
+V 0.333 0.804 0.471
+H QuantileTransformer.n_quantiles=287 | QuantileTransformer.output_distribution=uniform | QuantileTransformer.ignore_implicit_zeros=False | QuantileTransformer.subsample=131313 | QuantileTransformer.copy=True | DT.min_samples_split=8 | DT.criterion=gini | DT.splitter=best | 
+V 0.333 0.794 0.469
+H QuantileTransformer.n_quantiles=679 | QuantileTransformer.output_distribution=uniform | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=88695 | QuantileTransformer.copy=True | DT.min_samples_split=18 | DT.criterion=entropy | DT.splitter=random | 
+V 0.333 0.794 0.469
+H QuantileTransformer.n_quantiles=1891 | QuantileTransformer.output_distribution=normal | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=25943 | QuantileTransformer.copy=False | DT.min_samples_split=18 | DT.criterion=gini | DT.splitter=best | 
+V 0.333 0.775 0.466
+H QuantileTransformer.n_quantiles=1275 | QuantileTransformer.output_distribution=uniform | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=136040 | QuantileTransformer.copy=True | DT.min_samples_split=12 | DT.criterion=gini | DT.splitter=random | 
+V 0.333 0.783 0.468
+## END
+** Aug-15-2019 00:01:12
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 7.100452423095703
+H StandardScaler.copy=True | StandardScaler.with_mean=False | StandardScaler.with_std=True | SVM.C=260 | SVM.kernel=sigmoid | SVM.degree=7 | SVM.gamma=0.485334403531518 | SVM.coef0=0.07729775556598534 | SVM.tol=0.03718926262649817 | 
+V 0.333 0.842 0.478
+H StandardScaler.copy=False | StandardScaler.with_mean=False | StandardScaler.with_std=True | SVM.C=110 | SVM.kernel=sigmoid | SVM.degree=5 | SVM.gamma=0.017933293566144815 | SVM.coef0=0.05746712484310743 | SVM.tol=0.07394612294199546 | 
+V 0.5   0.709 0.586
+H StandardScaler.copy=False | StandardScaler.with_mean=True | StandardScaler.with_std=False | SVM.C=129 | SVM.kernel=sigmoid | SVM.degree=2 | SVM.gamma=0.17762697048083476 | SVM.coef0=0.07094116801709743 | SVM.tol=0.01621661466980543 | 
+V 0.333 0.84  0.477
+H StandardScaler.copy=True | StandardScaler.with_mean=False | StandardScaler.with_std=True | SVM.C=432 | SVM.kernel=sigmoid | SVM.degree=8 | SVM.gamma=0.017933293566144815 | SVM.coef0=0.07729775556598534 | SVM.tol=0.03718926262649817 | 
+V 0.5   0.715 0.588
+H StandardScaler.copy=True | StandardScaler.with_mean=False | StandardScaler.with_std=True | SVM.C=9 | SVM.kernel=poly | SVM.degree=4 | SVM.gamma=0.8528166997464166 | SVM.coef0=0.03815951034334886 | SVM.tol=0.09230050415366266 | 
+V 0.    0.998 0.   
+H StandardScaler.copy=False | StandardScaler.with_mean=False | StandardScaler.with_std=True | SVM.C=475 | SVM.kernel=sigmoid | SVM.degree=8 | SVM.gamma=0.8528166997464166 | SVM.coef0=0.05403003591824207 | SVM.tol=0.059651194472550344 | 
+V 0.333 0.808 0.472
+H StandardScaler.copy=False | StandardScaler.with_mean=False | StandardScaler.with_std=False | SVM.C=293 | SVM.kernel=sigmoid | SVM.degree=2 | SVM.gamma=0.5433753212217761 | SVM.coef0=0.0017878321190037073 | SVM.tol=0.06777276237001882 | 
+V 0.333 0.838 0.477
+H StandardScaler.copy=True | StandardScaler.with_mean=True | StandardScaler.with_std=False | SVM.C=322 | SVM.kernel=sigmoid | SVM.degree=3 | SVM.gamma=0.9312178311510345 | SVM.coef0=0.05403003591824207 | SVM.tol=0.09636997317752742 | 
+V 0.333 0.802 0.471
+H StandardScaler.copy=True | StandardScaler.with_mean=True | StandardScaler.with_std=False | SVM.C=222 | SVM.kernel=poly | SVM.degree=5 | SVM.gamma=0.8528166997464166 | SVM.coef0=0.03815951034334886 | SVM.tol=0.09230050415366266 | 
+V 0.    0.998 0.   
+H StandardScaler.copy=False | StandardScaler.with_mean=False | StandardScaler.with_std=False | SVM.C=197 | SVM.kernel=sigmoid | SVM.degree=3 | SVM.gamma=0.054538729096730965 | SVM.coef0=0.058603429147909517 | SVM.tol=0.019182163240700933 | 
+V 0.333 0.83  0.476
+## END
+** Aug-15-2019 00:01:19
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 6.657531023025513
+H Normalization.norm=l1 | Normalization.copy=False | NB.var_smoothing=1e-07 | 
+V 0.833 0.332 0.475
+H Normalization.norm=l1 | Normalization.copy=False | NB.var_smoothing=1e-06 | 
+V 0.833 0.332 0.475
+H Normalization.norm=max | Normalization.copy=False | NB.var_smoothing=0.001 | 
+V 0.833 0.366 0.509
+H Normalization.norm=max | Normalization.copy=False | NB.var_smoothing=0.001 | 
+V 0.833 0.366 0.509
+H Normalization.norm=l1 | Normalization.copy=False | NB.var_smoothing=1e-09 | 
+V 0.833 0.332 0.475
+H Normalization.norm=l2 | Normalization.copy=False | NB.var_smoothing=0.001 | 
+V 0.833 0.368 0.511
+H Normalization.norm=l1 | Normalization.copy=False | NB.var_smoothing=0.001 | 
+V 0.667 0.577 0.619
+H Normalization.norm=l1 | Normalization.copy=True | NB.var_smoothing=0.001 | 
+V 0.667 0.577 0.619
+H Normalization.norm=l1 | Normalization.copy=False | NB.var_smoothing=0.001 | 
+V 0.667 0.577 0.619
+H Normalization.norm=l1 | Normalization.copy=False | NB.var_smoothing=0.0001 | 
+V 0.833 0.366 0.509
+## END
+** Aug-15-2019 00:01:38
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 19.108417510986328
+H SMOTE.k=2 | SMOTE.m=147 | SMOTE.r=2 | NB.var_smoothing=1e-06 | 
+V 0.833 0.332 0.475
+H SMOTE.k=6 | SMOTE.m=368 | SMOTE.r=2 | NB.var_smoothing=0.0001 | 
+V 0.833 0.387 0.528
+H SMOTE.k=18 | SMOTE.m=73 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
+V 0.333 0.715 0.455
+H SMOTE.k=6 | SMOTE.m=263 | SMOTE.r=2 | NB.var_smoothing=0.001 | 
+V 0.5   0.636 0.56 
+H SMOTE.k=6 | SMOTE.m=338 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V 0.5   0.686 0.578
+H SMOTE.k=2 | SMOTE.m=341 | SMOTE.r=2 | NB.var_smoothing=1e-05 | 
+V 0.833 0.332 0.475
+H SMOTE.k=12 | SMOTE.m=217 | SMOTE.r=2 | NB.var_smoothing=0.001 | 
+V 0.5   0.646 0.564
+H SMOTE.k=8 | SMOTE.m=296 | SMOTE.r=4 | NB.var_smoothing=1e-07 | 
+V 0.833 0.332 0.475
+H SMOTE.k=15 | SMOTE.m=180 | SMOTE.r=3 | NB.var_smoothing=0.001 | 
+V 0.5   0.638 0.56 
+H SMOTE.k=19 | SMOTE.m=122 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
+V 0.333 0.733 0.458
+## END
+** Aug-15-2019 00:01:58
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 19.916221141815186
+H SMOTE.k=9 | SMOTE.m=245 | SMOTE.r=3 | SVM.C=152 | SVM.kernel=poly | SVM.degree=6 | SVM.gamma=0.9595278671019928 | SVM.coef0=0.04597185934618908 | SVM.tol=0.03786828018386926 | 
+V 0.167 0.868 0.28 
+H SMOTE.k=18 | SMOTE.m=140 | SMOTE.r=3 | SVM.C=224 | SVM.kernel=linear | SVM.degree=3 | SVM.gamma=0.9359831173375103 | SVM.coef0=0.058376228738704544 | SVM.tol=0.04999224230365854 | 
+V 0.167 0.903 0.281
+H SMOTE.k=15 | SMOTE.m=279 | SMOTE.r=1 | SVM.C=220 | SVM.kernel=poly | SVM.degree=4 | SVM.gamma=0.833315335796997 | SVM.coef0=0.056111500397295226 | SVM.tol=0.014223182725703344 | 
+V 0.167 0.862 0.279
+H SMOTE.k=18 | SMOTE.m=368 | SMOTE.r=3 | SVM.C=286 | SVM.kernel=rbf | SVM.degree=9 | SVM.gamma=0.957816147736042 | SVM.coef0=0.027142272522418832 | SVM.tol=0.039126370947165194 | 
+V 0.833 0.255 0.391
+H SMOTE.k=14 | SMOTE.m=317 | SMOTE.r=3 | SVM.C=433 | SVM.kernel=sigmoid | SVM.degree=9 | SVM.gamma=0.5306627010581475 | SVM.coef0=0.05733388490262001 | SVM.tol=0.03786828018386926 | 
+V 0.667 0.409 0.507
+H SMOTE.k=9 | SMOTE.m=94 | SMOTE.r=2 | SVM.C=422 | SVM.kernel=sigmoid | SVM.degree=7 | SVM.gamma=0.4468978227673902 | SVM.coef0=0.0751367749914884 | SVM.tol=0.08432582174390252 | 
+V 0.833 0.439 0.575
+H SMOTE.k=7 | SMOTE.m=350 | SMOTE.r=2 | SVM.C=248 | SVM.kernel=rbf | SVM.degree=4 | SVM.gamma=0.9595278671019928 | SVM.coef0=0.056111500397295226 | SVM.tol=0.014899621227601412 | 
+V 0.833 0.259 0.395
+H SMOTE.k=8 | SMOTE.m=261 | SMOTE.r=2 | SVM.C=335 | SVM.kernel=poly | SVM.degree=7 | SVM.gamma=0.6538797739679181 | SVM.coef0=0.05100557841702137 | SVM.tol=0.028801347810575376 | 
+V 0.167 0.826 0.277
+H SMOTE.k=10 | SMOTE.m=374 | SMOTE.r=2 | SVM.C=206 | SVM.kernel=sigmoid | SVM.degree=7 | SVM.gamma=0.38610994188431835 | SVM.coef0=0.0751367749914884 | SVM.tol=0.06316268380741646 | 
+V 0.833 0.395 0.536
+H SMOTE.k=6 | SMOTE.m=160 | SMOTE.r=4 | SVM.C=104 | SVM.kernel=sigmoid | SVM.degree=6 | SVM.gamma=0.8870805342899247 | SVM.coef0=0.04794272615727348 | SVM.tol=0.039126370947165194 | 
+V 0.833 0.348 0.491
+## END
+** Aug-15-2019 00:02:31
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 32.68779921531677
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | NB.var_smoothing=0.0001 | 
+V 0.833 0.332 0.475
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | NB.var_smoothing=1e-07 | 
+V 0.833 0.332 0.475
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | NB.var_smoothing=0.0001 | 
+V 0.833 0.332 0.475
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | NB.var_smoothing=1e-07 | 
+V 0.833 0.332 0.475
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | NB.var_smoothing=1e-05 | 
+V 0.833 0.332 0.475
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | NB.var_smoothing=1e-06 | 
+V 0.833 0.332 0.475
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | NB.var_smoothing=0.001 | 
+V 0.833 0.332 0.475
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | NB.var_smoothing=0.0001 | 
+V 0.833 0.332 0.475
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | NB.var_smoothing=1e-06 | 
+V 0.833 0.332 0.475
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | NB.var_smoothing=0.001 | 
+V 0.833 0.332 0.475
+## END
+** Aug-15-2019 00:03:01
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 30.288910150527954
+H SMOTE.k=2 | SMOTE.m=164 | SMOTE.r=4 | LR.penalty=l1 | LR.tol=0.04902504656027711 | LR.C=344 | 
+V 0.333 0.87  0.482
+H SMOTE.k=3 | SMOTE.m=188 | SMOTE.r=2 | LR.penalty=l1 | LR.tol=0.08125694040561478 | LR.C=150 | 
+V 0.333 0.885 0.484
+H SMOTE.k=13 | SMOTE.m=282 | SMOTE.r=4 | LR.penalty=l1 | LR.tol=0.03666594827223692 | LR.C=310 | 
+V 0.333 0.897 0.486
+H SMOTE.k=3 | SMOTE.m=397 | SMOTE.r=2 | LR.penalty=l2 | LR.tol=0.02759053311622094 | LR.C=66 | 
+V 0.333 0.777 0.467
+H SMOTE.k=19 | SMOTE.m=179 | SMOTE.r=5 | LR.penalty=l1 | LR.tol=0.08788959335522283 | LR.C=444 | 
+V 0.333 0.872 0.482
+H SMOTE.k=6 | SMOTE.m=392 | SMOTE.r=3 | LR.penalty=l1 | LR.tol=0.038218252666350316 | LR.C=76 | 
+V 0.833 0.553 0.665
+H SMOTE.k=10 | SMOTE.m=364 | SMOTE.r=4 | LR.penalty=l1 | LR.tol=0.06800716862047868 | LR.C=245 | 
+V 0.5   0.804 0.616
+H SMOTE.k=14 | SMOTE.m=132 | SMOTE.r=5 | LR.penalty=l2 | LR.tol=0.038218252666350316 | LR.C=268 | 
+V 0.167 0.891 0.281
+H SMOTE.k=10 | SMOTE.m=240 | SMOTE.r=2 | LR.penalty=l2 | LR.tol=0.013597446556934678 | LR.C=282 | 
+V 0.333 0.828 0.475
+H SMOTE.k=2 | SMOTE.m=320 | SMOTE.r=2 | LR.penalty=l1 | LR.tol=0.06675770761765902 | LR.C=390 | 
+V 0.667 0.575 0.617
+## END
+** Aug-15-2019 00:03:07
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 5.902889728546143
+H MinMaxScaler.copy=True | MinMaxScaler.min=-2 | MinMaxScaler.max=2 | NB.var_smoothing=0.0001 | 
+V 0.667 0.409 0.507
+H MinMaxScaler.copy=True | MinMaxScaler.min=-4 | MinMaxScaler.max=1 | NB.var_smoothing=1e-07 | 
+V 0.833 0.332 0.475
+H MinMaxScaler.copy=True | MinMaxScaler.min=-5 | MinMaxScaler.max=1 | NB.var_smoothing=1e-07 | 
+V 0.833 0.332 0.475
+H MinMaxScaler.copy=True | MinMaxScaler.min=-5 | MinMaxScaler.max=1 | NB.var_smoothing=1e-07 | 
+V 0.833 0.332 0.475
+H MinMaxScaler.copy=False | MinMaxScaler.min=-4 | MinMaxScaler.max=4 | NB.var_smoothing=1e-09 | 
+V 0.833 0.332 0.475
+H MinMaxScaler.copy=True | MinMaxScaler.min=-1 | MinMaxScaler.max=3 | NB.var_smoothing=1e-08 | 
+V 0.833 0.332 0.475
+H MinMaxScaler.copy=True | MinMaxScaler.min=-4 | MinMaxScaler.max=1 | NB.var_smoothing=0.001 | 
+V 0.667 0.425 0.519
+H MinMaxScaler.copy=True | MinMaxScaler.min=-1 | MinMaxScaler.max=1 | NB.var_smoothing=1e-08 | 
+V 0.833 0.332 0.475
+H MinMaxScaler.copy=True | MinMaxScaler.min=-1 | MinMaxScaler.max=3 | NB.var_smoothing=1e-08 | 
+V 0.833 0.332 0.475
+H MinMaxScaler.copy=False | MinMaxScaler.min=-5 | MinMaxScaler.max=1 | NB.var_smoothing=0.001 | 
+V 0.667 0.425 0.519
+## END
