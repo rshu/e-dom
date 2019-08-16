@@ -44,3 +44,51 @@ V 0.67  0.782 0.721
 H SMOTE.k=9 | SMOTE.m=270 | SMOTE.r=5 | RF.n_estimators=64 | RF.criterion=gini | RF.min_samples_leaf=12 | RF.min_samples_split=10 | RF.max_leaf_nodes=36 | RF.max_features=0.47000000000000003 | RF.max_depth=3 | 
 V 0.626 0.791 0.699
 ## END
+** Aug-15-2019 12:58:43
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 117.04725003242493
+H KernelCenterer.null=False | NB.var_smoothing=1e-07 | 
+V 0.487 0.914 0.635
+H KernelCenterer.null=False | NB.var_smoothing=1e-08 | 
+V 0.487 0.914 0.635
+H KernelCenterer.null=False | NB.var_smoothing=1e-06 | 
+V 0.487 0.914 0.635
+H KernelCenterer.null=True | NB.var_smoothing=1e-06 | 
+V 0.487 0.914 0.635
+H KernelCenterer.null=True | NB.var_smoothing=1e-07 | 
+V 0.487 0.914 0.635
+H KernelCenterer.null=True | NB.var_smoothing=1e-07 | 
+V 0.487 0.914 0.635
+H KernelCenterer.null=False | NB.var_smoothing=1e-08 | 
+V 0.487 0.914 0.635
+H KernelCenterer.null=True | NB.var_smoothing=1e-08 | 
+V 0.487 0.914 0.635
+H KernelCenterer.null=True | NB.var_smoothing=1e-09 | 
+V 0.487 0.914 0.635
+H KernelCenterer.null=True | NB.var_smoothing=1e-09 | 
+V 0.487 0.914 0.635
+## END
+** Aug-15-2019 13:01:57
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 194.1183488368988
+H SMOTE.k=9 | SMOTE.m=189 | SMOTE.r=4 | SVM.C=78 | SVM.kernel=linear | SVM.degree=4 | SVM.gamma=0.9921535706858898 | SVM.coef0=0.001694335296602534 | SVM.tol=0.0829145140888512 | 
+V 0.713 0.739 0.726
+H SMOTE.k=13 | SMOTE.m=159 | SMOTE.r=3 | SVM.C=287 | SVM.kernel=linear | SVM.degree=5 | SVM.gamma=0.8210586589551697 | SVM.coef0=0.06490697296935484 | SVM.tol=0.07553497583366327 | 
+V 0.783 0.716 0.748
+H SMOTE.k=8 | SMOTE.m=160 | SMOTE.r=2 | SVM.C=464 | SVM.kernel=rbf | SVM.degree=5 | SVM.gamma=0.83230829486991 | SVM.coef0=0.04323147213024584 | SVM.tol=0.047385514100940454 | 
+V 1.    0.058 0.11 
+H SMOTE.k=6 | SMOTE.m=381 | SMOTE.r=3 | SVM.C=153 | SVM.kernel=linear | SVM.degree=7 | SVM.gamma=0.4137351843028638 | SVM.coef0=0.09323529520388525 | SVM.tol=0.0874915767748868 | 
+V 0.617 0.793 0.694
+H SMOTE.k=9 | SMOTE.m=363 | SMOTE.r=1 | SVM.C=160 | SVM.kernel=linear | SVM.degree=5 | SVM.gamma=0.83230829486991 | SVM.coef0=0.09573849831994867 | SVM.tol=0.037383991554912614 | 
+V 0.652 0.782 0.711
+H SMOTE.k=14 | SMOTE.m=361 | SMOTE.r=3 | SVM.C=326 | SVM.kernel=linear | SVM.degree=7 | SVM.gamma=0.21999873455701802 | SVM.coef0=0.08508731863314314 | SVM.tol=0.09643952754639952 | 
+V 0.643 0.794 0.711
+H SMOTE.k=13 | SMOTE.m=356 | SMOTE.r=3 | SVM.C=336 | SVM.kernel=poly | SVM.degree=5 | SVM.gamma=0.6444838949352966 | SVM.coef0=0.027609835349450364 | SVM.tol=0.058915075438766264 | 
+V 0.513 0.715 0.597
+H SMOTE.k=16 | SMOTE.m=193 | SMOTE.r=4 | SVM.C=387 | SVM.kernel=rbf | SVM.degree=4 | SVM.gamma=0.5282600571227869 | SVM.coef0=0.054625536595659746 | SVM.tol=0.037383991554912614 | 
+V 0.983 0.216 0.355
+H SMOTE.k=12 | SMOTE.m=286 | SMOTE.r=3 | SVM.C=426 | SVM.kernel=linear | SVM.degree=3 | SVM.gamma=0.5282600571227869 | SVM.coef0=0.05506639293052193 | SVM.tol=0.058915075438766264 | 
+V 0.774 0.739 0.756
+H SMOTE.k=12 | SMOTE.m=372 | SMOTE.r=2 | SVM.C=430 | SVM.kernel=poly | SVM.degree=2 | SVM.gamma=0.5791310174296986 | SVM.coef0=0.07041404121216165 | SVM.tol=0.026416619789845653 | 
+V 0.522 0.767 0.621
+## END
