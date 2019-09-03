@@ -50,15 +50,24 @@ def get_performance(prediction, test_labels):
         tp + tn + fp + fn) != 0 else 0
     f1 = 2.0 * tp / (2.0 * tp + fp + fn) if (2.0 * tp + fp + fn) != 0 else 0
     gm = 2.0 * rec * (1 - fpr) / (rec + 1 - fpr) if (rec + 1 - fpr) != 0 else 0
-    return [round(x, 3) for x in [pre, rec, spec, fpr, npv, acc, f1, gm]]
+
+    ifa = 0
+    actual_results = np.asarray(test_labels)
+    predicted_results = prediction
+    for i, j in zip(actual_results, predicted_results):
+        if (i == 1) and (j == 1):
+            break
+        elif (i == 0) and (j == 1):
+            ifa += 1
+    return [round(x, 3) for x in [pre, rec, spec, fpr, npv, acc, f1, gm, ifa]]
 
 
 def get_score(criteria, prediction, test_labels, data):
     tn, fp, fn, tp = confusion_matrix(
         test_labels, prediction, labels=[0, 1]).ravel()
-    pre, rec, spec, fpr, npv, acc, f1, gm = get_performance(
+    pre, rec, spec, fpr, npv, acc, f1, gm, ifa = get_performance(
         prediction, test_labels)
-    all_metrics = [tp, fp, tn, fn, pre, rec, spec, fpr, npv, acc, f1]
+    all_metrics = [tp, fp, tn, fn, pre, rec, spec, fpr, npv, acc, f1, ifa]
     if criteria == "Accuracy":
         score = -all_metrics[-ACC]
     elif criteria == "d2h":
@@ -80,6 +89,8 @@ def get_score(criteria, prediction, test_labels, data):
         score = fpr
     elif criteria == 'g_measure':
         score = gm
+    elif criteria == "ifa":
+        score = ifa
     else:  # Information Gain
         P, N = all_metrics[0] + all_metrics[3], all_metrics[1] + all_metrics[2]
         p = 1.0 * P / (P + N) if P + N > 0 else 0  # before the split
