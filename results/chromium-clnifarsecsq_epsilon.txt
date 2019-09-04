@@ -376,3 +376,99 @@ V  0.661  0.902 85.
 H StandardScaler.copy=True | StandardScaler.with_mean=False | StandardScaler.with_std=False | NB.var_smoothing=1e-05 | 
 V   0.678   0.892 100.   
 ## END
+** Sep-04-2019 03:13:09
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 32885.31919145584
+H SMOTE.k=7 | SMOTE.m=203 | SMOTE.r=2 | SVM.C=262 | SVM.kernel=sigmoid | SVM.degree=9 | SVM.gamma=0.7761825523375099 | SVM.coef0=0.051811515736192484 | SVM.tol=0.008843192802460643 | 
+V 7.48e-01 4.33e-01 5.37e+02
+H SMOTE.k=6 | SMOTE.m=248 | SMOTE.r=1 | SVM.C=397 | SVM.kernel=sigmoid | SVM.degree=4 | SVM.gamma=0.6834196979668485 | SVM.coef0=0.07660264220844733 | SVM.tol=0.04112905362898616 | 
+V 7.91e-01 4.29e-01 5.75e+02
+H SMOTE.k=18 | SMOTE.m=214 | SMOTE.r=4 | SVM.C=226 | SVM.kernel=sigmoid | SVM.degree=2 | SVM.gamma=0.2734641501112596 | SVM.coef0=0.041999425777935556 | SVM.tol=0.05675118319096273 | 
+V 6.17e-01 4.71e-01 5.26e+02
+H SMOTE.k=14 | SMOTE.m=160 | SMOTE.r=2 | SVM.C=397 | SVM.kernel=sigmoid | SVM.degree=5 | SVM.gamma=0.32223732556701634 | SVM.coef0=0.013999351919825143 | SVM.tol=0.08598510388103951 | 
+V 7.30e-01 4.16e-01 5.64e+02
+H SMOTE.k=8 | SMOTE.m=211 | SMOTE.r=1 | SVM.C=416 | SVM.kernel=sigmoid | SVM.degree=6 | SVM.gamma=0.812204951552219 | SVM.coef0=0.04264369999582736 | SVM.tol=0.08506235462762635 | 
+V 7.22e-01 4.43e-01 5.29e+02
+H SMOTE.k=11 | SMOTE.m=179 | SMOTE.r=3 | SVM.C=450 | SVM.kernel=sigmoid | SVM.degree=6 | SVM.gamma=0.7761825523375099 | SVM.coef0=0.0335145370185888 | SVM.tol=0.05675118319096273 | 
+V 7.39e-01 4.29e-01 5.52e+02
+H SMOTE.k=8 | SMOTE.m=94 | SMOTE.r=2 | SVM.C=380 | SVM.kernel=sigmoid | SVM.degree=2 | SVM.gamma=0.9902557240580347 | SVM.coef0=0.09050466616070209 | SVM.tol=0.08598510388103951 | 
+V 8.35e-01 4.01e-01 5.80e+02
+H SMOTE.k=9 | SMOTE.m=275 | SMOTE.r=4 | SVM.C=158 | SVM.kernel=sigmoid | SVM.degree=5 | SVM.gamma=0.6147174670090065 | SVM.coef0=0.0335145370185888 | SVM.tol=0.08598510388103951 | 
+V 6.35e-01 4.54e-01 5.39e+02
+H SMOTE.k=14 | SMOTE.m=170 | SMOTE.r=2 | SVM.C=224 | SVM.kernel=sigmoid | SVM.degree=6 | SVM.gamma=0.812204951552219 | SVM.coef0=0.0335145370185888 | SVM.tol=0.06757176912930139 | 
+V 7.04e-01 4.34e-01 5.60e+02
+H SMOTE.k=5 | SMOTE.m=71 | SMOTE.r=4 | SVM.C=349 | SVM.kernel=poly | SVM.degree=9 | SVM.gamma=0.026650023159598635 | SVM.coef0=0.011834939117709865 | SVM.tol=0.037915687004179514 | 
+V 9.30e-01 1.29e-01 6.87e+02
+## END
+** Sep-04-2019 03:17:21
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 251.1506335735321
+H SMOTE.k=2 | SMOTE.m=54 | SMOTE.r=1 | NB.var_smoothing=1e-08 | 
+V   0.826   0.651 303.   
+H SMOTE.k=7 | SMOTE.m=146 | SMOTE.r=1 | NB.var_smoothing=1e-07 | 
+V   0.73    0.789 230.   
+H SMOTE.k=4 | SMOTE.m=151 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
+V   0.774   0.743 278.   
+H SMOTE.k=14 | SMOTE.m=79 | SMOTE.r=3 | NB.var_smoothing=1e-08 | 
+V   0.791   0.677 324.   
+H SMOTE.k=13 | SMOTE.m=139 | SMOTE.r=4 | NB.var_smoothing=1e-06 | 
+V   0.73    0.776 236.   
+H SMOTE.k=7 | SMOTE.m=64 | SMOTE.r=4 | NB.var_smoothing=0.001 | 
+V   0.791   0.726 267.   
+H SMOTE.k=13 | SMOTE.m=302 | SMOTE.r=3 | NB.var_smoothing=1e-07 | 
+V   0.704   0.85  171.   
+H SMOTE.k=18 | SMOTE.m=90 | SMOTE.r=4 | NB.var_smoothing=1e-07 | 
+V   0.757   0.69  304.   
+H SMOTE.k=14 | SMOTE.m=64 | SMOTE.r=3 | NB.var_smoothing=0.0001 | 
+V   0.896   0.554 401.   
+H SMOTE.k=16 | SMOTE.m=98 | SMOTE.r=1 | NB.var_smoothing=1e-05 | 
+V   0.791   0.716 259.   
+## END
+** Sep-04-2019 03:20:30
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 189.57854795455933
+H SMOTE.k=5 | SMOTE.m=105 | SMOTE.r=5 | NB.var_smoothing=0.001 | 
+V   0.826   0.708 300.   
+H SMOTE.k=16 | SMOTE.m=189 | SMOTE.r=1 | NB.var_smoothing=1e-05 | 
+V   0.809   0.792 209.   
+H SMOTE.k=9 | SMOTE.m=63 | SMOTE.r=4 | NB.var_smoothing=1e-09 | 
+V   0.748   0.641 350.   
+H SMOTE.k=4 | SMOTE.m=171 | SMOTE.r=2 | NB.var_smoothing=1e-05 | 
+V   0.817   0.733 225.   
+H SMOTE.k=12 | SMOTE.m=151 | SMOTE.r=3 | NB.var_smoothing=0.0001 | 
+V   0.783   0.744 251.   
+H SMOTE.k=7 | SMOTE.m=81 | SMOTE.r=5 | NB.var_smoothing=0.0001 | 
+V   0.87    0.699 251.   
+H SMOTE.k=7 | SMOTE.m=78 | SMOTE.r=1 | NB.var_smoothing=1e-06 | 
+V   0.765   0.703 295.   
+H SMOTE.k=15 | SMOTE.m=184 | SMOTE.r=1 | NB.var_smoothing=0.001 | 
+V   0.774   0.771 213.   
+H SMOTE.k=15 | SMOTE.m=74 | SMOTE.r=3 | NB.var_smoothing=1e-05 | 
+V   0.765   0.687 312.   
+H SMOTE.k=7 | SMOTE.m=79 | SMOTE.r=2 | NB.var_smoothing=1e-08 | 
+V   0.774   0.721 241.   
+## END
+** Sep-04-2019 03:23:37
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 186.55439496040344
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=True | RobustScaler.q_min=32 | RobustScaler.q_max=60 | RobustScaler.copy=False | NB.var_smoothing=0.0001 | 
+V   0.722   0.859 121.   
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=True | RobustScaler.q_min=13 | RobustScaler.q_max=86 | RobustScaler.copy=False | NB.var_smoothing=0.0001 | 
+V   0.722   0.859 121.   
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=False | RobustScaler.q_min=14 | RobustScaler.q_max=70 | RobustScaler.copy=True | NB.var_smoothing=0.001 | 
+V   0.704   0.862 115.   
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=False | RobustScaler.q_min=20 | RobustScaler.q_max=78 | RobustScaler.copy=False | NB.var_smoothing=1e-08 | 
+V   0.678   0.888 103.   
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=False | RobustScaler.q_min=32 | RobustScaler.q_max=72 | RobustScaler.copy=False | NB.var_smoothing=1e-05 | 
+V   0.722   0.868 110.   
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=False | RobustScaler.q_min=31 | RobustScaler.q_max=62 | RobustScaler.copy=False | NB.var_smoothing=1e-05 | 
+V   0.722   0.868 110.   
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=True | RobustScaler.q_min=14 | RobustScaler.q_max=69 | RobustScaler.copy=False | NB.var_smoothing=0.001 | 
+V   0.704   0.862 115.   
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=False | RobustScaler.q_min=37 | RobustScaler.q_max=76 | RobustScaler.copy=False | NB.var_smoothing=0.001 | 
+V   0.704   0.862 115.   
+H RobustScaler.with_centering=False | RobustScaler.with_scaling=True | RobustScaler.q_min=27 | RobustScaler.q_max=67 | RobustScaler.copy=False | NB.var_smoothing=0.001 | 
+V   0.704   0.862 115.   
+H RobustScaler.with_centering=True | RobustScaler.with_scaling=True | RobustScaler.q_min=14 | RobustScaler.q_max=70 | RobustScaler.copy=True | NB.var_smoothing=0.0001 | 
+V   0.722   0.859 121.   
+## END

@@ -524,3 +524,27 @@ V 8.78e-01 3.25e-01 5.50e+02
 H SMOTE.k=4 | SMOTE.m=395 | SMOTE.r=3 | KNN.n_neighbors=14 | KNN.weights=distance | KNN.metric=chebyshev | KNN.p=2 | 
 V 8.35e-01 3.52e-01 5.31e+02
 ## END
+** Sep-04-2019 11:59:13
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 55032.15980672836
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=C | SVM.C=183 | SVM.kernel=rbf | SVM.degree=5 | SVM.gamma=0.6773567464017252 | SVM.coef0=0.030862983484301776 | SVM.tol=0.06833161161807247 | 
+V 9.00e-03 9.84e-01 2.36e+02
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=F | SVM.C=71 | SVM.kernel=linear | SVM.degree=5 | SVM.gamma=0.36756666140169425 | SVM.coef0=0.09650576938076322 | SVM.tol=0.06045753646493678 | 
+V   0.704   0.88  105.   
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=C | SVM.C=53 | SVM.kernel=rbf | SVM.degree=6 | SVM.gamma=0.6773567464017252 | SVM.coef0=0.0660711195280887 | SVM.tol=0.09456286909613147 | 
+V 9.00e-03 9.84e-01 2.36e+02
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=F | SVM.C=426 | SVM.kernel=rbf | SVM.degree=3 | SVM.gamma=0.500131869656534 | SVM.coef0=0.07315459723884561 | SVM.tol=0.04254602359025931 | 
+V 9.00e-03 9.83e-01 2.47e+02
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=F | SVM.C=482 | SVM.kernel=rbf | SVM.degree=3 | SVM.gamma=0.500131869656534 | SVM.coef0=0.07315459723884561 | SVM.tol=0.04425541599013763 | 
+V 9.00e-03 9.83e-01 2.47e+02
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=C | SVM.C=266 | SVM.kernel=poly | SVM.degree=8 | SVM.gamma=0.7632946787563022 | SVM.coef0=0.012543174683523763 | SVM.tol=0.09456286909613147 | 
+V  0.217  0.934 64.   
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=C | SVM.C=285 | SVM.kernel=rbf | SVM.degree=5 | SVM.gamma=0.500131869656534 | SVM.coef0=0.07327872396248833 | SVM.tol=0.08423459481268464 | 
+V 9.00e-03 9.82e-01 2.53e+02
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=C | SVM.C=336 | SVM.kernel=rbf | SVM.degree=8 | SVM.gamma=0.7123224650935882 | SVM.coef0=0.05096387666999287 | SVM.tol=0.028007377959635895 | 
+V   0.      0.988 250.   
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=F | SVM.C=434 | SVM.kernel=rbf | SVM.degree=5 | SVM.gamma=0.0037560639094474935 | SVM.coef0=0.07315459723884561 | SVM.tol=0.08423459481268464 | 
+V  0.643  0.893 86.   
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=F | SVM.C=253 | SVM.kernel=linear | SVM.degree=4 | SVM.gamma=0.7123224650935882 | SVM.coef0=0.03572096358872057 | SVM.tol=0.040606893258982535 | 
+V  0.678  0.882 98.   
+## END
