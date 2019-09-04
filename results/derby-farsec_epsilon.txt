@@ -564,3 +564,123 @@ V 0.476 0.963 0.637
 H StandardScaler.copy=True | StandardScaler.with_mean=False | StandardScaler.with_std=True | NB.var_smoothing=1e-07 | 
 V 0.476 0.961 0.637
 ## END
+** Sep-03-2019 16:01:20
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 12.110812187194824
+H MinMaxScaler.copy=True | MinMaxScaler.min=-1 | MinMaxScaler.max=4 | DT.min_samples_split=12 | DT.criterion=entropy | DT.splitter=random | 
+V 0.286 0.976 3.   
+H MinMaxScaler.copy=True | MinMaxScaler.min=-4 | MinMaxScaler.max=1 | DT.min_samples_split=13 | DT.criterion=entropy | DT.splitter=random | 
+V 0.405 0.965 2.   
+H MinMaxScaler.copy=True | MinMaxScaler.min=-2 | MinMaxScaler.max=3 | DT.min_samples_split=3 | DT.criterion=entropy | DT.splitter=best | 
+V 0.405 0.93  2.   
+H MinMaxScaler.copy=True | MinMaxScaler.min=-2 | MinMaxScaler.max=1 | DT.min_samples_split=17 | DT.criterion=entropy | DT.splitter=best | 
+V 0.286 0.987 1.   
+H MinMaxScaler.copy=False | MinMaxScaler.min=-3 | MinMaxScaler.max=2 | DT.min_samples_split=12 | DT.criterion=entropy | DT.splitter=random | 
+V 0.476 0.983 1.   
+H MinMaxScaler.copy=False | MinMaxScaler.min=-2 | MinMaxScaler.max=1 | DT.min_samples_split=7 | DT.criterion=entropy | DT.splitter=random | 
+V 0.452 0.961 3.   
+H MinMaxScaler.copy=False | MinMaxScaler.min=-1 | MinMaxScaler.max=4 | DT.min_samples_split=19 | DT.criterion=entropy | DT.splitter=random | 
+V 0.429 0.978 1.   
+H MinMaxScaler.copy=False | MinMaxScaler.min=-4 | MinMaxScaler.max=3 | DT.min_samples_split=8 | DT.criterion=entropy | DT.splitter=best | 
+V 0.31 0.98 2.  
+H MinMaxScaler.copy=True | MinMaxScaler.min=-3 | MinMaxScaler.max=2 | DT.min_samples_split=10 | DT.criterion=entropy | DT.splitter=best | 
+V 0.31  0.978 2.   
+H MinMaxScaler.copy=False | MinMaxScaler.min=-5 | MinMaxScaler.max=2 | DT.min_samples_split=7 | DT.criterion=entropy | DT.splitter=best | 
+V 0.333 0.978 2.   
+## END
+** Sep-03-2019 16:01:35
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 15.434116840362549
+H Normalization.norm=max | Normalization.copy=True | SVM.C=299 | SVM.kernel=poly | SVM.degree=4 | SVM.gamma=0.7189933564636113 | SVM.coef0=0.07686632365608764 | SVM.tol=0.04365054383269993 | 
+V 0.143 0.985 2.   
+H Normalization.norm=max | Normalization.copy=False | SVM.C=196 | SVM.kernel=poly | SVM.degree=9 | SVM.gamma=0.9784203313992388 | SVM.coef0=0.019846751779310168 | SVM.tol=0.08786846198911993 | 
+V 0.095 0.991 1.   
+H Normalization.norm=l1 | Normalization.copy=False | SVM.C=275 | SVM.kernel=linear | SVM.degree=4 | SVM.gamma=0.7111376294085943 | SVM.coef0=0.08894054038883024 | SVM.tol=0.046925910050006285 | 
+V 0.357 0.967 0.   
+H Normalization.norm=max | Normalization.copy=True | SVM.C=94 | SVM.kernel=linear | SVM.degree=6 | SVM.gamma=0.8798521750864392 | SVM.coef0=0.09348302287768526 | SVM.tol=0.04869791655404191 | 
+V 0.357 0.959 0.   
+H Normalization.norm=max | Normalization.copy=False | SVM.C=280 | SVM.kernel=rbf | SVM.degree=9 | SVM.gamma=0.7189933564636113 | SVM.coef0=0.019846751779310168 | SVM.tol=0.07349206896759661 | 
+V 0.024 0.996 2.   
+H Normalization.norm=max | Normalization.copy=True | SVM.C=330 | SVM.kernel=poly | SVM.degree=4 | SVM.gamma=0.9784203313992388 | SVM.coef0=0.07686632365608764 | SVM.tol=0.04322163439029915 | 
+V 0.143 0.985 2.   
+H Normalization.norm=max | Normalization.copy=True | SVM.C=91 | SVM.kernel=sigmoid | SVM.degree=4 | SVM.gamma=0.25329830982913804 | SVM.coef0=0.07327677983865392 | SVM.tol=0.04869791655404191 | 
+V 0.143 0.967 3.   
+H Normalization.norm=l1 | Normalization.copy=False | SVM.C=196 | SVM.kernel=rbf | SVM.degree=6 | SVM.gamma=0.25329830982913804 | SVM.coef0=0.015418065495473567 | SVM.tol=0.002020818864900209 | 
+V 0.286 0.989 0.   
+H Normalization.norm=max | Normalization.copy=False | SVM.C=355 | SVM.kernel=poly | SVM.degree=2 | SVM.gamma=0.7794954791837877 | SVM.coef0=0.09515167517578574 | SVM.tol=0.025341993072469628 | 
+V 0.19  0.974 4.   
+H Normalization.norm=l1 | Normalization.copy=True | SVM.C=310 | SVM.kernel=poly | SVM.degree=4 | SVM.gamma=0.8798521750864392 | SVM.coef0=0.03288698987797677 | SVM.tol=0.012032086334359005 | 
+V 0.    0.993 3.   
+## END
+** Sep-03-2019 16:01:50
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 14.432966947555542
+H MinMaxScaler.copy=True | MinMaxScaler.min=-1 | MinMaxScaler.max=1 | SVM.C=58 | SVM.kernel=linear | SVM.degree=3 | SVM.gamma=0.5941070520051186 | SVM.coef0=0.02999742032778784 | SVM.tol=0.04779237403450326 | 
+V 0.429 0.952 0.   
+H MinMaxScaler.copy=True | MinMaxScaler.min=-4 | MinMaxScaler.max=1 | SVM.C=205 | SVM.kernel=rbf | SVM.degree=9 | SVM.gamma=0.3761583028927401 | SVM.coef0=0.06671092968171176 | SVM.tol=0.06174748709956274 | 
+V 0. 1. 0.
+H MinMaxScaler.copy=True | MinMaxScaler.min=-1 | MinMaxScaler.max=1 | SVM.C=262 | SVM.kernel=linear | SVM.degree=8 | SVM.gamma=0.7023265563094053 | SVM.coef0=0.006975177340509964 | SVM.tol=0.026701702280775442 | 
+V 0.452 0.91  0.   
+H MinMaxScaler.copy=False | MinMaxScaler.min=-3 | MinMaxScaler.max=2 | SVM.C=24 | SVM.kernel=linear | SVM.degree=4 | SVM.gamma=0.7023265563094053 | SVM.coef0=0.013217372116530336 | SVM.tol=0.014920083485949443 | 
+V 0.476 0.921 0.   
+H MinMaxScaler.copy=False | MinMaxScaler.min=-1 | MinMaxScaler.max=2 | SVM.C=387 | SVM.kernel=linear | SVM.degree=4 | SVM.gamma=0.7023265563094053 | SVM.coef0=0.0779835806847028 | SVM.tol=0.008384141261197131 | 
+V 0.452 0.91  0.   
+H MinMaxScaler.copy=True | MinMaxScaler.min=-3 | MinMaxScaler.max=3 | SVM.C=363 | SVM.kernel=linear | SVM.degree=7 | SVM.gamma=0.22744024023329257 | SVM.coef0=0.09213175980074723 | SVM.tol=0.025813397421324127 | 
+V 0.452 0.91  0.   
+H MinMaxScaler.copy=True | MinMaxScaler.min=-1 | MinMaxScaler.max=2 | SVM.C=92 | SVM.kernel=rbf | SVM.degree=8 | SVM.gamma=0.4603139405043699 | SVM.coef0=0.05121273585715033 | SVM.tol=0.0876607400178478 | 
+V 0.    0.998 1.   
+H MinMaxScaler.copy=True | MinMaxScaler.min=-1 | MinMaxScaler.max=4 | SVM.C=416 | SVM.kernel=linear | SVM.degree=3 | SVM.gamma=0.7548704289724439 | SVM.coef0=0.0779835806847028 | SVM.tol=0.09044200636877159 | 
+V 0.452 0.91  0.   
+H MinMaxScaler.copy=True | MinMaxScaler.min=-3 | MinMaxScaler.max=3 | SVM.C=449 | SVM.kernel=linear | SVM.degree=7 | SVM.gamma=0.26954594513985153 | SVM.coef0=0.09213175980074723 | SVM.tol=0.0876607400178478 | 
+V 0.452 0.91  0.   
+H MinMaxScaler.copy=False | MinMaxScaler.min=-3 | MinMaxScaler.max=2 | SVM.C=333 | SVM.kernel=linear | SVM.degree=2 | SVM.gamma=0.5121461738557836 | SVM.coef0=0.040600341711115 | SVM.tol=0.026701702280775442 | 
+V 0.452 0.91  0.   
+## END
+** Sep-03-2019 16:01:59
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 9.212751865386963
+H MinMaxScaler.copy=False | MinMaxScaler.min=-4 | MinMaxScaler.max=2 | DT.min_samples_split=8 | DT.criterion=entropy | DT.splitter=random | 
+V 0.405 0.972 1.   
+H MinMaxScaler.copy=True | MinMaxScaler.min=-2 | MinMaxScaler.max=2 | DT.min_samples_split=19 | DT.criterion=entropy | DT.splitter=random | 
+V 0.429 0.98  1.   
+H MinMaxScaler.copy=False | MinMaxScaler.min=-5 | MinMaxScaler.max=1 | DT.min_samples_split=16 | DT.criterion=entropy | DT.splitter=best | 
+V 0.286 0.987 1.   
+H MinMaxScaler.copy=True | MinMaxScaler.min=-2 | MinMaxScaler.max=4 | DT.min_samples_split=2 | DT.criterion=entropy | DT.splitter=best | 
+V 0.286 0.965 2.   
+H MinMaxScaler.copy=True | MinMaxScaler.min=-1 | MinMaxScaler.max=2 | DT.min_samples_split=9 | DT.criterion=entropy | DT.splitter=best | 
+V 0.286 0.98  2.   
+H MinMaxScaler.copy=True | MinMaxScaler.min=-2 | MinMaxScaler.max=2 | DT.min_samples_split=7 | DT.criterion=entropy | DT.splitter=best | 
+V 0.286 0.98  2.   
+H MinMaxScaler.copy=True | MinMaxScaler.min=-2 | MinMaxScaler.max=3 | DT.min_samples_split=10 | DT.criterion=entropy | DT.splitter=best | 
+V 0.31 0.98 2.  
+H MinMaxScaler.copy=False | MinMaxScaler.min=-3 | MinMaxScaler.max=1 | DT.min_samples_split=16 | DT.criterion=entropy | DT.splitter=random | 
+V 0.429 0.976 1.   
+H MinMaxScaler.copy=True | MinMaxScaler.min=-4 | MinMaxScaler.max=1 | DT.min_samples_split=2 | DT.criterion=entropy | DT.splitter=best | 
+V 0.381 0.93  2.   
+H MinMaxScaler.copy=False | MinMaxScaler.min=-4 | MinMaxScaler.max=3 | DT.min_samples_split=12 | DT.criterion=entropy | DT.splitter=random | 
+V 0.286 0.969 2.   
+## END
+** Sep-03-2019 16:02:12
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 13.190558671951294
+H Binarization.threshold=0 | Binarization.copy=True | LR.penalty=l1 | LR.tol=0.0741376480373779 | LR.C=433 | 
+V 0.405 0.965 0.   
+H Binarization.threshold=5 | Binarization.copy=True | LR.penalty=l1 | LR.tol=0.022345304620310258 | LR.C=230 | 
+V 0.    0.989 5.   
+H Binarization.threshold=0 | Binarization.copy=False | LR.penalty=l2 | LR.tol=0.09349191713549188 | LR.C=144 | 
+V 0.381 0.969 1.   
+H Binarization.threshold=4 | Binarization.copy=False | LR.penalty=l2 | LR.tol=0.07956300294341279 | LR.C=197 | 
+V 0.    0.989 5.   
+H Binarization.threshold=5 | Binarization.copy=False | LR.penalty=l2 | LR.tol=0.04968995802480192 | LR.C=433 | 
+V 0.    0.991 4.   
+H Binarization.threshold=7 | Binarization.copy=True | LR.penalty=l2 | LR.tol=0.022345304620310258 | LR.C=350 | 
+V 0.    0.989 5.   
+H Binarization.threshold=5 | Binarization.copy=True | LR.penalty=l2 | LR.tol=0.0571681645296496 | LR.C=139 | 
+V 0.    0.991 4.   
+H Binarization.threshold=2 | Binarization.copy=False | LR.penalty=l1 | LR.tol=0.0741376480373779 | LR.C=67 | 
+V 0.143 0.961 1.   
+H Binarization.threshold=0 | Binarization.copy=True | LR.penalty=l2 | LR.tol=0.07956300294341279 | LR.C=126 | 
+V 0.381 0.969 1.   
+H Binarization.threshold=7 | Binarization.copy=True | LR.penalty=l1 | LR.tol=0.02745016936289234 | LR.C=163 | 
+V 0.    0.989 5.   
+## END

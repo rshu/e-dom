@@ -308,3 +308,219 @@ V 0.652 0.926 0.765
 H QuantileTransformer.n_quantiles=1640 | QuantileTransformer.output_distribution=uniform | QuantileTransformer.ignore_implicit_zeros=True | QuantileTransformer.subsample=95751 | QuantileTransformer.copy=False | NB.var_smoothing=1e-06 | 
 V 0.704 0.901 0.791
 ## END
+** Sep-03-2019 16:03:30
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 143.85734939575195
+H SMOTE.k=3 | SMOTE.m=268 | SMOTE.r=2 | DT.min_samples_split=3 | DT.criterion=entropy | DT.splitter=random | 
+V   0.67    0.702 340.   
+H SMOTE.k=14 | SMOTE.m=145 | SMOTE.r=3 | DT.min_samples_split=8 | DT.criterion=gini | DT.splitter=best | 
+V   0.617   0.634 282.   
+H SMOTE.k=15 | SMOTE.m=134 | SMOTE.r=5 | DT.min_samples_split=11 | DT.criterion=entropy | DT.splitter=random | 
+V   0.687   0.615 403.   
+H SMOTE.k=6 | SMOTE.m=108 | SMOTE.r=2 | DT.min_samples_split=3 | DT.criterion=gini | DT.splitter=best | 
+V   0.704   0.589 379.   
+H SMOTE.k=4 | SMOTE.m=97 | SMOTE.r=3 | DT.min_samples_split=19 | DT.criterion=gini | DT.splitter=random | 
+V   0.791   0.558 403.   
+H SMOTE.k=4 | SMOTE.m=86 | SMOTE.r=3 | DT.min_samples_split=5 | DT.criterion=entropy | DT.splitter=best | 
+V   0.757   0.549 405.   
+H SMOTE.k=3 | SMOTE.m=294 | SMOTE.r=1 | DT.min_samples_split=4 | DT.criterion=entropy | DT.splitter=random | 
+V   0.722   0.71  332.   
+H SMOTE.k=8 | SMOTE.m=92 | SMOTE.r=3 | DT.min_samples_split=10 | DT.criterion=gini | DT.splitter=random | 
+V   0.73    0.577 427.   
+H SMOTE.k=12 | SMOTE.m=81 | SMOTE.r=4 | DT.min_samples_split=19 | DT.criterion=gini | DT.splitter=best | 
+V   0.609   0.604 417.   
+H SMOTE.k=5 | SMOTE.m=97 | SMOTE.r=2 | DT.min_samples_split=10 | DT.criterion=gini | DT.splitter=best | 
+V   0.774   0.533 448.   
+## END
+** Sep-03-2019 19:37:33
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 12842.38247704506
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | KNN.n_neighbors=19 | KNN.weights=distance | KNN.metric=chebyshev | KNN.p=2 | 
+V 3.50e-02 9.89e-01 1.53e+02
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | KNN.n_neighbors=19 | KNN.weights=distance | KNN.metric=chebyshev | KNN.p=2 | 
+V 3.50e-02 9.89e-01 1.53e+02
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | KNN.n_neighbors=16 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=1 | 
+V 9.00e-03 9.91e-01 4.80e+01
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | KNN.n_neighbors=24 | KNN.weights=distance | KNN.metric=chebyshev | KNN.p=2 | 
+V   0.      0.991 190.   
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | KNN.n_neighbors=20 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=1 | 
+V 9.00e-03 9.91e-01 4.80e+01
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=False | KNN.n_neighbors=9 | KNN.weights=distance | KNN.metric=chebyshev | KNN.p=3 | 
+V  0.209  0.983 23.   
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=True | KNN.n_neighbors=19 | KNN.weights=distance | KNN.metric=chebyshev | KNN.p=2 | 
+V 3.50e-02 9.89e-01 1.53e+02
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | KNN.n_neighbors=19 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=1 | 
+V 9.00e-03 9.91e-01 4.80e+01
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=False | PowerTransformer.copy=False | KNN.n_neighbors=19 | KNN.weights=distance | KNN.metric=chebyshev | KNN.p=1 | 
+V 3.50e-02 9.89e-01 1.53e+02
+H PowerTransformer.method=yeo-johnson | PowerTransformer.standardize=True | PowerTransformer.copy=True | KNN.n_neighbors=16 | KNN.weights=distance | KNN.metric=chebyshev | KNN.p=1 | 
+V  0.07   0.988 58.   
+## END
+** Sep-03-2019 19:52:55
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 922.5437879562378
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=C | SVM.C=137 | SVM.kernel=poly | SVM.degree=7 | SVM.gamma=0.9833809773746006 | SVM.coef0=0.08923026999569654 | SVM.tol=0.06569243678089139 | 
+V  0.217  0.936 60.   
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=F | SVM.C=334 | SVM.kernel=linear | SVM.degree=8 | SVM.gamma=0.2501570012685719 | SVM.coef0=0.03199844051148728 | SVM.tol=0.014980203520486447 | 
+V  0.67   0.883 97.   
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=F | SVM.C=149 | SVM.kernel=linear | SVM.degree=2 | SVM.gamma=0.693678791627437 | SVM.coef0=0.058908276800347464 | SVM.tol=0.006718963870102668 | 
+V   0.687   0.881 104.   
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=C | SVM.C=449 | SVM.kernel=rbf | SVM.degree=4 | SVM.gamma=0.45860792637194026 | SVM.coef0=0.009608156611590857 | SVM.tol=0.06755744260078798 | 
+V 9.00e-03 9.82e-01 2.57e+02
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=C | SVM.C=239 | SVM.kernel=rbf | SVM.degree=6 | SVM.gamma=0.45860792637194026 | SVM.coef0=0.03511282434754797 | SVM.tol=0.0557281376860448 | 
+V 9.00e-03 9.82e-01 2.55e+02
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=F | SVM.C=454 | SVM.kernel=rbf | SVM.degree=9 | SVM.gamma=0.5462194191133329 | SVM.coef0=0.006036001592498908 | SVM.tol=0.08444646472997913 | 
+V 9.00e-03 9.84e-01 2.37e+02
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=True | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=C | SVM.C=60 | SVM.kernel=linear | SVM.degree=7 | SVM.gamma=0.693678791627437 | SVM.coef0=0.058908276800347464 | SVM.tol=0.05256511309882588 | 
+V   0.713   0.879 106.   
+H PolynomialFeatures.degree=2 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=C | SVM.C=85 | SVM.kernel=linear | SVM.degree=9 | SVM.gamma=0.3348165616056582 | SVM.coef0=0.039911136040376174 | SVM.tol=0.013633607032843498 | 
+V   0.696   0.881 106.   
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=False | PolynomialFeatures.order=F | SVM.C=340 | SVM.kernel=linear | SVM.degree=3 | SVM.gamma=0.9833809773746006 | SVM.coef0=0.05924092103051 | SVM.tol=0.007985506860837965 | 
+V  0.67   0.884 96.   
+H PolynomialFeatures.degree=3 | PolynomialFeatures.interaction_only=False | PolynomialFeatures.include_bias=True | PolynomialFeatures.order=F | SVM.C=285 | SVM.kernel=poly | SVM.degree=7 | SVM.gamma=0.568157525747049 | SVM.coef0=0.06169205512107208 | SVM.tol=0.0557281376860448 | 
+V  0.217  0.936 60.   
+## END
+** Sep-03-2019 20:25:27
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 1951.448959350586
+H StandardScaler.copy=True | StandardScaler.with_mean=True | StandardScaler.with_std=False | SVM.C=189 | SVM.kernel=rbf | SVM.degree=8 | SVM.gamma=0.1885577650130138 | SVM.coef0=0.02283798587733318 | SVM.tol=0.07287169763871146 | 
+V 9.00e-03 9.87e-01 1.94e+02
+H StandardScaler.copy=False | StandardScaler.with_mean=False | StandardScaler.with_std=False | SVM.C=385 | SVM.kernel=linear | SVM.degree=2 | SVM.gamma=0.24559215797883327 | SVM.coef0=0.05422497071891278 | SVM.tol=0.0638044574710626 | 
+V  0.678  0.884 97.   
+H StandardScaler.copy=False | StandardScaler.with_mean=True | StandardScaler.with_std=False | SVM.C=77 | SVM.kernel=linear | SVM.degree=8 | SVM.gamma=0.9047463750597068 | SVM.coef0=0.014303965697562794 | SVM.tol=0.05378009017686182 | 
+V  0.678  0.884 95.   
+H StandardScaler.copy=False | StandardScaler.with_mean=False | StandardScaler.with_std=False | SVM.C=290 | SVM.kernel=linear | SVM.degree=5 | SVM.gamma=0.6053576374662268 | SVM.coef0=0.05521153751553262 | SVM.tol=0.030646065526757495 | 
+V  0.678  0.884 95.   
+H StandardScaler.copy=False | StandardScaler.with_mean=False | StandardScaler.with_std=False | SVM.C=364 | SVM.kernel=sigmoid | SVM.degree=3 | SVM.gamma=0.6053576374662268 | SVM.coef0=0.05521153751553262 | SVM.tol=0.09378595919139636 | 
+V  0.252  0.981 44.   
+H StandardScaler.copy=True | StandardScaler.with_mean=False | StandardScaler.with_std=True | SVM.C=334 | SVM.kernel=rbf | SVM.degree=7 | SVM.gamma=0.7078490708593161 | SVM.coef0=0.07767005008255362 | SVM.tol=0.060723463985277 | 
+V 9.00e-03 9.90e-01 1.46e+02
+H StandardScaler.copy=False | StandardScaler.with_mean=True | StandardScaler.with_std=False | SVM.C=254 | SVM.kernel=rbf | SVM.degree=8 | SVM.gamma=0.655118180302377 | SVM.coef0=0.0008293677460861848 | SVM.tol=0.006088845925003073 | 
+V 9.00e-03 9.90e-01 1.46e+02
+H StandardScaler.copy=False | StandardScaler.with_mean=True | StandardScaler.with_std=True | SVM.C=425 | SVM.kernel=rbf | SVM.degree=3 | SVM.gamma=0.9047463750597068 | SVM.coef0=0.08804180799398757 | SVM.tol=0.030646065526757495 | 
+V   0.     0.99 203.  
+H StandardScaler.copy=True | StandardScaler.with_mean=False | StandardScaler.with_std=False | SVM.C=335 | SVM.kernel=rbf | SVM.degree=3 | SVM.gamma=0.655118180302377 | SVM.coef0=0.061505099695742464 | SVM.tol=0.09461649682783851 | 
+V 9.00e-03 9.90e-01 1.46e+02
+H StandardScaler.copy=False | StandardScaler.with_mean=False | StandardScaler.with_std=False | SVM.C=266 | SVM.kernel=poly | SVM.degree=9 | SVM.gamma=0.4782890506315577 | SVM.coef0=0.02283798587733318 | SVM.tol=0.05378009017686182 | 
+V  0.287  0.951 58.   
+## END
+** Sep-03-2019 20:29:10
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 223.3869092464447
+H SMOTE.k=8 | SMOTE.m=91 | SMOTE.r=3 | KNN.n_neighbors=21 | KNN.weights=uniform | KNN.metric=chebyshev | KNN.p=2 | 
+V 8.70e-01 2.12e-01 5.89e+02
+H SMOTE.k=5 | SMOTE.m=77 | SMOTE.r=5 | KNN.n_neighbors=13 | KNN.weights=uniform | KNN.metric=minkowski | KNN.p=1 | 
+V 9.74e-01 1.48e-01 6.68e+02
+H SMOTE.k=11 | SMOTE.m=136 | SMOTE.r=2 | KNN.n_neighbors=17 | KNN.weights=uniform | KNN.metric=chebyshev | KNN.p=2 | 
+V 8.70e-01 2.53e-01 6.16e+02
+H SMOTE.k=5 | SMOTE.m=153 | SMOTE.r=4 | KNN.n_neighbors=10 | KNN.weights=distance | KNN.metric=chebyshev | KNN.p=1 | 
+V 8.35e-01 2.84e-01 5.76e+02
+H SMOTE.k=12 | SMOTE.m=251 | SMOTE.r=3 | KNN.n_neighbors=14 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=4 | 
+V 7.57e-01 4.50e-01 4.53e+02
+H SMOTE.k=14 | SMOTE.m=138 | SMOTE.r=1 | KNN.n_neighbors=9 | KNN.weights=uniform | KNN.metric=chebyshev | KNN.p=2 | 
+V 8.87e-01 2.40e-01 6.20e+02
+H SMOTE.k=8 | SMOTE.m=186 | SMOTE.r=1 | KNN.n_neighbors=15 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=1 | 
+V 9.39e-01 3.01e-01 5.52e+02
+H SMOTE.k=3 | SMOTE.m=97 | SMOTE.r=5 | KNN.n_neighbors=13 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=2 | 
+V 9.39e-01 3.34e-01 5.33e+02
+H SMOTE.k=10 | SMOTE.m=242 | SMOTE.r=3 | KNN.n_neighbors=11 | KNN.weights=distance | KNN.metric=chebyshev | KNN.p=1 | 
+V 8.09e-01 3.36e-01 5.38e+02
+H SMOTE.k=14 | SMOTE.m=347 | SMOTE.r=3 | KNN.n_neighbors=22 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=2 | 
+V 8.70e-01 4.39e-01 4.64e+02
+## END
+** Sep-03-2019 20:30:38
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 87.8035626411438
+H MaxAbsScaler.copy=False | NB.var_smoothing=1e-07 | 
+V   0.687   0.885 105.   
+H MaxAbsScaler.copy=False | NB.var_smoothing=0.001 | 
+V   0.722   0.857 122.   
+H MaxAbsScaler.copy=True | NB.var_smoothing=0.001 | 
+V   0.722   0.857 122.   
+H MaxAbsScaler.copy=False | NB.var_smoothing=0.001 | 
+V   0.722   0.857 122.   
+H MaxAbsScaler.copy=False | NB.var_smoothing=0.0001 | 
+V   0.722   0.865 114.   
+H MaxAbsScaler.copy=True | NB.var_smoothing=0.001 | 
+V   0.722   0.857 122.   
+H MaxAbsScaler.copy=True | NB.var_smoothing=0.001 | 
+V   0.722   0.857 122.   
+H MaxAbsScaler.copy=False | NB.var_smoothing=0.001 | 
+V   0.722   0.857 122.   
+H MaxAbsScaler.copy=False | NB.var_smoothing=0.001 | 
+V   0.722   0.857 122.   
+H MaxAbsScaler.copy=True | NB.var_smoothing=0.0001 | 
+V   0.722   0.865 114.   
+## END
+** Sep-03-2019 20:33:28
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 169.8312427997589
+H SMOTE.k=10 | SMOTE.m=119 | SMOTE.r=1 | RF.n_estimators=81 | RF.criterion=entropy | RF.min_samples_leaf=3 | RF.min_samples_split=14 | RF.max_leaf_nodes=42 | RF.max_features=0.62 | RF.max_depth=1 | 
+V 9.04e-01 4.70e-01 4.80e+02
+H SMOTE.k=12 | SMOTE.m=323 | SMOTE.r=1 | RF.n_estimators=62 | RF.criterion=entropy | RF.min_samples_leaf=12 | RF.min_samples_split=2 | RF.max_leaf_nodes=34 | RF.max_features=0.75 | RF.max_depth=4 | 
+V   0.826   0.585 454.   
+H SMOTE.k=14 | SMOTE.m=62 | SMOTE.r=5 | RF.n_estimators=140 | RF.criterion=gini | RF.min_samples_leaf=18 | RF.min_samples_split=18 | RF.max_leaf_nodes=46 | RF.max_features=0.85 | RF.max_depth=8 | 
+V   0.896   0.469 465.   
+H SMOTE.k=3 | SMOTE.m=287 | SMOTE.r=4 | RF.n_estimators=145 | RF.criterion=entropy | RF.min_samples_leaf=14 | RF.min_samples_split=8 | RF.max_leaf_nodes=2 | RF.max_features=0.79 | RF.max_depth=7 | 
+V 9.48e-01 2.08e-01 6.13e+02
+H SMOTE.k=9 | SMOTE.m=56 | SMOTE.r=2 | RF.n_estimators=108 | RF.criterion=gini | RF.min_samples_leaf=16 | RF.min_samples_split=4 | RF.max_leaf_nodes=9 | RF.max_features=0.24000000000000002 | RF.max_depth=2 | 
+V 9.48e-01 2.92e-01 5.49e+02
+H SMOTE.k=3 | SMOTE.m=257 | SMOTE.r=1 | RF.n_estimators=79 | RF.criterion=gini | RF.min_samples_leaf=2 | RF.min_samples_split=14 | RF.max_leaf_nodes=42 | RF.max_features=0.04 | RF.max_depth=4 | 
+V   0.887   0.531 456.   
+H SMOTE.k=8 | SMOTE.m=171 | SMOTE.r=5 | RF.n_estimators=18 | RF.criterion=gini | RF.min_samples_leaf=1 | RF.min_samples_split=12 | RF.max_leaf_nodes=12 | RF.max_features=0.45 | RF.max_depth=8 | 
+V   0.817   0.607 441.   
+H SMOTE.k=16 | SMOTE.m=257 | SMOTE.r=3 | RF.n_estimators=119 | RF.criterion=entropy | RF.min_samples_leaf=12 | RF.min_samples_split=10 | RF.max_leaf_nodes=2 | RF.max_features=0.67 | RF.max_depth=7 | 
+V 8.61e-01 3.49e-01 6.14e+02
+H SMOTE.k=15 | SMOTE.m=342 | SMOTE.r=4 | RF.n_estimators=147 | RF.criterion=gini | RF.min_samples_leaf=11 | RF.min_samples_split=8 | RF.max_leaf_nodes=9 | RF.max_features=0.5 | RF.max_depth=7 | 
+V   0.826   0.593 447.   
+H SMOTE.k=8 | SMOTE.m=375 | SMOTE.r=2 | RF.n_estimators=25 | RF.criterion=entropy | RF.min_samples_leaf=7 | RF.min_samples_split=4 | RF.max_leaf_nodes=2 | RF.max_features=0.74 | RF.max_depth=2 | 
+V 8.61e-01 3.49e-01 6.14e+02
+## END
+** Sep-03-2019 20:37:27
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 239.0727093219757
+H SMOTE.k=6 | SMOTE.m=97 | SMOTE.r=3 | SVM.C=344 | SVM.kernel=sigmoid | SVM.degree=2 | SVM.gamma=0.11037223516354633 | SVM.coef0=0.05536171957209525 | SVM.tol=0.06778369216936907 | 
+V 8.35e-01 2.97e-01 6.82e+02
+H SMOTE.k=9 | SMOTE.m=107 | SMOTE.r=3 | SVM.C=327 | SVM.kernel=poly | SVM.degree=8 | SVM.gamma=0.5697150388454341 | SVM.coef0=0.0226858763233465 | SVM.tol=0.06778369216936907 | 
+V   0.626   0.625 431.   
+H SMOTE.k=13 | SMOTE.m=145 | SMOTE.r=3 | SVM.C=279 | SVM.kernel=poly | SVM.degree=7 | SVM.gamma=0.33021954540472864 | SVM.coef0=0.061700502687954566 | SVM.tol=0.0765558866287242 | 
+V   0.687   0.529 421.   
+H SMOTE.k=17 | SMOTE.m=301 | SMOTE.r=1 | SVM.C=345 | SVM.kernel=sigmoid | SVM.degree=8 | SVM.gamma=0.33021954540472864 | SVM.coef0=0.009549992112176121 | SVM.tol=0.059238674906982584 | 
+V   0.643   0.506 477.   
+H SMOTE.k=4 | SMOTE.m=250 | SMOTE.r=4 | SVM.C=319 | SVM.kernel=sigmoid | SVM.degree=9 | SVM.gamma=0.10884799381923405 | SVM.coef0=0.09560235737004012 | SVM.tol=0.06778369216936907 | 
+V 7.39e-01 4.23e-01 5.71e+02
+H SMOTE.k=11 | SMOTE.m=57 | SMOTE.r=3 | SVM.C=186 | SVM.kernel=rbf | SVM.degree=5 | SVM.gamma=0.6308160762834829 | SVM.coef0=0.036357908448740615 | SVM.tol=0.0068855477870770065 | 
+V 1.00e+00 2.90e-02 7.77e+02
+H SMOTE.k=13 | SMOTE.m=264 | SMOTE.r=2 | SVM.C=126 | SVM.kernel=sigmoid | SVM.degree=4 | SVM.gamma=0.8226352846524942 | SVM.coef0=0.0226858763233465 | SVM.tol=0.0765558866287242 | 
+V 7.48e-01 4.45e-01 5.44e+02
+H SMOTE.k=19 | SMOTE.m=127 | SMOTE.r=3 | SVM.C=481 | SVM.kernel=sigmoid | SVM.degree=7 | SVM.gamma=0.649422587532821 | SVM.coef0=0.04236424475221506 | SVM.tol=0.08844455702801836 | 
+V 7.83e-01 3.38e-01 6.35e+02
+H SMOTE.k=12 | SMOTE.m=113 | SMOTE.r=3 | SVM.C=347 | SVM.kernel=rbf | SVM.degree=6 | SVM.gamma=0.8226352846524942 | SVM.coef0=0.04479980789069609 | SVM.tol=0.05421134106763803 | 
+V 1.0e+00 3.3e-02 7.8e+02
+H SMOTE.k=13 | SMOTE.m=164 | SMOTE.r=2 | SVM.C=404 | SVM.kernel=rbf | SVM.degree=4 | SVM.gamma=0.649422587532821 | SVM.coef0=0.05536171957209525 | SVM.tol=0.05865103656193398 | 
+V 9.91e-01 9.60e-02 7.23e+02
+## END
+** Sep-03-2019 20:42:01
+Epsilon [0.1, 0.1, 0.1]
+Execution time: 273.8102853298187
+H SMOTE.k=12 | SMOTE.m=67 | SMOTE.r=4 | KNN.n_neighbors=17 | KNN.weights=distance | KNN.metric=minkowski | KNN.p=4 | 
+V 8.61e-01 2.50e-01 6.08e+02
+H SMOTE.k=2 | SMOTE.m=211 | SMOTE.r=3 | KNN.n_neighbors=15 | KNN.weights=distance | KNN.metric=chebyshev | KNN.p=3 | 
+V 8.78e-01 3.05e-01 5.71e+02
+H SMOTE.k=15 | SMOTE.m=84 | SMOTE.r=1 | KNN.n_neighbors=21 | KNN.weights=uniform | KNN.metric=minkowski | KNN.p=1 | 
+V 9.74e-01 1.88e-01 6.47e+02
+H SMOTE.k=5 | SMOTE.m=77 | SMOTE.r=5 | KNN.n_neighbors=9 | KNN.weights=distance | KNN.metric=chebyshev | KNN.p=3 | 
+V 9.39e-01 2.21e-01 6.11e+02
+H SMOTE.k=10 | SMOTE.m=233 | SMOTE.r=3 | KNN.n_neighbors=3 | KNN.weights=uniform | KNN.metric=minkowski | KNN.p=1 | 
+V   0.835   0.541 455.   
+H SMOTE.k=13 | SMOTE.m=292 | SMOTE.r=1 | KNN.n_neighbors=13 | KNN.weights=distance | KNN.metric=chebyshev | KNN.p=2 | 
+V 8.26e-01 3.46e-01 5.32e+02
+H SMOTE.k=16 | SMOTE.m=275 | SMOTE.r=2 | KNN.n_neighbors=8 | KNN.weights=distance | KNN.metric=chebyshev | KNN.p=1 | 
+V 8.70e-01 3.24e-01 5.45e+02
+H SMOTE.k=7 | SMOTE.m=156 | SMOTE.r=2 | KNN.n_neighbors=22 | KNN.weights=uniform | KNN.metric=chebyshev | KNN.p=4 | 
+V 8.70e-01 2.54e-01 6.04e+02
+H SMOTE.k=16 | SMOTE.m=334 | SMOTE.r=1 | KNN.n_neighbors=10 | KNN.weights=uniform | KNN.metric=chebyshev | KNN.p=2 | 
+V 8.78e-01 3.25e-01 5.50e+02
+H SMOTE.k=4 | SMOTE.m=395 | SMOTE.r=3 | KNN.n_neighbors=14 | KNN.weights=distance | KNN.metric=chebyshev | KNN.p=2 | 
+V 8.35e-01 3.52e-01 5.31e+02
+## END
