@@ -67,10 +67,14 @@ def _define_smote(data, num, k=5, r=1):
 
 def _apply_model(train_df, test_df, model):
     X = train_df.loc[:, train_df.columns != 'label']
+    print(X)
     y = train_df.label
+    print(y)
     model.fit(X, y)
     X_test = test_df.loc[:, test_df.columns != 'label']
+    print(X_test)
     prediction = model.predict(X_test)
+    print(prediction)
     return prediction
 
 
@@ -476,10 +480,10 @@ def MLP(train_df, test_df, HP):
 
 def evaluation(dataset, HP):
     # read csc file (MacBook)
-    train_df = pd.read_csv(f'{root}/data/FARSEC/{dataset}-train.csv').drop(
-        ['id'], axis=1)
-    test_df = pd.read_csv(f'{root}/data/FARSEC/{dataset}-test.csv').drop(
-        ['id'], axis=1)
+    train_df = pd.read_csv(f'{root}/data/STATICWARNING/{dataset}-train.csv').drop(
+        ['F54', 'F55', 'F26', 'F21', 'F20'], axis=1)
+    test_df = pd.read_csv(f'{root}/data/STATICWARNING/{dataset}-test.csv').drop(
+        ['F54', 'F55', 'F26', 'F21', 'F20'], axis=1)
 
     if 'SMOTE' in HP.keys():
         train_df = SMOTE(train_df, HP)
@@ -534,9 +538,10 @@ def evaluation(dataset, HP):
 
 def get_HP_obj():
     FARSEC_HP = Hyperparameter(
-        preprocessing_names=['SMOTE', 'StandardScaler', 'MinMaxScaler', 'MaxAbsScaler', 'RobustScaler',
-                             'KernelCenterer', 'QuantileTransformer', 'PowerTransformer', 'Normalization',
-                             'Binarization', 'PolynomialFeatures'],
+        # preprocessing_names=['SMOTE', 'StandardScaler', 'MinMaxScaler', 'MaxAbsScaler', 'RobustScaler',
+        #                      'KernelCenterer', 'QuantileTransformer', 'PowerTransformer', 'Normalization',
+        #                      'Binarization', 'PolynomialFeatures'],
+        preprocessing_names=['SMOTE'],
         learner_names=['DT', 'RF', 'SVM', 'KNN', 'NB', 'LR', 'MLP'])
 
     # Register hyperparameters for pre-processors

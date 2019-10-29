@@ -87,7 +87,7 @@ if __name__ == '__main__':
         '-db',
         '--database',
         help='Name of the database',
-        default="ambari",
+        default="ant",
         metavar='DB')
     parser.add_argument(
         '-r',
