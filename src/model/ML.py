@@ -67,14 +67,14 @@ def _define_smote(data, num, k=5, r=1):
 
 def _apply_model(train_df, test_df, model):
     X = train_df.loc[:, train_df.columns != 'label']
-    print(X)
+    # print(X)
     y = train_df.label
-    print(y)
+    # print(y)
     model.fit(X, y)
     X_test = test_df.loc[:, test_df.columns != 'label']
-    print(X_test)
+    # print(X_test)
     prediction = model.predict(X_test)
-    print(prediction)
+    # print(prediction)
     return prediction
 
 
@@ -485,6 +485,16 @@ def evaluation(dataset, HP):
     test_df = pd.read_csv(f'{root}/data/STATICWARNING/{dataset}-test.csv').drop(
         ['F54', 'F55', 'F26', 'F21', 'F20'], axis=1)
 
+    trainHeader = train_df.columns.tolist()
+    testHeader = test_df.columns.tolist()
+
+    for i in trainHeader:
+        if i not in testHeader:
+            train_df = train_df.drop(i, 1)
+
+    for i in testHeader:
+        if i not in trainHeader:
+            test_df = test_df.drop(i, 1)
 
 
     if 'SMOTE' in HP.keys():
