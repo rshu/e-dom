@@ -485,6 +485,8 @@ def evaluation(dataset, HP):
     test_df = pd.read_csv(f'{root}/data/STATICWARNING/{dataset}-test.csv').drop(
         ['F54', 'F55', 'F26', 'F21', 'F20'], axis=1)
 
+
+
     if 'SMOTE' in HP.keys():
         train_df = SMOTE(train_df, HP)
     elif 'StandardScaler' in HP.keys():
