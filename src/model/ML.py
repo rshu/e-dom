@@ -481,7 +481,7 @@ def MLP(train_df, test_df, HP):
 def evaluation(dataset, HP):
     # read csc file (MacBook)
     train_df = pd.read_csv(f'{root}/data/STATICWARNING/{dataset}-train.csv').drop(
-        ['F54', 'F55', 'F26', 'F21', 'F20'], axis=1)
+        ['F54', 'F53', 'F55', 'F26', 'F21', 'F20'], axis=1)
     test_df = pd.read_csv(f'{root}/data/STATICWARNING/{dataset}-test.csv').drop(
         ['F54', 'F55', 'F26', 'F21', 'F20'], axis=1)
 
@@ -492,10 +492,19 @@ def evaluation(dataset, HP):
         if i not in testHeader:
             train_df = train_df.drop(i, 1)
 
-    for i in testHeader:
-        if i not in trainHeader:
-            test_df = test_df.drop(i, 1)
+    for j in testHeader:
+        if j not in trainHeader:
+            test_df = test_df.drop(j, 1)
 
+    # print(train_df.columns.tolist())
+    # print(test_df.columns.tolist())
+    # print(train_df.columns.tolist() ==  test_df.columns.tolist())
+
+    train_df.loc[train_df['label'] == 'open', 'label'] = 0
+    train_df.loc[train_df['label'] == 'close', 'label'] = 1
+
+    test_df.loc[test_df['label'] == 'open', 'label'] = 0
+    test_df.loc[test_df['label'] == 'close', 'label'] = 1
 
     if 'SMOTE' in HP.keys():
         train_df = SMOTE(train_df, HP)
@@ -545,7 +554,7 @@ def evaluation(dataset, HP):
     gm = get_score("g_measure", prediction, test_labels, "NA")
     ifa = get_score("ifa", prediction, test_labels, "NA")
 
-    return np.array([rec, 1 - fpr, ifa])
+    return np.array([rec, 1 - fpr, gm])
 
 
 def get_HP_obj():
@@ -554,7 +563,8 @@ def get_HP_obj():
         #                      'KernelCenterer', 'QuantileTransformer', 'PowerTransformer', 'Normalization',
         #                      'Binarization', 'PolynomialFeatures'],
         preprocessing_names=['SMOTE'],
-        learner_names=['DT', 'RF', 'SVM', 'KNN', 'NB', 'LR', 'MLP'])
+        # learner_names=['DT', 'RF', 'SVM', 'KNN', 'NB', 'LR', 'MLP'])
+        learner_names = ['DT', 'RF', 'SVM',  'NB', 'LR', 'MLP'])
 
     # Register hyperparameters for pre-processors
     FARSEC_HP.register_hp('SMOTE', 'k', np.arange(2, 20))

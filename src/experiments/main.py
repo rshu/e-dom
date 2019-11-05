@@ -60,7 +60,7 @@ def run_epsilon(model):
     FARSEC_HP = ML.get_HP_obj()
     epsilon_list = [0.2, 0.2, 0.2]
     epsilon_start_time = time.time()
-    res = epsilon.exec_(model, FARSEC_HP, ML.evaluation, 100, epsilon_list)
+    res = epsilon.exec_(model, FARSEC_HP, ML.evaluation, 15, epsilon_list)
     epsilon_execution_time = time.time() - epsilon_start_time
 
     # writing results to file
