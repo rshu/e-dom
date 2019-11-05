@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Copyright (C) 2019, Jianfeng Chen <jchen37@ncsu.edu>
+# Copyright (C) 2019, Rui Shu, Jianfeng Chen <rshu, jchen37@ncsu.edu>
 # vim: set ts=4 sts=4 sw=4 expandtab smartindent:
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -481,7 +481,7 @@ def MLP(train_df, test_df, HP):
 def evaluation(dataset, HP):
     # read csc file (MacBook)
     train_df = pd.read_csv(f'{root}/data/STATICWARNING/{dataset}-train.csv').drop(
-        ['F54', 'F53', 'F55', 'F26', 'F21', 'F20'], axis=1)
+        ['F54', 'F55', 'F26', 'F21', 'F20'], axis=1)
     test_df = pd.read_csv(f'{root}/data/STATICWARNING/{dataset}-test.csv').drop(
         ['F54', 'F55', 'F26', 'F21', 'F20'], axis=1)
 

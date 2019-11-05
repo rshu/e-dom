@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Copyright (C) 2019, Jianfeng Chen <jchen37@ncsu.edu>
+# Copyright (C) 2019, Rui Shu, Jianfeng Chen <rshu, jchen37@ncsu.edu>
 # vim: set ts=4 sts=4 sw=4 expandtab smartindent:
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -60,7 +60,7 @@ def run_epsilon(model):
     FARSEC_HP = ML.get_HP_obj()
     epsilon_list = [0.2, 0.2, 0.2]
     epsilon_start_time = time.time()
-    res = epsilon.exec_(model, FARSEC_HP, ML.evaluation, 5, epsilon_list)
+    res = epsilon.exec_(model, FARSEC_HP, ML.evaluation, 15, epsilon_list)
     epsilon_execution_time = time.time() - epsilon_start_time
 
     # writing results to file

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Copyright (C) 2019, Jianfeng Chen <jchen37@ncsu.edu>
+# Copyright (C) 2019, Rui Shu, Jianfeng Chen <rshu, jchen37@ncsu.edu>
 # vim: set ts=4 sts=4 sw=4 expandtab smartindent:
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy

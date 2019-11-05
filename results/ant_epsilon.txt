@@ -94,3 +94,27 @@ V 0.796 0.998 0.886
 H SMOTE.k=15 | SMOTE.m=138 | SMOTE.r=1 | LR.penalty=l2 | LR.tol=0.09735412052990812 | LR.C=201 | 
 V 1. 0. 0.
 ## END
+** Nov-05-2019 11:16:01
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 111.50215291976929
+H SMOTE.k=10 | SMOTE.m=238 | SMOTE.r=3 | RF.n_estimators=74 | RF.criterion=gini | RF.min_samples_leaf=14 | RF.min_samples_split=15 | RF.max_leaf_nodes=27 | RF.max_features=0.87 | RF.max_depth=7 | 
+V 0.741 0.993 0.849
+H SMOTE.k=5 | SMOTE.m=177 | SMOTE.r=4 | RF.n_estimators=63 | RF.criterion=gini | RF.min_samples_leaf=10 | RF.min_samples_split=15 | RF.max_leaf_nodes=22 | RF.max_features=0.89 | RF.max_depth=3 | 
+V 0.741 0.992 0.848
+H SMOTE.k=6 | SMOTE.m=382 | SMOTE.r=2 | RF.n_estimators=48 | RF.criterion=gini | RF.min_samples_leaf=9 | RF.min_samples_split=19 | RF.max_leaf_nodes=26 | RF.max_features=0.16 | RF.max_depth=1 | 
+V 0.759 0.988 0.859
+H SMOTE.k=13 | SMOTE.m=105 | SMOTE.r=5 | RF.n_estimators=78 | RF.criterion=entropy | RF.min_samples_leaf=7 | RF.min_samples_split=3 | RF.max_leaf_nodes=2 | RF.max_features=0.85 | RF.max_depth=7 | 
+V 1.    0.823 0.903
+H SMOTE.k=10 | SMOTE.m=151 | SMOTE.r=4 | RF.n_estimators=144 | RF.criterion=gini | RF.min_samples_leaf=19 | RF.min_samples_split=7 | RF.max_leaf_nodes=31 | RF.max_features=0.05 | RF.max_depth=8 | 
+V 0.796 0.992 0.884
+H SMOTE.k=18 | SMOTE.m=330 | SMOTE.r=3 | RF.n_estimators=108 | RF.criterion=entropy | RF.min_samples_leaf=11 | RF.min_samples_split=5 | RF.max_leaf_nodes=41 | RF.max_features=0.03 | RF.max_depth=2 | 
+V 0.833 0.855 0.844
+H SMOTE.k=2 | SMOTE.m=349 | SMOTE.r=3 | RF.n_estimators=83 | RF.criterion=gini | RF.min_samples_leaf=7 | RF.min_samples_split=8 | RF.max_leaf_nodes=11 | RF.max_features=0.060000000000000005 | RF.max_depth=5 | 
+V 0.759 0.992 0.86 
+H SMOTE.k=6 | SMOTE.m=146 | SMOTE.r=2 | RF.n_estimators=30 | RF.criterion=gini | RF.min_samples_leaf=8 | RF.min_samples_split=5 | RF.max_leaf_nodes=45 | RF.max_features=0.89 | RF.max_depth=1 | 
+V 1.    0.823 0.903
+H SMOTE.k=19 | SMOTE.m=373 | SMOTE.r=2 | RF.n_estimators=46 | RF.criterion=gini | RF.min_samples_leaf=7 | RF.min_samples_split=11 | RF.max_leaf_nodes=10 | RF.max_features=0.08 | RF.max_depth=1 | 
+V 0.963 0.767 0.854
+H SMOTE.k=6 | SMOTE.m=185 | SMOTE.r=2 | RF.n_estimators=139 | RF.criterion=gini | RF.min_samples_leaf=12 | RF.min_samples_split=8 | RF.max_leaf_nodes=39 | RF.max_features=0.2 | RF.max_depth=1 | 
+V 0.852 0.979 0.911
+## END
