@@ -564,7 +564,7 @@ def get_HP_obj():
         #                      'Binarization', 'PolynomialFeatures'],
         preprocessing_names=['SMOTE'],
         # learner_names=['DT', 'RF', 'SVM', 'KNN', 'NB', 'LR', 'MLP'])
-        learner_names = ['DT', 'RF', 'SVM',  'NB', 'LR', 'MLP'])
+        learner_names = ['DT', 'RF', 'SVM',  'NB', 'LR'])
 
     # Register hyperparameters for pre-processors
     FARSEC_HP.register_hp('SMOTE', 'k', np.arange(2, 20))
