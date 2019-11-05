@@ -1,0 +1,48 @@
+** Nov-05-2019 11:44:48
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 235.49805879592896
+H SMOTE.k=8 | SMOTE.m=115 | SMOTE.r=1 | NB.var_smoothing=1e-09 | 
+V 0.449 0.674 0.539
+H SMOTE.k=8 | SMOTE.m=149 | SMOTE.r=3 | NB.var_smoothing=1e-09 | 
+V 0.364 0.808 0.502
+H SMOTE.k=7 | SMOTE.m=390 | SMOTE.r=4 | NB.var_smoothing=1e-09 | 
+V 0.362 0.779 0.494
+H SMOTE.k=10 | SMOTE.m=156 | SMOTE.r=2 | NB.var_smoothing=1e-09 | 
+V 0.364 0.756 0.492
+H SMOTE.k=9 | SMOTE.m=278 | SMOTE.r=2 | NB.var_smoothing=1e-09 | 
+V 0.37  0.701 0.485
+H SMOTE.k=8 | SMOTE.m=367 | SMOTE.r=5 | NB.var_smoothing=0.0001 | 
+V 0.971 0.223 0.363
+H SMOTE.k=5 | SMOTE.m=304 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.845 0.337 0.482
+H SMOTE.k=4 | SMOTE.m=344 | SMOTE.r=1 | NB.var_smoothing=1e-09 | 
+V 0.344 0.807 0.482
+H SMOTE.k=6 | SMOTE.m=143 | SMOTE.r=1 | NB.var_smoothing=0.0001 | 
+V 0.936 0.296 0.449
+H SMOTE.k=17 | SMOTE.m=379 | SMOTE.r=3 | NB.var_smoothing=0.0001 | 
+V 0.869 0.332 0.48 
+## END
+** Nov-05-2019 11:59:53
+Epsilon [0.2, 0.2, 0.2]
+Execution time: 905.0442070960999
+H SMOTE.k=2 | SMOTE.m=381 | SMOTE.r=1 | LR.penalty=l1 | LR.tol=0.018718694163039184 | LR.C=191 | 
+V 0.805 0.991 0.888
+H SMOTE.k=12 | SMOTE.m=106 | SMOTE.r=4 | LR.penalty=l1 | LR.tol=0.04910162881918702 | LR.C=64 | 
+V 0.843 0.981 0.907
+H SMOTE.k=11 | SMOTE.m=376 | SMOTE.r=4 | LR.penalty=l1 | LR.tol=0.07018467500998649 | LR.C=106 | 
+V 0.732 0.997 0.844
+H SMOTE.k=4 | SMOTE.m=390 | SMOTE.r=4 | LR.penalty=l1 | LR.tol=0.07018467500998649 | LR.C=216 | 
+V 0.889 0.964 0.925
+H SMOTE.k=7 | SMOTE.m=305 | SMOTE.r=3 | LR.penalty=l1 | LR.tol=0.026945226656009028 | LR.C=308 | 
+V 0.764 0.996 0.865
+H SMOTE.k=13 | SMOTE.m=250 | SMOTE.r=2 | LR.penalty=l1 | LR.tol=0.025127394367386393 | LR.C=289 | 
+V 0.752 0.998 0.858
+H SMOTE.k=6 | SMOTE.m=193 | SMOTE.r=5 | LR.penalty=l1 | LR.tol=0.03654314782682671 | LR.C=270 | 
+V 0.746 0.979 0.847
+H SMOTE.k=19 | SMOTE.m=379 | SMOTE.r=5 | LR.penalty=l1 | LR.tol=0.06965506686303802 | LR.C=70 | 
+V 0.88  0.967 0.922
+H SMOTE.k=19 | SMOTE.m=222 | SMOTE.r=5 | LR.penalty=l1 | LR.tol=0.06279130689457839 | LR.C=195 | 
+V 0.7   0.991 0.82 
+H SMOTE.k=9 | SMOTE.m=137 | SMOTE.r=4 | LR.penalty=l1 | LR.tol=0.05752860431160792 | LR.C=103 | 
+V 0.901 0.918 0.909
+## END
