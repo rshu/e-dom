@@ -552,9 +552,9 @@ def evaluation(dataset, HP):
     rec = get_score('recall', prediction, test_labels, "NA")
     fpr = get_score('false_alarm', prediction, test_labels, "NA")
     gm = get_score("g_measure", prediction, test_labels, "NA")
-    ifa = get_score("ifa", prediction, test_labels, "NA")
+    auc = get_score("Pf_Auc", prediction, test_labels, "NA")
 
-    return np.array([rec, 1 - fpr, gm])
+    return np.array([rec, auc, gm])
 
 
 def get_HP_obj():
