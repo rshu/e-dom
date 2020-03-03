@@ -2,6 +2,10 @@ import matplotlib.pyplot as plt
 
 plt.style.use('seaborn-whitegrid')
 
+font = {'family': 'normal',
+        'size': 20}
+plt.rc('font', **font)
+
 deciles = list(range(1, 11))
 
 # chromium_baseline = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
@@ -102,7 +106,8 @@ axs[2, 0].set(xlabel='Deciles',
 
 axs[2, 0].legend()
 
-fig.subplots_adjust(hspace=0.5)
+fig.subplots_adjust(hspace=0.2)
 fig.delaxes(axs[2, 1])
 
+plt.savefig("MAP.png", bbox_inches='tight')
 plt.show()
